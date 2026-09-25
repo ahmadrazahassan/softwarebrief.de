@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { categories, categorySlugs, byCategory } from "@/lib/catalog";
+export const metadata = {title:"Softwarekategorien | Klarlotse",description:"Buchhaltung, Lohnabrechnung, Personal, CRM und ERP für deutsche Unternehmen entdecken."};
+export default function CategoriesPage(){return <main><section className="page-hero shell"><p className="eyebrow">KATEGORIEN</p><h1>Wo kann Software Ihren Betrieb entlasten?</h1><p>Beginnen Sie bei Ihrer Aufgabe. In jedem Bereich finden Sie fünf recherchierte Produkte, passende Auswahlfragen und Quellen zu den Herstellerangaben.</p></section><section className="shell category-index">{categorySlugs.map((slug)=><Link href={`/software/${slug}`} className="category-index-row" key={slug}><span>{categories[slug].number}</span><div><p className="eyebrow">{categories[slug].kicker.toUpperCase()}</p><h2>{categories[slug].name}</h2><p>{categories[slug].intro}</p></div><strong>{byCategory(slug).length} Produkte</strong><ArrowUpRight size={24}/></Link>)}</section></main>}

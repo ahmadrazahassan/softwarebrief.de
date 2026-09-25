@@ -1,0 +1,625 @@
+[
+  {
+    "id": 1,
+    "name": "FastBill",
+    "slug": "fastbill",
+    "category": "Buchhaltung",
+    "categorySlug": "buchhaltung",
+    "fit": "Selbstständige und kleine Dienstleistungsunternehmen mit Schwerpunkt Angebot, Rechnung, Beleg und Steuerberaterübergabe.",
+    "pricing": "Solo 10 €/Monat bei monatlicher Zahlung oder 9 €/Monat bei jährlicher Zahlung; Plus 15/14 €, Pro 30/27 €, Premium ab 59/53 €; netto. Add-ons kosten extra.",
+    "features": "E-Rechnungen, Mahnwesen, Belege, Banking, DATEV-Export, UStVA; wiederkehrende Rechnungen erst ab Pro, automatische Belegverarbeitung vor allem Premium.",
+    "review": "Die Tarifstaffel lässt kleine Betriebe günstig mit dem Rechnungskern beginnen. Wer viele Personen, automatische Abläufe oder Belegverarbeitung braucht, muss die höherpreisigen Pakete und Zusatzmodule mitrechnen. FastBill beschreibt die Zusammenarbeit mit der Steuerberatung ausdrücklich; für komplexe Abschlüsse sollte die konkrete Arbeitsteilung vor Auswahl geklärt werden.",
+    "alternatives": [
+      "Lexware Office für breitere Buchhaltung",
+      "Billomat für dokumentenlastige Abläufe."
+    ],
+    "sources": [
+      {
+        "label": "Preisquelle",
+        "url": "https://www.fastbill.com/preise"
+      },
+      {
+        "label": "Funktionen",
+        "url": "https://www.fastbill.com/funktionen"
+      }
+    ],
+    "vendorUrl": "https://www.fastbill.com/preise",
+    "priceShort": "Solo 10 €/Monat bei monatlicher Zahlung oder 9 €/Monat bei jährlicher Zahlung"
+  },
+  {
+    "id": 2,
+    "name": "Lexware Office",
+    "slug": "lexware-office",
+    "category": "Buchhaltung",
+    "categorySlug": "buchhaltung",
+    "fit": "Gründer, Freiberufler und kleine Unternehmen, die Belege, Rechnungen und laufende Buchhaltung in einem System verbinden wollen.",
+    "pricing": "S 7,90 €, M 12,90 €, L 21,90 €, XL 32,90 € pro Monat, zzgl. MwSt.; Aktionspreise nicht als Regelpreis verwenden.",
+    "features": "Belege ab S, Ausgangsrechnungen ab M, EÜR und UStVA ab L; XL ergänzt unter anderem API und besondere Rechnungstypen.",
+    "review": "Die klare Staffelung ist hilfreich, wenn der Betrieb von reiner Belegablage zur eigenen Buchführung wächst. Ein „ab 7,90 €“-Vergleich wäre irreführend für Unternehmen, die tatsächlich Rechnungen oder EÜR benötigen: dafür gelten M beziehungsweise L. Prüfen Sie vor der Entscheidung die benötigte Version und Zusatzkosten für Lohn.",
+    "alternatives": [
+      "sevdesk",
+      "Sage Active."
+    ],
+    "sources": [
+      {
+        "label": "Preise und Versionen",
+        "url": "https://www.lexware.de/preise/"
+      },
+      {
+        "label": "Produkt",
+        "url": "https://www.lexware.de/buchhaltungssoftware/"
+      }
+    ],
+    "vendorUrl": "https://www.lexware.de/preise/",
+    "priceShort": "S 7,90 €, M 12,90 €, L 21,90 €, XL 32,90 € pro Monat, zzgl"
+  },
+  {
+    "id": 3,
+    "name": "sevdesk",
+    "slug": "sevdesk",
+    "category": "Buchhaltung",
+    "categorySlug": "buchhaltung",
+    "fit": "Selbstständige und kleine Unternehmen, die Rechnungen und Buchhaltung webbasiert organisieren.",
+    "pricing": "Rechnung ab 12,90 €, Buchhaltung ab 25,90 €, Buchhaltung Pro ab 34,90 € pro Monat laut aktueller Herstellerübersicht; konkrete Laufzeit, MwSt. und Aktionen vor Kauf prüfen.",
+    "features": "E-Rechnungen, Belege, Bankabgleich, Steuerberater-Zusammenarbeit und je nach Tarif erweiterte Buchhaltung.",
+    "review": "Die Trennung zwischen Rechnungs- und Buchhaltungstarif macht den Einstieg verständlich. Wer Buchführung, Auswertungen oder Teamfunktionen braucht, sollte den passenden Tarif anhand der Vergleichstabelle prüfen; ein reiner Einstiegspreis reicht hier nicht. Die öffentlich sichtbaren Preise können durch Aktionen und Abrechnungsmodus abweichen.",
+    "alternatives": [
+      "Lexware Office",
+      "FastBill."
+    ],
+    "sources": [
+      {
+        "label": "Preise",
+        "url": "https://sevdesk.de/preise/"
+      },
+      {
+        "label": "Produktübersicht",
+        "url": "https://sevdesk.de/produktuebersicht/"
+      }
+    ],
+    "vendorUrl": "https://sevdesk.de/preise/",
+    "priceShort": "Rechnung ab 12,90 €, Buchhaltung ab 25,90 €, Buchhaltung Pro ab 34,90 € pro Monat laut aktueller Herstell"
+  },
+  {
+    "id": 4,
+    "name": "Sage Active",
+    "slug": "sage-active",
+    "category": "Buchhaltung",
+    "categorySlug": "buchhaltung",
+    "fit": "Kleine Unternehmen, die bei Rechnungen beginnen und später doppelte Buchführung sowie Lohnfunktionen brauchen.",
+    "pricing": "Sage nennt Starter ab 25 €/Monat und umfassendere Pakete ab 49 €/Monat; die Produktseite zeigt zusätzlich eine befristete Aktion.",
+    "features": "Starter für Angebote, Rechnungen und Banking; Essentials laut Hersteller mit EÜR, SKR03/04, Anlagenbuchhaltung, GuV/Bilanz, UStVA und Lohn/HR.",
+    "review": "Der Unterschied zwischen Starter und Essentials ist für den Softwarevergleich wesentlich: Wer Buchführung benötigt, darf den Starter-Einstieg nicht als Preis der vollständigen Lösung lesen. Zudem nennt Sage Rechnungs- und Nutzerkontingente sowie mögliche Mehrkosten. Die individuelle Gesamtsumme muss daher aus Tarif, Mitarbeitenden und Zusatznutzung errechnet werden.",
+    "alternatives": [
+      "Lexware Office",
+      "sevdesk."
+    ],
+    "sources": [
+      {
+        "label": "Produkt und Bedingungen",
+        "url": "https://www.sage.com/de-de/produkte/sage-active/"
+      },
+      {
+        "label": "Preisanker",
+        "url": "https://www.sage.com/de-de/buchhaltung-software/"
+      }
+    ],
+    "vendorUrl": "https://www.sage.com/de-de/produkte/sage-active/",
+    "priceShort": "Sage nennt Starter ab 25 €/Monat und umfassendere Pakete ab 49 €/Monat"
+  },
+  {
+    "id": 5,
+    "name": "Billomat",
+    "slug": "billomat",
+    "category": "Buchhaltung",
+    "categorySlug": "buchhaltung",
+    "fit": "Freiberufler, kleine Teams und wachsende Handels-/Dienstleistungsbetriebe mit vielen Dokumenten.",
+    "pricing": "Professional ab 29 €/Monat monatlich bzw. 19 €/Monat jährlich, Business ab 39/29 €, Enterprise ab 119/99 €; netto.",
+    "features": "Rechnungen, E-Rechnung, Belege, EÜR, Mahnungen, Angebote; DATEVconnect und Banking-Verknüpfung laut Tariftabelle erst ab Business. Professional umfasst einen Nutzer und 30 Rechnungen pro Monat.",
+    "review": "Die Funktionsliste ist breit, doch die Grenzen des kleinsten Tarifs sind für Teams entscheidend. Ein Betrieb mit mehreren Nutzern oder größerem Rechnungsvolumen sollte Business als realistischen Vergleichspunkt nehmen. API-Nutzung und zusätzliche Personen können die Kosten erhöhen.",
+    "alternatives": [
+      "FastBill für fakturazentrierte Arbeit",
+      "Lexware Office für Buchhaltung."
+    ],
+    "sources": [
+      {
+        "label": "Preise und Tarifdetails",
+        "url": "https://www.billomat.com/preise/"
+      }
+    ],
+    "vendorUrl": "https://www.billomat.com/preise/",
+    "priceShort": "Professional ab 29 €/Monat monatlich bzw"
+  },
+  {
+    "id": 6,
+    "name": "Sage Payroll / Sage Business Cloud Lohnabrechnung",
+    "slug": "sage-payroll",
+    "category": "Lohnabrechnung",
+    "categorySlug": "lohnabrechnung",
+    "fit": "Kleine Arbeitgeber, die Entgeltabrechnung selbst in einer Cloud-Lösung führen möchten.",
+    "pricing": "Lohnabrechnung ab 6,50 € pro Mitarbeiter und Monat, Plus ab 8,50 €; jeweils zzgl. MwSt.; weitere Abrechnungen/Korrekturen haben gesonderte Preise laut Hersteller.",
+    "features": "Lohnlauf, Meldungen und Dokumente; Plus ergänzt laut Preisseite unter anderem Zeiterfassung, digitale Personalakte und Abwesenheitsplanung.",
+    "review": "Der Preis pro Mitarbeiter macht kleine Bestände gut kalkulierbar, solange Sonderfälle und Korrekturen berücksichtigt werden. Für eine reine Lohnaufgabe kann die Basisvariante genügen; für integrierte Personalarbeit muss Plus mit eigenständigen HR-Systemen verglichen werden.",
+    "alternatives": [
+      "Lexware Office Lohn & Gehalt",
+      "Agenda Personalwesen."
+    ],
+    "sources": [
+      {
+        "label": "Preise und Funktionsvergleich",
+        "url": "https://www.sage.com/de-de/sage-business-cloud/lohnabrechnung/preis/"
+      },
+      {
+        "label": "Produkt",
+        "url": "https://www.sage.com/de-de/sage-business-cloud/sage-payroll/"
+      }
+    ],
+    "vendorUrl": "https://www.sage.com/de-de/sage-business-cloud/lohnabrechnung/preis/",
+    "priceShort": "Lohnabrechnung ab 6,50 € pro Mitarbeiter und Monat, Plus ab 8,50 €"
+  },
+  {
+    "id": 7,
+    "name": "Lexware Office Lohn & Gehalt",
+    "slug": "lexware-office-lohn-gehalt",
+    "category": "Lohnabrechnung",
+    "categorySlug": "lohnabrechnung",
+    "fit": "Kleinbetriebe, besonders wenn Lexware Office bereits für die Buchhaltung genutzt wird.",
+    "pricing": "ab 12,90 € pro Monat zzgl. MwSt. laut Preisübersicht; der Hersteller nennt die Abrechnung nach Mitarbeitenden, daher konkrete Staffel im Checkout prüfen.",
+    "features": "geführte Abrechnung, Meldungen an Finanzamt und Sozialversicherung sowie automatische Buchung der Personalkosten in Lexware Office.",
+    "review": "Die enge Verbindung mit der Buchhaltung vermeidet manuelle Übergaben. Der Hersteller nennt aber ausdrücklich ausgeschlossene Beschäftigungsarten und Entgeltfälle, darunter Baulohn und öffentlichen Dienst. Solche Anforderungen vor der Auswahl mit der aktuellen Ausschlussliste abgleichen.",
+    "alternatives": [
+      "Sage Payroll bei einfacher Lohnabrechnung",
+      "DATEV bei komplexeren Fällen."
+    ],
+    "sources": [
+      {
+        "label": "Preise und Ausschlüsse",
+        "url": "https://www.lexware.de/preise/"
+      },
+      {
+        "label": "Produkt",
+        "url": "https://www.lexware.de/lohnprogramm-lohnsoftware/"
+      }
+    ],
+    "vendorUrl": "https://www.lexware.de/preise/",
+    "priceShort": "ab 12,90 € pro Monat zzgl"
+  },
+  {
+    "id": 8,
+    "name": "DATEV Lohn und Gehalt classic",
+    "slug": "datev-lohn-und-gehalt",
+    "category": "Lohnabrechnung",
+    "categorySlug": "lohnabrechnung",
+    "fit": "Betriebe und Fachkräfte, die umfangreiche deutsche Lohnfälle verarbeiten und bereits mit DATEV arbeiten.",
+    "pricing": "Die Produktseite zeigt „ab 15,86 €/Monat“; eine DATEV-Preisliste für 2026 unterscheidet Lizenzarten und nennt für eine Einer-Netzlizenz 27,20 €/Monat. Deshalb keinen dieser Beträge als vollständigen Gesamtpreis darstellen; Lizenz, Rechenzentrumsnutzung und Zusatzdienste einzeln prüfen.",
+    "features": "unbegrenzt abrechenbare Arbeitnehmer, Baulohn und weitere Sonderfälle, Meldung über DATEV-Rechenzentrum, lokale PC-Verarbeitung.",
+    "review": "Der fachliche Umfang ist ein starkes Argument bei komplexer Entgeltabrechnung. Die lokale DATEV-Systemumgebung und mehrteilige Preisstruktur verlangen mehr Planung als ein einfacher Cloud-Einstieg.",
+    "alternatives": [
+      "Agenda Personalwesen",
+      "Sage Payroll."
+    ],
+    "sources": [
+      {
+        "label": "Produkt und Preise",
+        "url": "https://www.datev.de/web/de/shop/produkt-details/41842"
+      },
+      {
+        "label": "DATEV-Preisliste",
+        "url": "https://www.datev.de/content/dam/markenassets/preislisten/DATEV-Preisliste_geaenderte_preise_ab_2025_lfu.pdf"
+      }
+    ],
+    "vendorUrl": "https://www.datev.de/web/de/shop/produkt-details/41842",
+    "priceShort": "Die Produktseite zeigt „ab 15,86 €/Monat“"
+  },
+  {
+    "id": 9,
+    "name": "Agenda Personalwesen",
+    "slug": "agenda-personalwesen",
+    "category": "Lohnabrechnung",
+    "categorySlug": "lohnabrechnung",
+    "fit": "Kleine bis mittelgroße Betriebe mit intern verantworteter Lohnabrechnung und Bedarf an optionalen Personalmodulen.",
+    "pricing": "Personalwesen-Komplettsystem ab 50 €/Monat; die Produktseite zeigt Paketbestandteile mit Grundpreisen und nutzungsabhängigen Kosten pro Mitarbeitendem. Endpreis abhängig von Arbeitsplätzen, Modulen und Abrechnungsvolumen; 12 Monate Mindestlaufzeit laut Hersteller.",
+    "features": "Lohn und Gehalt, Meldewesen, Mitarbeiterportal, digitale Akte, Urlaubsverwaltung; Baulohn optional.",
+    "review": "Agenda eignet sich als prüfenswerte Fachlösung, wenn spezielle Lohnprozesse und Experten-Support wichtig sind. Ein Vergleich nur der Grundgebühr wäre zu niedrig; die variable Komponente und die Vertragsdauer gehören in die Gesamtkostenrechnung.",
+    "alternatives": [
+      "DATEV Lohn und Gehalt",
+      "Sage Payroll."
+    ],
+    "sources": [
+      {
+        "label": "Preismodell",
+        "url": "https://www.agenda-software.de/unternehmen/preise.php"
+      },
+      {
+        "label": "Leistungen und Paketpreise",
+        "url": "https://www.agenda-software.de/unternehmen/personalwesen.php"
+      }
+    ],
+    "vendorUrl": "https://www.agenda-software.de/unternehmen/preise.php",
+    "priceShort": "Personalwesen-Komplettsystem ab 50 €/Monat"
+  },
+  {
+    "id": 10,
+    "name": "Personio Payroll",
+    "slug": "personio-payroll",
+    "category": "Lohnabrechnung",
+    "categorySlug": "lohnabrechnung",
+    "fit": "Wachsende Unternehmen, die Stammdaten und Lohnlauf in derselben HR-Umgebung verbinden wollen.",
+    "pricing": "Individuelles Angebot; Personio veröffentlicht für das HR-System keine feste deutsche Monatsgebühr und beschreibt Mitarbeiterzahl und Apps als Preisfaktoren.",
+    "features": "Payroll als Teil der Personio-Plattform; laut Hersteller Zusammenarbeit mit Steuerberatung oder eigener Abrechnung möglich.",
+    "review": "Sinnvoll vor allem, wenn Personio als HR-Kernsystem eingesetzt oder ernsthaft geplant wird. Für eine isolierte, sehr kleine Lohnabrechnung ist vorab zu prüfen, ob Einführung, Konfiguration und Gesamtkosten zum Bedarf passen. Payroll-Angebot und enthaltene HR-Module sollten schriftlich abgegrenzt werden.",
+    "alternatives": [
+      "Sage Payroll",
+      "Lexware Office Lohn & Gehalt."
+    ],
+    "sources": [
+      {
+        "label": "Payroll",
+        "url": "https://www.personio.de/funktionen/personio-payroll/"
+      },
+      {
+        "label": "Preismodell",
+        "url": "https://www.personio.de/preise/"
+      }
+    ],
+    "vendorUrl": "https://www.personio.de/funktionen/personio-payroll/",
+    "priceShort": "Individuelles Angebot"
+  },
+  {
+    "id": 11,
+    "name": "Personio",
+    "slug": "personio",
+    "category": "HR",
+    "categorySlug": "hr",
+    "fit": "Unternehmen ab etwa zehn Mitarbeitenden, die Personalstammdaten, Zeit und Prozesse zentralisieren möchten.",
+    "pricing": "Auf Anfrage; abhängig von Beschäftigtenzahl und zusätzlichen Apps.",
+    "features": "Core mit Profilen, Dokumenten, Berichten, Workflows, Zeit und vorbereitender Lohnbuchhaltung; Core Pro erweitert unter anderem API und Rechte.",
+    "review": "Die Breite der Plattform kann Medienbrüche im HR-Alltag reduzieren. Entscheidend ist, welche gewünschten Funktionen bereits in Core liegen und welche als App oder Pro-Funktion hinzukommen. Auch Einführungsaufwand und Payroll sollten separat abgefragt werden.",
+    "alternatives": [
+      "Factorial für modularen Einstieg",
+      "HR WORKS für DACH-orientierte Prozesse."
+    ],
+    "sources": [
+      {
+        "label": "Pakete und Preislogik",
+        "url": "https://www.personio.de/preise/"
+      }
+    ],
+    "vendorUrl": "https://www.personio.de/preise/",
+    "priceShort": "Auf Anfrage"
+  },
+  {
+    "id": 12,
+    "name": "Factorial",
+    "slug": "factorial",
+    "category": "HR",
+    "categorySlug": "hr",
+    "fit": "Kleine und mittlere Unternehmen, die HR, Zeit, Talent und gegebenenfalls Finanzen modular verbinden wollen.",
+    "pricing": "Hersteller nennt Einstieg ab 8 € pro Nutzer und Monat; konkretes Angebot hängt von ausgewählten Modulen ab.",
+    "features": "Core umfasst Mitarbeiterverzeichnis, On-/Offboarding-Vorlagen, Signatur und Benachrichtigungen; weitere Zeit-, Talent- und Finanzfunktionen auswählbar.",
+    "review": "Das modulare Konzept ist gut, wenn ein Unternehmen schrittweise digitalisiert. Für einen fairen Vergleich müssen die gewünschten Module und die Zahl der abrechenbaren Nutzer schriftlich feststehen; „ab 8 €“ ist kein Preis für jede gezeigte Funktion.",
+    "alternatives": [
+      "Kenjo bei Schicht- und Zeitfokus",
+      "Personio bei breiter HR-Plattform."
+    ],
+    "sources": [
+      {
+        "label": "Preise und Module",
+        "url": "https://factorialhr.de/preise"
+      }
+    ],
+    "vendorUrl": "https://factorialhr.de/preise",
+    "priceShort": "Hersteller nennt Einstieg ab 8 € pro Nutzer und Monat"
+  },
+  {
+    "id": 13,
+    "name": "Kenjo",
+    "slug": "kenjo",
+    "category": "HR",
+    "categorySlug": "hr",
+    "fit": "Betriebe mit Schichten, Zeit- und Abwesenheitsprozessen sowie digitaler Personalakte.",
+    "pricing": "Aktuelle Preisseite rendert in der Textansicht widersprüchliche „0,0 €“-Werte; kein verifizierter deutscher Listenpreis. Individuelles Angebot einholen; Onboarding kann einmalig berechnet werden.",
+    "features": "Starter mit Zeit, Urlaub, Dokumenten und Schichtplanung; Growth ergänzt Workflows, Signatur, Berechtigungen und Auswertungen; Connect bietet unter anderem API und fortgeschrittene Integrationen. Recruiting ist Zusatzmodul.",
+    "review": "Für operative Teams sind Schicht- und Zeitfunktionen relevanter als eine allgemeine HR-Vollständigkeitsbehauptung. Vor dem Vergleich den konkreten Plan, Recruiting-Add-on und Onboardingkosten prüfen.",
+    "alternatives": [
+      "HR WORKS",
+      "Factorial."
+    ],
+    "sources": [
+      {
+        "label": "Tarife und Funktionen",
+        "url": "https://www.kenjo.io/de/preise"
+      }
+    ],
+    "vendorUrl": "https://www.kenjo.io/de/preise",
+    "priceShort": "Aktuelle Preisseite rendert in der Textansicht widersprüchliche „0,0 €“-Werte"
+  },
+  {
+    "id": 14,
+    "name": "HR WORKS",
+    "slug": "hr-works",
+    "category": "HR",
+    "categorySlug": "hr",
+    "fit": "Mittelständische Unternehmen mit Personalverwaltung, Zeitwirtschaft und Reisekosten in einem System.",
+    "pricing": "Kein verifizierter Listenbetrag auf Herstellerseite; monatliche Gebühr setzt sich laut FAQ aus Lizenzzahl plus Grundgebühr zusammen.",
+    "features": "Personalverwaltung, Zeiterfassung, Abwesenheiten, Reisekosten und vorbereitende Lohnbuchhaltung.",
+    "review": "Der stärkste Grund zur Prüfung ist die Verbindung von HR und Reisekosten, besonders in deutschen Betrieben mit häufigen Dienstreisen. Es ist wichtig, vorbereitende Lohnbuchhaltung nicht als vollständig integrierte Entgeltabrechnung zu missverstehen; den gewünschten Ablauf und Schnittstellen im Angebot bestätigen lassen.",
+    "alternatives": [
+      "Personio",
+      "Kenjo."
+    ],
+    "sources": [
+      {
+        "label": "Produkt",
+        "url": "https://www.hrworks.de/produkt/personalverwaltung-software/"
+      },
+      {
+        "label": "Abrechnungsmodell",
+        "url": "https://www.hrworks.de/produkt/faq-haeufig-gestellte-fragen-antworten/"
+      }
+    ],
+    "vendorUrl": "https://www.hrworks.de/produkt/personalverwaltung-software/",
+    "priceShort": "Kein verifizierter Listenbetrag auf Herstellerseite"
+  },
+  {
+    "id": 15,
+    "name": "HiBob / Bob",
+    "slug": "hibob-bob",
+    "category": "HR",
+    "categorySlug": "hr",
+    "fit": "Wachsende, teils international aufgestellte Mittelständler mit komplexeren HR-Prozessen.",
+    "pricing": "Individuelles Angebot nach Mitarbeiterzahl und Modulen.",
+    "features": "Core mit Mitarbeiterdaten, Dokumenten, Abwesenheiten, Workflows, Integrationen und Analysen; weitere Module nach Auswahl.",
+    "review": "Bob kann interessant sein, wenn HR-Reporting und mehrere Teams oder Länder zusammenkommen. Ein kleines Unternehmen mit einfachen Zeit- und Aktenprozessen sollte die Einführung und die Modulpreise gegen schlankere Alternativen halten. Payroll-Integration nicht mit einer für Deutschland bestätigten nativen Lohnabrechnung gleichsetzen.",
+    "alternatives": [
+      "Personio",
+      "Factorial."
+    ],
+    "sources": [
+      {
+        "label": "Tarife und Preismodell",
+        "url": "https://www.hibob.com/de/pricing-plans/"
+      },
+      {
+        "label": "Payroll-Einordnung",
+        "url": "https://www.hibob.com/de/faq/"
+      }
+    ],
+    "vendorUrl": "https://www.hibob.com/de/pricing-plans/",
+    "priceShort": "Individuelles Angebot nach Mitarbeiterzahl und Modulen"
+  },
+  {
+    "id": 16,
+    "name": "Pipedrive",
+    "slug": "pipedrive",
+    "category": "CRM",
+    "categorySlug": "crm",
+    "fit": "Vertriebsteams, die eine visuelle Pipeline und konsequente Nachverfolgung von Deals benötigen.",
+    "pricing": "Deutsche Preisseite zeigte Lite ab 14 US-Dollar pro Nutzer und Monat bei Jahreszahlung; da der Anbieter auf der DE-Seite USD ausspielte, keinen EUR-Betrag umrechnen oder erfinden.",
+    "features": "Leads, Deals, Kontakte, Kalender, Berichte; höhere Pläne und Add-ons ergänzen Automatisierung.",
+    "review": "Die klare Konzentration auf den Vertrieb macht Pipedrive für kleine Sales-Teams gut prüfbar. Unternehmen, die Marketing, Support und tiefe Anpassungen in einer Suite erwarten, sollten Funktionsumfang und Zusatzkosten gegen HubSpot oder SuperOffice halten.",
+    "alternatives": [
+      "CentralStationCRM für sehr kleine Teams",
+      "HubSpot Sales Hub für Plattformausbau."
+    ],
+    "sources": [
+      {
+        "label": "Deutsche Preis- und Funktionsseite",
+        "url": "https://www.pipedrive.com/de/pricing"
+      }
+    ],
+    "vendorUrl": "https://www.pipedrive.com/de/pricing",
+    "priceShort": "Deutsche Preisseite zeigte Lite ab 14 US-Dollar pro Nutzer und Monat bei Jahreszahlung"
+  },
+  {
+    "id": 17,
+    "name": "HubSpot Sales Hub",
+    "slug": "hubspot-sales-hub",
+    "category": "CRM",
+    "categorySlug": "crm",
+    "fit": "Teams, die CRM und Vertrieb mit späterem Marketing-/Service-Ausbau verbinden möchten.",
+    "pricing": "Aktuelle dynamische DE-Preisseite zeigt Starter ab 7 €/Lizenz und Monat, Professional 90 €, Enterprise 150 €; Abrechnungsart, mögliche Aktionen und Onboarding im Checkout bestätigen.",
+    "features": "Kontakte und Deals, E-Mail, Meetingplanung; höhere Stufen bieten mehr Pipelines, Automatisierung und Steuerung.",
+    "review": "Der kostenlose Einstieg und das breite Ökosystem senken die Startschwelle. Für wachsende Teams können Lizenzstufen und kostenpflichtige Zusatzprodukte einen großen Kostensprung bedeuten; der Vergleich muss den tatsächlich benötigten Workflow abbilden.",
+    "alternatives": [
+      "Pipedrive für fokussierten Vertrieb",
+      "Zoho CRM für anpassbare Prozesse."
+    ],
+    "sources": [
+      {
+        "label": "Aktuelle Preisseite",
+        "url": "https://www.hubspot.de/pricing/sales"
+      },
+      {
+        "label": "Produkt",
+        "url": "https://www.hubspot.de/products/sales"
+      }
+    ],
+    "vendorUrl": "https://www.hubspot.de/pricing/sales",
+    "priceShort": "Aktuelle dynamische DE-Preisseite zeigt Starter ab 7 €/Lizenz und Monat, Professional 90 €, Enterprise 15"
+  },
+  {
+    "id": 18,
+    "name": "CentralStationCRM",
+    "slug": "centralstationcrm",
+    "category": "CRM",
+    "categorySlug": "crm",
+    "fit": "Kleine deutsche Teams, die Kontakte und Aktivitäten ohne komplexe CRM-Einführung teilen möchten.",
+    "pricing": "Starter kostenlos (bis 3 Nutzer, 200 Kontakte); Team 24 €/Monat (3 Nutzer, 3.000 Kontakte), Small Office 75 € (10 Nutzer), Business 149 € (20 Nutzer), Enterprise 289 € (40 Nutzer); zzgl. MwSt.",
+    "features": "Gleicher Grundfunktionsumfang über Pakete, Grenzen liegen vor allem bei Nutzern, Kontakten und Speicher.",
+    "review": "Diese Preislogik ist für kleine Teams leicht zu verstehen und verhindert Funktionsrätsel zwischen Stufen. Wachsende Kontaktbestände oder Dateien können ein Upgrade oder zusätzliche Kapazität erfordern; ein aktives Vertriebsteam sollte außerdem Integrations- und Automationsbedarf prüfen.",
+    "alternatives": [
+      "Pipedrive",
+      "HubSpot Sales Hub."
+    ],
+    "sources": [
+      {
+        "label": "Pakete und Grenzen",
+        "url": "https://centralstationcrm.de/plans"
+      }
+    ],
+    "vendorUrl": "https://centralstationcrm.de/plans",
+    "priceShort": "Starter kostenlos (bis 3 Nutzer, 200 Kontakte)"
+  },
+  {
+    "id": 19,
+    "name": "Zoho CRM",
+    "slug": "zoho-crm",
+    "category": "CRM",
+    "categorySlug": "crm",
+    "fit": "Unternehmen, die ein anpassbares CRM mit Workflows und breitem Funktionsausbau suchen.",
+    "pricing": "Kostenfreie Edition laut deutscher Herstellerseite für bis zu drei Benutzer; für bezahlte deutsche Pläne kein verifizierter EUR-Preis aus der dynamischen Preisseite (sie zeigte INR-Werte trotz DE-URL).",
+    "features": "Standard unter anderem Pipeline, Workflow und Berichte; höhere Editionen erweitern Prozessautomatisierung, Anpassung und Analysen.",
+    "review": "Zoho eignet sich für Teams, die Prozessstruktur aktiv konfigurieren wollen. Die vielen Editionen und Sonderlizenzarten verlangen genaue Prüfung von Nutzerrollen und benötigten Funktionen. Eine INR-Zahl aus der DE-Seite darf nicht als deutscher Preis veröffentlicht werden.",
+    "alternatives": [
+      "HubSpot Sales Hub",
+      "Pipedrive."
+    ],
+    "sources": [
+      {
+        "label": "Deutsche Editionen und Preiswähler",
+        "url": "https://www.zoho.com/de/crm/zohocrm-pricing.html"
+      }
+    ],
+    "vendorUrl": "https://www.zoho.com/de/crm/zohocrm-pricing.html",
+    "priceShort": "Kostenfreie Edition laut deutscher Herstellerseite für bis zu drei Benutzer"
+  },
+  {
+    "id": 20,
+    "name": "SuperOffice CRM",
+    "slug": "superoffice-crm",
+    "category": "CRM",
+    "categorySlug": "crm",
+    "fit": "Mittelständische Teams, die Vertrieb, Service und Kundenkontakt auf einer CRM-Plattform bündeln möchten.",
+    "pricing": "Starter 45 €, Core 65 €, Growth 95 €, Plus 130 €, Super 160 € pro Nutzer und Monat; die Website sagt, dass die angezeigten Preise für jährliche Zahlung gelten.",
+    "features": "Kontakte und Aktivitäten ab Starter; Core ergänzt Pipeline, Projekte, Service und Automatisierung, Growth stärkere Vertriebs- und Serviceprozesse.",
+    "review": "Das Produkt ist als breites Kundenmanagement sinnvoll, wenn mehrere Abteilungen denselben Datenbestand brauchen. Der Preis pro Person und separat angebotene Einführung/Schulung sollten vor Vertragsabschluss als Gesamtkosten gerechnet werden.",
+    "alternatives": [
+      "HubSpot Sales Hub",
+      "Pipedrive."
+    ],
+    "sources": [
+      {
+        "label": "Deutsche Preise und Leistungsgrenzen",
+        "url": "https://www.superoffice.de/preise/"
+      }
+    ],
+    "vendorUrl": "https://www.superoffice.de/preise/",
+    "priceShort": "Starter 45 €, Core 65 €, Growth 95 €, Plus 130 €, Super 160 € pro Nutzer und Monat"
+  },
+  {
+    "id": 21,
+    "name": "weclapp",
+    "slug": "weclapp",
+    "category": "ERP",
+    "categorySlug": "erp",
+    "fit": "Kleine bis mittlere Dienstleister, Händler und E-Commerce-Teams.",
+    "pricing": "ERP Starter 39 €/Nutzer/Monat; Dienstleistung 86 € bei jährlicher bzw. 95 € bei monatlicher Zahlung; Handel 163/179 €; netto. Enterprise auf Anfrage.",
+    "features": "Starter für Kontakte, Angebote, Rechnungen und Fibu; Dienstleistung ergänzt CRM/Projekte/Zeit, Handel Warenwirtschaft, Lager und Produktion.",
+    "review": "Die Trennung nach Arbeitsmodell erleichtert die Vorauswahl. Der Starterpreis ist für Handelsunternehmen ungeeignet als Vergleichsanker, weil die relevanten Lager-/Shopfunktionen erst im Handelspaket liegen. Bei mehreren Mitarbeitenden wächst der Nutzerpreis spürbar.",
+    "alternatives": [
+      "Xentral für auftragsstarken Handel",
+      "Sage 100 für modulare Mittelstandsprozesse."
+    ],
+    "sources": [
+      {
+        "label": "Pakete und Preise",
+        "url": "https://www.weclapp.com/de/preise/"
+      }
+    ],
+    "vendorUrl": "https://www.weclapp.com/de/preise/",
+    "priceShort": "ERP Starter 39 €/Nutzer/Monat"
+  },
+  {
+    "id": 22,
+    "name": "Xentral",
+    "slug": "xentral",
+    "category": "ERP",
+    "categorySlug": "erp",
+    "fit": "Handels- und E-Commerce-Unternehmen mit Aufträgen, Lager, Versand und Shop-/Marktplatzanbindung.",
+    "pricing": "Launch ab 99 €/Monat für Startups bis 500.000 € Jahresumsatz, plus 0,30 €/Auftrag laut Seite; Starter ab 349 €/Monat inklusive 500 Aufträgen/Monat und unbegrenzten Nutzern. Weitere Kosten hängen von Volumen, Modulen und Geschäftsmodell ab.",
+    "features": "Shop-/Marktplatz-Anbindung, Lager, Versand, Rechnungen, DATEV; Pakete unterscheiden sich nach Umfang und Volumen.",
+    "review": "Die unbegrenzten Nutzer können bei Teamwachstum attraktiv sein. Für die Kostenentscheidung sind Auftragsvolumen, Umsatzgrenze und Zusatzmodule wichtiger als ein bloßer Nutzervergleich. Dienstleistungsbetriebe ohne Warenfluss sollten Alternativen prüfen.",
+    "alternatives": [
+      "weclapp",
+      "Odoo."
+    ],
+    "sources": [
+      {
+        "label": "Preise und Bedingungen",
+        "url": "https://xentral.com/de/preise"
+      }
+    ],
+    "vendorUrl": "https://xentral.com/de/preise",
+    "priceShort": "Launch ab 99 €/Monat für Startups bis 500"
+  },
+  {
+    "id": 23,
+    "name": "Odoo",
+    "slug": "odoo",
+    "category": "ERP",
+    "categorySlug": "erp",
+    "fit": "Unternehmen, die CRM, Buchhaltung, Lager, Verkauf und weitere Anwendungen auf einer modularen Plattform verbinden wollen.",
+    "pricing": "Die deutsche Preisseite spielte USD aus: „Eine App gratis“, Standard mit einem angezeigten Einstieg von 24,90 US-Dollar und regulär 31,10 US-Dollar pro Nutzer/Monat, Custom 49/61 US-Dollar; die Quelle beschreibt einen zeitlich begrenzten Rabatt. Keinen EUR-Preis behaupten. Odoo.sh-Hosting ist gesondert.",
+    "features": "Standard bietet Apps auf Odoo Online; Custom ergänzt Studio, mehrere Firmen, externe API und andere Hosting-Optionen.",
+    "review": "Die breite App-Auswahl macht Odoo für unterschiedliche Geschäftsmodelle interessant. Anpassungen, Implementierung und Partnerleistungen können das Gesamtbudget wesentlich verändern; für deutsche Buchhaltungsprozesse konkrete Lokalisierung vor Kauf prüfen.",
+    "alternatives": [
+      "weclapp",
+      "Business Central."
+    ],
+    "sources": [
+      {
+        "label": "Tarife und Fußnoten",
+        "url": "https://www.odoo.com/de_DE/pricing"
+      }
+    ],
+    "vendorUrl": "https://www.odoo.com/de_DE/pricing",
+    "priceShort": "Die deutsche Preisseite spielte USD aus: „Eine App gratis“, Standard mit einem angezeigten Einstieg von 2"
+  },
+  {
+    "id": 24,
+    "name": "Sage 100",
+    "slug": "sage-100",
+    "category": "ERP",
+    "categorySlug": "erp",
+    "fit": "Mittelständische Unternehmen mit modularen Anforderungen an Warenwirtschaft, Rechnungswesen oder Produktion.",
+    "pricing": "Warenwirtschaft ab 56 €, Rechnungswesen ab 58 €, Produktion ab 90 € pro Nutzer und Monat; Jahresrechnung und 12 Monate Mindestlaufzeit, zzgl. MwSt.; Gesamtlösung auf Anfrage.",
+    "features": "Waren, Einkauf, Lager, Rechnungswesen, Controlling, Produktion; Erweiterungen und Partnerlösungen.",
+    "review": "Sage 100 ist eher eine konfigurierbare Prozesslandschaft als ein einfacher Festpreis-Tarif. Der öffentlich genannte Modulpreis darf nicht als Komplettpreis für ERP mit allen Bereichen erscheinen. Geeignet, wenn ein Betrieb seine Prozesse und Implementierung bewusst spezifizieren kann.",
+    "alternatives": [
+      "weclapp für Cloud-Einstieg",
+      "Business Central für Microsoft-Umgebung."
+    ],
+    "sources": [
+      {
+        "label": "Module, Preise und Vertragsbedingungen",
+        "url": "https://www.sage.com/de-de/produkte/sage-100/"
+      }
+    ],
+    "vendorUrl": "https://www.sage.com/de-de/produkte/sage-100/",
+    "priceShort": "Warenwirtschaft ab 56 €, Rechnungswesen ab 58 €, Produktion ab 90 € pro Nutzer und Monat"
+  },
+  {
+    "id": 25,
+    "name": "Microsoft Dynamics 365 Business Central",
+    "slug": "microsoft-dynamics-365-business-central",
+    "category": "ERP",
+    "categorySlug": "erp",
+    "fit": "Wachsende mittelständische Unternehmen, besonders mit Microsoft-Umgebung und Bedarf an Finanz-, Vertriebs- und Warenprozessen.",
+    "pricing": "Essentials 69,30 €, Premium 95,30 €, Team Members 6,90 € pro Nutzer und Monat bei jährlicher Abrechnung, zzgl. MwSt.; Microsoft warnt vor regionalen Abweichungen und verweist für Kauf/Beratung an Partner.",
+    "features": "Essentials mit Finanzmanagement, Einkauf, Lager und Projekten; Premium ergänzt Dienstverwaltung und Fertigung.",
+    "review": "Der Funktionsumfang spricht für komplexere Abläufe. Für einen realistischen Vergleich müssen Partnerimplementierung, Anpassungen, Apps und unterschiedliche Lizenztypen zusätzlich zum Listenpreis kalkuliert werden.",
+    "alternatives": [
+      "Sage 100",
+      "Odoo."
+    ],
+    "sources": [
+      {
+        "label": "Deutsche Preise und Leistungsübersicht",
+        "url": "https://www.microsoft.com/de-de/dynamics-365/products/business-central/pricing"
+      }
+    ],
+    "vendorUrl": "https://www.microsoft.com/de-de/dynamics-365/products/business-central/pricing",
+    "priceShort": "Essentials 69,30 €, Premium 95,30 €, Team Members 6,90 € pro Nutzer und Monat bei jährlicher Abrechnung, "
+  }
+]

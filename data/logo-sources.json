@@ -1,0 +1,154 @@
+{
+  "lexware-office": {
+    "asset": "/logos/lexware-office.png",
+    "source": "https://www.lexware.de/apple-touch-icon.png",
+    "page": "https://www.lexware.de/preise/",
+    "vendor": "Lexware Office"
+  },
+  "sevdesk": {
+    "asset": "/logos/sevdesk.png",
+    "source": "https://cdn.prod.website-files.com/65c9eb8b18a74904c71e4d3c/66390d25d762a009ca906096_android-chrome-256x256.png",
+    "page": "https://sevdesk.de/preise/",
+    "vendor": "sevdesk"
+  },
+  "billomat": {
+    "asset": "/logos/billomat.png",
+    "source": "https://www.billomat.com/wp-content/themes/billomat/img/logo.svg",
+    "page": "https://www.billomat.com/preise/",
+    "vendor": "Billomat",
+    "note": "Originales Bildzeichen aus der offiziellen Wortmarke"
+  },
+  "agenda-personalwesen": {
+    "asset": "/logos/agenda-personalwesen.png",
+    "source": "https://www.agenda-software.de/software2020-wGlobal/wGlobal/layout/images/site-icons/apple-touch-icon-180x180.png",
+    "page": "https://www.agenda-software.de/unternehmen/preise.php",
+    "vendor": "Agenda Personalwesen"
+  },
+  "factorial": {
+    "asset": "/logos/factorial.png",
+    "source": "https://factorialhr.de/next-favicons/apple-touch-icon.png",
+    "page": "https://factorialhr.de/preise",
+    "vendor": "Factorial"
+  },
+  "kenjo": {
+    "asset": "/logos/kenjo.png",
+    "source": "https://www.kenjo.io/icon2.png?8bd2521e45c1267f",
+    "page": "https://www.kenjo.io/de/preise",
+    "vendor": "Kenjo"
+  },
+  "hr-works": {
+    "asset": "/logos/hr-works.png",
+    "source": "https://www.hrworks.de/wp-content/themes/hrworks/img/favicon/apple-touch-icon.png",
+    "page": "https://www.hrworks.de/produkt/personalverwaltung-software/",
+    "vendor": "HR WORKS"
+  },
+  "hibob-bob": {
+    "asset": "/logos/hibob-bob.png",
+    "source": "https://new.hibob.com/app/uploads/2026/05/cropped-HiBob-Logo-Icon-180x180.png",
+    "page": "https://www.hibob.com/de/pricing-plans/",
+    "vendor": "HiBob / Bob"
+  },
+  "pipedrive": {
+    "asset": "/logos/pipedrive.png",
+    "source": "https://cdn.dub-1.pipedriveassets.com/www-main-renderer/_next/static/media/apple-touch-icon-152x152.8af4bcfd.png",
+    "page": "https://www.pipedrive.com/de/pricing",
+    "vendor": "Pipedrive"
+  },
+  "hubspot-sales-hub": {
+    "asset": "/logos/hubspot-sales-hub.png",
+    "source": "https://static.hsappstatic.net/quartz/static-1.6368/favicon/apple-touch-icon.png",
+    "page": "https://www.hubspot.de/pricing/sales",
+    "vendor": "HubSpot Sales Hub"
+  },
+  "superoffice-crm": {
+    "asset": "/logos/superoffice-crm.png",
+    "source": "https://www.superoffice.de/static/favicons/apple-touch-icon.png",
+    "page": "https://www.superoffice.de/preise/",
+    "vendor": "SuperOffice CRM"
+  },
+  "weclapp": {
+    "asset": "/logos/weclapp.png",
+    "source": "https://www.weclapp.com/de/wp-content/uploads/sites/4/2021/01/weclapp-site-icon-300x300.png",
+    "page": "https://www.weclapp.com/de/preise/",
+    "vendor": "weclapp"
+  },
+  "xentral": {
+    "asset": "/logos/xentral.png",
+    "source": "https://avatars.githubusercontent.com/u/49244947?s=256&v=4",
+    "page": "https://github.com/xentral",
+    "vendor": "Xentral"
+  },
+  "lexware-office-lohn-gehalt": {
+    "asset": "/logos/lexware-office.png",
+    "source": "https://www.lexware.de/apple-touch-icon.png",
+    "page": "https://www.lexware.de/preise/",
+    "vendor": "Lexware Office Lohn & Gehalt"
+  },
+  "fastbill": {
+    "asset": "/logos/fastbill.png",
+    "source": "https://www.fastbill.com/themes/custom/fastbill/img/FastBill-Logo-Black.svg",
+    "page": "https://www.fastbill.com/preise",
+    "vendor": "FastBill",
+    "note": "Originales Bildzeichen aus der offiziellen Wortmarke"
+  },
+  "centralstationcrm": {
+    "asset": "/logos/centralstationcrm.png",
+    "source": "https://centralstationcrm.de/_astro/logo-crm-icon.TqGkD-7P.svg",
+    "page": "https://centralstationcrm.de/",
+    "vendor": "centralstationcrm"
+  },
+  "zoho-crm": {
+    "asset": "/logos/zoho-crm.png",
+    "source": "https://www.zohowebstatic.com/sites/zweb/images/favicon.ico",
+    "page": "https://www.zohowebstatic.com/sites/zweb/images/favicon.ico",
+    "vendor": "zoho-crm"
+  },
+  "odoo": {
+    "asset": "/logos/odoo.png",
+    "source": "https://cdn.simpleicons.org/odoo",
+    "page": "https://www.odoo.com/page/brand-assets",
+    "vendor": "odoo"
+  },
+  "sage-active": {
+    "asset": "/logos/sage-active.png",
+    "source": "https://cdn.simpleicons.org/sage",
+    "page": "https://simpleicons.org/?q=sage",
+    "vendor": "Sage"
+  },
+  "datev-lohn-und-gehalt": {
+    "asset": "/logos/datev-lohn-und-gehalt.png",
+    "source": "https://cdn.simpleicons.org/datev",
+    "page": "https://simpleicons.org/?q=datev",
+    "vendor": "DATEV"
+  },
+  "microsoft-dynamics-365-business-central": {
+    "asset": "/logos/microsoft-dynamics-365-business-central.png",
+    "source": "https://raw.githubusercontent.com/DamoBird365/microsoft-cloud-icons/master/icons/dynamics-365/business-central.svg",
+    "page": "https://github.com/DamoBird365/microsoft-cloud-icons",
+    "vendor": "Microsoft Dynamics 365 Business Central"
+  },
+  "personio": {
+    "asset": "/logos/personio.png",
+    "source": "https://cdn.simpleicons.org/personio",
+    "page": "https://simpleicons.org/?q=personio",
+    "vendor": "Personio"
+  },
+  "sage-payroll": {
+    "asset": "/logos/sage-active.png",
+    "source": "https://cdn.simpleicons.org/sage",
+    "page": "https://simpleicons.org/?q=sage",
+    "vendor": "Sage Payroll"
+  },
+  "sage-100": {
+    "asset": "/logos/sage-active.png",
+    "source": "https://cdn.simpleicons.org/sage",
+    "page": "https://simpleicons.org/?q=sage",
+    "vendor": "Sage 100"
+  },
+  "personio-payroll": {
+    "asset": "/logos/personio.png",
+    "source": "https://cdn.simpleicons.org/personio",
+    "page": "https://simpleicons.org/?q=personio",
+    "vendor": "Personio Payroll"
+  }
+}

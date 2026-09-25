@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { guides } from "@/data/guides";
+import { categories, categorySlugs } from "@/lib/catalog";
+export const metadata={title:"Ratgeber zur Softwareauswahl | Klarlotse",description:"Praktische Ratgeber für Buchhaltung, Lohnabrechnung, Personal, CRM und ERP."};
+export default function GuidesPage(){return <main><section className="page-hero shell"><p className="eyebrow">RATGEBER</p><h1>Wissen, bevor Sie entscheiden.</h1><p>Gute Software löst eine konkrete Aufgabe. Unsere Ratgeber helfen Ihnen, Anforderungen zu sortieren, Kosten richtig zu lesen und im Gespräch mit Anbietern die richtigen Fragen zu stellen.</p></section><div className="shell guides-index">{categorySlugs.map((slug)=><section key={slug}><div className="guide-category-header"><span>{categories[slug].number} / 05</span><h2>{categories[slug].name}</h2></div><div className="guide-cards">{guides.filter((g)=>g.category===slug).map((g)=><Link href={`/ratgeber/${g.slug}`} key={g.slug}><span>LESEZEIT {g.readingMinutes} MINUTEN</span><h3>{g.title}</h3><p>{g.intro}</p><strong>Ratgeber lesen <ArrowUpRight size={17}/></strong></Link>)}</div></section>)}</div></main>}
