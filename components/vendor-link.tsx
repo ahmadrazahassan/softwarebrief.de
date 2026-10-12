@@ -7,7 +7,7 @@ export function VendorLink({ product, className = "", cta, label = "Anbieter bes
   const destination = withAffiliateLink(product);
   const affiliate = destination.linkType === "affiliate";
   const rel = affiliate ? "noopener noreferrer sponsored" : "noopener noreferrer";
-  const content = <>{affiliate && <span className="affiliate-label">Werbung</span>}{label}</>;
+  const content = <>{affiliate && <span className="affiliate-label">Werbung</span>}<span className="vendor-link-text">{label}</span></>;
   const accessibleLabel = `${affiliate ? "Werbung: " : ""}${ariaLabel ?? `${label}: ${product.name}`} (öffnet in neuem Tab)`;
   if (cta) return <a className={ctaClass({ ...cta, className })} href={destination.vendorUrl} target="_blank" rel={rel} aria-label={accessibleLabel}>
     <CtaContent icon={<ArrowUpRight size={18} strokeWidth={1.75} />}>{content}</CtaContent>

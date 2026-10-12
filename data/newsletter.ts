@@ -83,7 +83,7 @@ export const newsletter = {
       { term: "Welche Daten", text: "Ihre E-Mail-Adresse sowie Zeitpunkt und Nachweis Ihrer Bestätigung." },
       { term: "Wofür", text: "Ausschließlich für den Versand des Softwarebriefs." },
       { term: "Rechtsgrundlage", text: "Ihre Einwilligung nach Artikel 6 Absatz 1 Buchstabe a der Datenschutz-Grundverordnung." },
-      { term: "Versanddienstleister", text: "Versand und Verwaltung der Adressen übernimmt ein Dienstleister, mit dem wir einen Vertrag zur Auftragsverarbeitung schließen. Seinen Namen nennen wir in der Datenschutzerklärung." },
+      { term: "Versanddienstleister", text: "Bestätigungsmail, Versand und Verwaltung der bestätigten Adressen übernimmt Resend. Weitere Angaben finden Sie in der Datenschutzerklärung." },
       { term: "Speicherdauer", text: "Bis Sie Ihre Einwilligung widerrufen. Danach löschen wir Ihre Adresse, soweit keine gesetzlichen Aufbewahrungs- oder Nachweispflichten entgegenstehen." },
       { term: "Ihre Rechte", text: "Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Zudem haben Sie Rechte auf Auskunft, Berichtigung und Löschung sowie auf Beschwerde bei einer Aufsichtsbehörde." },
     ],

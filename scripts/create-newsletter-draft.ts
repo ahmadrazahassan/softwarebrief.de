@@ -1,0 +1,18 @@
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { currentIssue } from "@/data/newsletter-issue";
+import { operator, addressLines } from "@/data/operator";
+import { renderNewsletterEmail } from "@/lib/newsletter-email";
+process.loadEnvFile(".env.local");
+const key=process.env.RESEND_CONTACTS_API_KEY||process.env.RESEND_API_KEY;
+const segment=process.env.RESEND_SEGMENT_ID;
+const from=process.env.RESEND_FROM_EMAIL;
+if(!key||!segment||!from)throw new Error("Configure Resend in .env.local first.");
+const file="outputs/newsletter-draft.json";
+const previous=existsSync(file)?JSON.parse(readFileSync(file,"utf8")):null;
+const id=previous?.label===currentIssue.label&&/^[a-f0-9-]{36}$/.test(previous?.id)?previous.id:null;
+const email=renderNewsletterEmail(currentIssue,operator.siteUrl,{name:operator.name,address:addressLines().slice(1).join(", "),email:operator.email!});
+const response=await fetch(`https://api.resend.com/broadcasts${id?`/${id}`:""}`,{method:id?"PATCH":"POST",headers:{Authorization:`Bearer ${key}`,"Content-Type":"application/json"},body:JSON.stringify({from,name:currentIssue.label,subject:email.subject,html:email.html,text:email.text,...(!id?{segment_id:segment,send:false}:{})})});
+if(!response.ok)throw new Error(`Resend draft update HTTP ${response.status}`);
+const result=await response.json();mkdirSync("outputs",{recursive:true});
+writeFileSync(file,JSON.stringify({id:result.id??id,label:currentIssue.label},null,2)+"\n");
+console.log(`${id?"Updated":"Created"} German newsletter draft ${result.id??id}. No newsletter was sent.`);

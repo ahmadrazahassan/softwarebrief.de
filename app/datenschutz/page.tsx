@@ -49,9 +49,9 @@ export default function PrivacyPage() {
       </section>
 
       <section aria-labelledby="newsletter"><h2 id="newsletter">Newsletter (Softwarebrief)</h2>
-        <p>Wenn Sie sich für den Softwarebrief anmelden, verarbeiten wir Ihre E-Mail-Adresse. Wir verwenden das Double Opt-in Verfahren: Nach der Anmeldung erhalten Sie eine E-Mail mit einem Bestätigungslink. Erst nach dem Klick sind Sie angemeldet. Den Zeitpunkt der Anmeldung und der Bestätigung sowie technische Angaben dazu speichert der Versanddienstleister als Nachweis Ihrer Einwilligung.</p>
+        <p>Wenn Sie sich für den Softwarebrief anmelden, verarbeiten wir Ihre E-Mail-Adresse. Wir verwenden das Double Opt-in Verfahren: Nach der Anmeldung erhalten Sie eine E-Mail mit einem Bestätigungslink. Erst nach dem Klick sind Sie angemeldet. Nach Ihrer Bestätigung speichern wir Ihre Adresse, den Zeitpunkt der Anmeldung und der Bestätigung sowie die Version der Einwilligung in der Kontaktverwaltung von Resend. Vor der Bestätigung wird Ihre Adresse nur für die Bestätigungsmail verarbeitet.</p>
         <p><strong>Zweck:</strong> Versand des Softwarebriefs, der einmal im Monat erscheint. <strong>Rechtsgrundlage:</strong> Ihre Einwilligung nach Artikel 6 Absatz 1 Buchstabe a DSGVO. Den Nachweis speichern wir auf Grundlage von Artikel 6 Absatz 1 Buchstabe f, weil wir die Einwilligung belegen müssen. <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, zum Beispiel über den Abmeldelink in jeder Ausgabe oder per E-Mail an {operator.email}. <strong>Speicherdauer:</strong> bis zum Widerruf. Danach löschen wir Ihre Adresse, soweit keine gesetzlichen Aufbewahrungs- oder Nachweispflichten entgegenstehen.</p>
-        <p><strong>Versanddienstleister:</strong> Für Versand und Verwaltung der Adressen nutzen wir den Dienst Brevo. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung nach Artikel 28 DSGVO. Wir geben Ihre Adresse nicht an Softwareanbieter weiter. Mehr zum Verfahren steht auf der Seite <Link href="/newsletter">Newsletter</Link>.</p>
+        <p><strong>Versanddienstleister:</strong> Für Versand und Verwaltung der Adressen nutzen wir Resend (Resend, Inc., USA). Weitere Hinweise finden Sie in der <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Resend</a>. Wir geben Ihre Adresse nicht an Softwareanbieter weiter. Mehr zum Verfahren steht auf der Seite <Link href="/newsletter">Newsletter</Link>.</p>
       </section>
 
       <section aria-labelledby="erfahrungen"><h2 id="erfahrungen">Erfahrungsberichte einreichen</h2>
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
             <tbody>
               <tr><th scope="row">{operator.hosting.name}</th><td>Betrieb der Website, Server Protokolle</td><td>{operator.hosting.country}, Absicherung über EU-US Data Privacy Framework und Standardvertragsklauseln</td></tr>
               <tr><th scope="row">Cloudinary</th><td>Auslieferung von Bildern, Videos und Dokumentseiten</td><td>EU, USA, Vereinigtes Königreich, Singapur, Israel; Teilnahme am EU-US Data Privacy Framework</td></tr>
-              <tr><th scope="row">Brevo</th><td>Versand des Newsletters, nur nach Ihrer Anmeldung</td><td>Anbieter in der Europäischen Union, Auftragsverarbeitung</td></tr>
+              <tr><th scope="row">Resend</th><td>Bestätigungsmail und Kontaktverwaltung, Newsletter nach Ihrer Bestätigung</td><td>USA</td></tr>
               <tr><th scope="row">Supabase</th><td>Speicherung eingereichter Erfahrungsberichte, nur wenn Sie einen Beitrag senden</td><td>Auftragsverarbeitung</td></tr>
             </tbody>
           </table>

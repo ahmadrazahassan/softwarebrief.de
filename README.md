@@ -4,7 +4,7 @@ German software comparison site for small and medium businesses. The starter cat
 
 ## Run locally
 
-Use Node.js 22.13 or later.
+Use Node.js 24.x (also configured for Vercel).
 
 ```bash
 npm ci
@@ -22,6 +22,8 @@ The site works immediately with the checked in research catalog. No database cre
 
 `catalog_products.profile` stores the complete structured profile. The `outbound_links` table stores the active vendor destination for each product. Set `link_type` to `affiliate` only when a real agreement and tracking URL exist. The site then shows `Werbung` beside that link and adds `rel="sponsored"`. Never replace a vendor link with an unverified destination.
 
+The partner section appears immediately after the homepage guides. Official FreshBooks and easybill SVG marks are downloaded from their own websites; provenance is in data/logo-sources.json. CTA labels wrap within their buttons, including translated labels.
+
 The five confirmed Affiliate Partners (FastBill, Lexware, sevdesk, FreshBooks and easybill) and the exact operator supplied tracking URLs live in `lib/affiliate.ts`. The overrides run on both the local catalog and the merged Supabase catalog, so older remote destinations cannot undo these links. Both Lexware Office profiles use the Lexware partner URL. `VendorLink` applies the same override for every provider CTA, including tariff cards and the mobile bar, and adds the visible `Werbung` label plus `rel="sponsored"`. The homepage shows all five partners; FreshBooks and easybill link directly to their vendors and do not claim to have researched catalog profiles. Affiliate disclosure appears before the partner cards, in the global footer, on partner profiles, and at `/methodik#affiliate-offenlegung`. Editorial source links keep their original destinations.
 
 The review form appears after Supabase is connected. Submitted reviews remain `pending` and are invisible to visitors. Review each submission in the Supabase console, then set `moderation_status` to `published` and `published_at` to the publication time. No fabricated ratings or testimonials are included. The public anon key can insert pending reviews but cannot approve them or edit catalog entries.
@@ -30,21 +32,13 @@ The review form appears after Supabase is connected. Submitted reviews remain `p
 
 The newsletter page lives at `/newsletter`. Sign-up forms also appear at the end of the homepage and of every guide. The confirmation and goodbye pages are `/newsletter/bestaetigt` and `/newsletter/abgemeldet` (both `noindex`).
 
-**Architecture.** The email service owns the subscriber list, sends the confirmation email (double opt-in) and hosts the unsubscribe link. The site only forwards the address through `POST /api/newsletter/anmeldung`. This keeps proof of consent with a processor that is under a data processing agreement and keeps every secret out of the repository. We deliberately do not store subscribers in Supabase: the double opt-in check would need a server secret (the service role key), which this project avoids.
+**Architecture.** Resend sends a confirmation email through its transactional API. A signed link is valid for 48 hours. Opening the link does not subscribe the visitor: an explicit confirmation POST creates or updates the contact in the dedicated Softwarebrief segment. Resend contact properties store the request time, confirmation time and consent version. An old confirmation cannot reactivate a contact after unsubscribe. No local subscriber database is used. Send the monthly issue as a Resend Broadcast to this segment and include Resend's native unsubscribe link in every issue.
 
-**Default is off.** Without `NEWSLETTER_PROVIDER` the API answers 503 with a German "noch nicht freigeschaltet" message, in every environment. The form never fakes a success.
+**Configuration.** The default remains off when NEWSLETTER_PROVIDER is empty. Use NEWSLETTER_PROVIDER=resend, RESEND_API_KEY, RESEND_FROM_EMAIL, NEWSLETTER_TOKEN_SECRET and RESEND_SEGMENT_ID as server environment variables. A sending-only key can deliver emails but cannot manage contacts: supply a Full access key through RESEND_CONTACTS_API_KEY, or use one Full access RESEND_API_KEY for both. The token secret must have at least 32 random characters and remain stable between deployments. NEXT_PUBLIC_SITE_URL defaults to the domain in data/operator.ts. The Resend sender domain must be verified.
 
-**Local preview.** Put `NEWSLETTER_PROVIDER=dev` into `.env.local` and restart the dev server. The form then validates, shows the success state with a visible "Testmodus" note and writes a masked line to the server log. No email is sent and nothing is stored. Test mode is ignored in any production build (`import.meta.env.PROD` is fixed at build time because Cloudflare Workers do not reliably set `NODE_ENV`).
+**One-time setup.** Put the real credentials in the ignored .env.local and run `node scripts/configure-resend.mjs`. This reuses or creates the Softwarebrief segment and the three consent properties, then writes RESEND_SEGMENT_ID to .env.local. It sends no email. Configure the same values in the production host. Never commit real .env files. The tracked .env.example contains placeholders only.
 
-**Going live with Brevo** (the only adapter so far; `lib/newsletter.ts` is the single place to add another provider such as rapidmail or CleverReach):
-
-1. Create a Brevo account, sign the data processing agreement and create a contact list. Note its numeric ID.
-2. Create a double opt-in email template in German. It must contain the confirmation link placeholder `{{ params.DOIurl }}`. Note the template ID.
-3. In the list's unsubscribe settings, set the redirect page to `https://<your-domain>/newsletter/abgemeldet`.
-4. Set `NEWSLETTER_PROVIDER=brevo`, `BREVO_API_KEY`, `BREVO_LIST_ID`, `BREVO_DOI_TEMPLATE_ID` and `NEXT_PUBLIC_SITE_URL` as server environment variables of the hosting. After the confirmation click Brevo redirects to `<NEXT_PUBLIC_SITE_URL>/newsletter/bestaetigt`.
-5. Add rate limiting or a bot challenge in front of `/api/newsletter/anmeldung` (for example a Cloudflare rate limiting rule or Turnstile). The form has a honeypot and requires JSON, but without a limit someone can still trigger confirmation emails to a third party address by repeating requests.
-
-The Brevo request in `subscribeWithBrevo` follows its documented double opt-in endpoint and is covered by tests with mocked responses. It has not been run against a live Brevo account, so send one real signup through a test list before launch.
+**Local preview.** NEWSLETTER_PROVIDER=dev validates the form and logs a masked address without sending or storing anything. This mode is disabled in production. For actual signup, the form only succeeds after Resend accepts the confirmation email and contact storage has been checked. Confirmation errors and expired links never display a successful subscription. Add request rate limiting at the hosting edge before public signup; the existing form honeypot remains active.
 
 Copy lives in `data/newsletter.ts`; the sample issue is built from the existing CRM guide in `data/newsletter-sample.ts`. The sample is labelled as such and is not presented as a sent issue. Run the tests with `npm test`.
 
@@ -96,8 +90,35 @@ The product cards use real company marks stored under `public/logos/`. `data/log
 
 ## Legal pages (Impressum, Datenschutz, Kontakt)
 
-The operator's details live in one file, `data/operator.ts`, and feed all three pages. Filled in on 13 October 2026: name, c/o address, phone and the e-mail address `niklas.winterfeld@softwarebrief.de` (shown on Impressum, Kontakt, Datenschutz, in the footer and in the newsletter FAQ). The mailbox itself must exist at the domain host before launch, and it should be the same address that Brevo uses as sender. Add `vatId` if the operator has one. If the site is run through a company (UG, GmbH), the Impressum needs company name, legal form, representative and register number instead of a private person.
+The operator's details live in one file, `data/operator.ts`, and feed all three pages. Filled in on 13 October 2026: name, c/o address, phone and the e-mail address `niklas.winterfeld@softwarebrief.de` (shown on Impressum, Kontakt, Datenschutz, in the footer and in the newsletter FAQ). The mailbox itself must exist at the domain host before launch, and it should be the same address that Resend uses as sender. Add `vatId` if the operator has one. If the site is run through a company (UG, GmbH), the Impressum needs company name, legal form, representative and register number instead of a private person.
 
-The privacy statement (`app/datenschutz/page.tsx`) describes what the code really does: no cookies or analytics, server logs at the host (`operator.hosting`, Cloudflare by default), Cloudinary for media, self hosted fonts, contact, newsletter via Brevo, review submissions via Supabase. Before launch the operator must actually have the contracts it states (data processing agreements with the host, Cloudinary, Brevo and Supabase; choose an EU region for Supabase), and the text must be updated when something changes, for example newsletter open tracking or an analytics tool. Have a lawyer or a data protection officer read it once. Decide how long review submissions are retained and document it there before enabling reviews publicly.
+The privacy statement (`app/datenschutz/page.tsx`) describes what the code really does: no cookies or analytics, server logs at the host (`operator.hosting`, Vercel for production), Cloudinary for media, self hosted fonts, contact, newsletter via Resend, review submissions via Supabase. Before launch the operator must actually have the contracts it states (data processing agreements with the host, Cloudinary, Resend and Supabase; choose an EU region for Supabase), and the text must be updated when something changes, for example newsletter open tracking or an analytics tool. Have a lawyer or a data protection officer read it once. Decide how long review submissions are retained and document it there before enabling reviews publicly.
 
 The visual brief and complete website generation prompt are in the parent workspace at `website-generation-prompt.md`; reference screenshots and design notes are under `research/`.
+
+## Current storage setup
+
+| Component | Current setup |
+|---|---|
+| Software catalog, articles, editorial content, affiliate URLs | Versioned JSON/TypeScript files |
+| Images, videos and documents | Local public assets and Cloudinary |
+| Newsletter delivery and confirmed subscriber storage | Resend API, Contacts, Softwarebrief segment and consent properties |
+| Supabase | Optional code and SQL schema exist; no credentials are configured, so reviews stay disabled |
+| Website database | None connected; Cloudflare starter bindings have been removed |
+| Site hosting | Standard Next.js on Vercel; local Next.js preview |
+
+Real local environment variables are not pushed to GitHub. Configure them separately on any new hosting destination. No scheduler for the monthly newsletter has been created; compose and send issues from Resend Broadcasts.
+
+## Deploy on Vercel
+
+Import the GitHub repository as a new Vercel project. The app is at the repository root; use the Next.js framework preset, Node.js 24.x, npm ci and npm run build. vercel.json declares the framework and commands. No custom output directory or Cloudflare bindings are needed.
+
+Add the values from your private .env.local to Vercel Project Settings → Environment Variables for Production (and Preview if needed). Required newsletter keys: NEWSLETTER_PROVIDER=resend, RESEND_API_KEY, RESEND_CONTACTS_API_KEY, RESEND_FROM_EMAIL, RESEND_SEGMENT_ID and NEWSLETTER_TOKEN_SECRET. Keep the token secret stable. Set NEXT_PUBLIC_SITE_URL=https://softwarebrief.de for production and add the softwarebrief.de domain in Vercel. For preview signup tests, set the public origin to that preview URL. NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME is the only Cloudinary value the site needs for delivery; Cloudinary API secrets are for the local upload script only. Supabase keys are optional and not required for the catalog.
+
+The real env file stays out of GitHub. A new hosting environment does not inherit local credentials. Redeploy after changing environment variables.
+
+German email previews: npm run emails:preview. Newsletter drafts: npm run newsletter:draft creates a Resend Broadcast draft using existing published guides and a native unsubscribe link. It never sends the broadcast. Review and send the issue from Resend. The monthly issue is not scheduled automatically.
+
+## Brand assets and email design
+
+The existing diamond mark, Lato wordmark and green dot are exported as transparent PNGs in public/brand. The light version appears in the site footer. Confirmation emails embed the dark logo as a CID attachment, so it does not depend on a live website image URL. Monthly broadcasts use the same logo from the production domain. Both emails use the website charcoal, green and pale green colors, table layouts, German copy and a plain text alternative. Regenerate logos with npm run brand:build. Next.js output tracing explicitly includes the confirmation logo in the Vercel function.

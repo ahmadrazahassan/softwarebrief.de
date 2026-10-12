@@ -71,10 +71,10 @@
 .partner-disclosure p{font-size:13px;line-height:1.75;color:#42594b;margin:7px 0 0;max-width:1040px}
 .partner-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
 .partner-card{display:flex;flex-direction:column;min-width:0;padding:20px;background:#fff;border:1px solid #d2e0d6;border-radius:16px}
-.partner-card-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.partner-card-head .product-logo{width:46px;height:46px;flex:none}
-.partner-card-head .product-logo>span{display:grid;place-items:center;width:46px;height:46px;border-radius:10px;background:#eaf5ec;color:#17683c;font:900 25px Lato,sans-serif}
-.partner-card-head>span{font:900 10px/1.4 Lato,sans-serif;text-align:right;color:#17683c}
+.partner-card-head{display:grid;grid-template-rows:48px auto;align-content:start;justify-items:start;gap:12px;min-height:84px}
+.partner-brand-frame{display:flex;align-items:center;width:100%;min-width:0;height:48px;overflow:hidden}
+.partner-brand-image{display:block;width:auto!important;height:auto!important;max-width:140px!important;max-height:44px!important;object-fit:contain;object-position:left center}
+.partner-status{display:inline-block;padding:5px 8px;border:1px solid #d4e5d9;border-radius:6px;background:#eef7f0;color:#17683c;font:800 10px/1.3 'Open Sans',sans-serif;letter-spacing:.15px}
 .partner-card h3{font:900 23px/1.2 Lato,sans-serif;margin:22px 0 5px;letter-spacing:-.3px}
 .partner-domain{font-size:12px;color:#567060;margin:0}
 .partner-card-copy{font-size:12px;line-height:1.65;color:#4c6154;margin:16px 0 18px}
@@ -82,8 +82,10 @@
 .partner-profiles a{display:flex;align-items:center;justify-content:space-between;gap:7px;font-size:11px;line-height:1.5;font-weight:800;color:#146f3e}
 .partner-profiles svg{flex:none}
 #affiliate-offenlegung{scroll-margin-top:110px}
-.partner-card .cta.cta--sm{font-size:12px;padding-right:12px}
-.partner-card .cta .cta-label{gap:6px;padding-left:8px}
+.partner-card .cta.cta--sm{font-size:13px;padding-right:14px}
+.partner-card .cta .cta-label{gap:6px;padding:7px 0 7px 10px}
+.partner-card .cta .vendor-link-text{flex:0 1 auto}
+.site-footer .footer-brand-logo{display:block;width:240px;max-width:100%;height:auto;object-fit:contain}
 @media(max-width:1150px){.partner-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.partner-section{padding:42px 0}.partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.partner-heading{align-items:start;gap:16px;flex-direction:column}.partner-disclosure{padding:16px}.partner-card{padding:16px}}
 @media(max-width:540px){.partner-grid{grid-template-columns:1fr}.partner-card h3{margin-top:16px}.partner-card .cta.cta--sm{font-size:14px}.partner-card .cta .cta-label{gap:8px;padding-left:16px}}

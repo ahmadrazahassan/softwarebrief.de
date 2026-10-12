@@ -180,5 +180,17 @@
     "source": "https://cdn.simpleicons.org/sage",
     "page": "https://simpleicons.org/?q=sage",
     "vendor": "Sage Sales Management"
+  },
+  "freshbooks": {
+    "asset": "/logos/freshbooks.svg",
+    "source": "https://www.freshbooks.com/_next/static/media/freshbooks-logo.d5e91349.svg",
+    "page": "https://www.freshbooks.com/",
+    "vendor": "FreshBooks"
+  },
+  "easybill": {
+    "asset": "/logos/easybill.svg",
+    "source": "https://www.easybill.de/wp-content/uploads/2026/02/EasyBillLogo-1.svg",
+    "page": "https://www.easybill.de/",
+    "vendor": "easybill"
   }
 }

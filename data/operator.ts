@@ -25,8 +25,8 @@ export const operator = {
     city: "20459 Hamburg",
     url: "https://datenschutz-hamburg.de/",
   },
-  /** Hosting der Website. Anpassen, falls die Website nicht bei Cloudflare betrieben wird. */
-  hosting: { name: "Cloudflare, Inc.", country: "USA", privacyUrl: "https://www.cloudflare.com/de-de/privacypolicy/" },
+  /** Für die Veröffentlichung ist Vercel vorgesehen. */
+  hosting: { name: "Vercel Inc.", country: "USA", privacyUrl: "https://vercel.com/legal/privacy-policy" },
 };
 
 export const addressLines = () => [

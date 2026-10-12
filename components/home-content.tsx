@@ -88,8 +88,6 @@ export function HomeContent({ products }: { products: Product[] }) {
       </div>
     </div></section>
 
-    <AffiliatePartners products={products} />
-
     <section className="shell situation-section" aria-labelledby="situation-title"><div className="section-heading"><div><p className="eyebrow">BEGINNEN SIE MIT IHRER AUFGABE</p><h2 id="situation-title">Was soll die Software für Sie lösen?</h2></div><Link href="/empfehlung">Noch unsicher? Vier Fragen beantworten <ArrowUpRight size={17} /></Link></div><div className="situation-grid">{situations.map((item) => <Link href={item.href} className="situation-card" key={item.number}><div><span>{item.number}</span><small>{item.tag}</small></div><h3>{item.title}</h3><p>{item.text}</p><ArrowUpRight size={19} aria-hidden="true" /></Link>)}</div></section>
 
     <section className="categories-section shell" aria-labelledby="categories-title">
@@ -114,6 +112,8 @@ export function HomeContent({ products }: { products: Product[] }) {
       <div className="insight-grid">{guides.slice(0, 6).map((g) => <GuideCard guide={g} key={g.slug} />)}</div>
       <div className="insights-more"><Link className={ctaClass({ variant: "light" })} href="/ratgeber"><CtaContent>Alle {guides.length} Ratgeber ansehen</CtaContent></Link></div>
     </section>
+
+    <AffiliatePartners products={products} />
 
     <section className="home-recommendation"><div className="shell home-recommendation-inner"><div><p className="eyebrow">WENN SIE NOCH NICHT WISSEN, WO SIE ANFANGEN SOLLEN</p><h2>Vier Fragen schaffen Orientierung.</h2><p>Beschreiben Sie Ihre wichtigste Aufgabe und Ihre Betriebsgröße. Danach sehen Sie passende Produkte mit einer nachvollziehbaren Begründung und einem Hinweis, was Sie noch prüfen sollten.</p><Link className={ctaClass({ variant: "brand", size: "lg" })} href="/empfehlung"><CtaContent>Empfehlung erhalten</CtaContent></Link></div><div className="recommendation-art"><Image src="/illustrations/recommendation.webp" alt="" width={768} height={768} sizes="(max-width: 760px) 80vw, 310px" /></div></div></section>
 

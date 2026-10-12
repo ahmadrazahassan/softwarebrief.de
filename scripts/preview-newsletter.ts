@@ -1,0 +1,10 @@
+import { mkdirSync, writeFileSync, readFileSync } from "node:fs";
+import { currentIssue } from "@/data/newsletter-issue";
+import { operator, addressLines } from "@/data/operator";
+import { renderConfirmationEmail, renderNewsletterEmail } from "@/lib/newsletter-email";
+mkdirSync("outputs", { recursive: true });
+const newsletter = renderNewsletterEmail(currentIssue, operator.siteUrl, {name:operator.name,address:addressLines().slice(1).join(", "),email:operator.email!}, `${operator.siteUrl}/newsletter/abgemeldet`);
+const confirmation = renderConfirmationEmail({siteUrl:operator.siteUrl,confirmationUrl:`${operator.siteUrl}/newsletter/bestaetigt?token=preview`});
+writeFileSync("outputs/newsletter-email.html",newsletter.html.replaceAll(`${operator.siteUrl}/brand/softwarebrief-logo.png`, `data:image/png;base64,${readFileSync("public/brand/softwarebrief-logo.png").toString("base64")}`));
+writeFileSync("outputs/confirmation-email.html",confirmation.html.replaceAll(`${operator.siteUrl}/brand/softwarebrief-logo.png`, `data:image/png;base64,${readFileSync("public/brand/softwarebrief-logo.png").toString("base64")}`));
+console.log("Saved German newsletter and confirmation email previews in outputs/.");

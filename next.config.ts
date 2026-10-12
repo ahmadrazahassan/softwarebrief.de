@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  outputFileTracingIncludes: {
+    "/api/newsletter/anmeldung": ["./public/brand/softwarebrief-logo.png"],
+  },
 };
 
 export default nextConfig;

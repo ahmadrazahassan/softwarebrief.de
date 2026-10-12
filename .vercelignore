@@ -1,0 +1,11 @@
+.git
+.env*
+.dev.vars*
+outputs
+work
+media-originals
+dist
+.wrangler
+.sites-runtime
+*.zip
+*.tar.gz

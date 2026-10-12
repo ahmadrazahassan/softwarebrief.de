@@ -5,13 +5,14 @@
    brand – primary action on dark surfaces (green body, charcoal tile)   */
 :root{--cta-radius:12px;--cta-inset:5px;--cta-ink:#292d34;--cta-green:#00d54b;--cta-green-hover:#1ec677;--cta-mist:#eef1ef}
 
-:is(a,button,span).cta{--h:52px;--tile:calc(var(--h) - var(--cta-inset) * 2);position:relative;display:inline-flex;flex:none;align-items:center;gap:0;height:var(--h);min-width:0;padding:var(--cta-inset);padding-right:22px;border:0;border-radius:var(--cta-radius)!important;font:700 15px/1 'Open Sans',sans-serif;letter-spacing:-.1px;white-space:nowrap;cursor:pointer;text-decoration:none;isolation:isolate;overflow:hidden;transition:background-color .25s ease,color .25s ease,box-shadow .25s ease,transform .15s ease}
+:is(a,button,span).cta{--h:52px;--tile:calc(var(--h) - var(--cta-inset) * 2);position:relative;display:inline-flex;flex:none;align-items:center;gap:0;min-height:var(--h);height:auto;min-width:0;max-width:100%;padding:var(--cta-inset);padding-right:22px;border:0;border-radius:var(--cta-radius)!important;font:700 15px/1.3 'Open Sans',sans-serif;letter-spacing:-.1px;white-space:normal;cursor:pointer;text-decoration:none;isolation:isolate;overflow:hidden;transition:background-color .25s ease,color .25s ease,box-shadow .25s ease,transform .15s ease}
 .cta.cta--sm{--h:44px;font-size:14px;padding-right:18px}
 .cta.cta--lg{--h:58px;font-size:16px;padding-right:26px}
 .cta.cta--block{display:flex;width:100%}
 .cta .cta-icon{flex:none;display:grid;place-items:center;width:var(--tile);height:var(--tile);border-radius:calc(var(--cta-radius) - var(--cta-inset) + 1px);transition:width .35s cubic-bezier(.2,.8,.2,1),background-color .25s ease;overflow:hidden}
 .cta .cta-icon svg{width:18px;height:18px;flex:none;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-.cta .cta-label{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding-left:16px;text-align:center}
+.cta .cta-label{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 8px;padding:6px 0 6px 16px;text-align:center;overflow-wrap:anywhere}
+.cta .vendor-link-text{min-width:0;flex:1 1 80px;white-space:normal;line-height:1.35}
 
 .cta:hover .cta-icon svg{transform:translateX(3px)}
 .cta:active{transform:translateY(1px)}
@@ -34,7 +35,7 @@
 .cta.cta--brand:hover{background:var(--cta-green-hover);color:var(--cta-ink)}
 
 /* Chips inside the label (e.g. the "Werbung" disclosure) */
-.cta .affiliate-label{margin:0;border-radius:4px;font-size:9px;padding:3px 5px}
+.cta .affiliate-label{flex:0 1 auto;max-width:100%;margin:0;border-radius:4px;font-size:9px;line-height:1.3;padding:3px 5px}
 .cta--dark .affiliate-label{background:rgba(255,255,255,.14);color:#fff}
 .cta--brand .affiliate-label,.cta--light .affiliate-label{background:var(--cta-ink);color:#fff}
 
@@ -55,7 +56,7 @@
 .evidence-video a.cta{padding:var(--cta-inset);padding-right:18px}
 .catalog-card-bottom a.cta{margin-left:auto;padding:var(--cta-inset);padding-right:16px;gap:0;font-size:13px}
 .catalog-card-bottom a.cta:hover{color:#fff}
-.compare-bar .cta{height:44px}
+.compare-bar .cta{--h:44px;min-height:44px;height:auto}
 .profile-actions .cta{margin:0}
 .compare-table td .cta{margin-top:10px;font-size:13px}
 .review-form .cta,form .cta{align-self:flex-start}
@@ -97,7 +98,7 @@
 
 /* Balanced button: label centred in the space right of the tile, equal breathing room on both sides */
 .plan-card .cta.cta--block{--h:50px;margin-bottom:26px;font-size:14px;padding-right:calc(var(--cta-inset) + 10px)}
-.plan-card .cta .cta-label{padding-left:10px;white-space:nowrap}
+.plan-card .cta .cta-label{padding-left:10px;white-space:normal}
 .plan-grid[data-count="4"] .plan-card{padding:24px 18px 8px}
 .plan-grid[data-count="4"] .plan-card li{font-size:13.5px;gap:10px}
 .plan-grid[data-count="4"] .plan-card .cta.cta--block{padding-right:calc(var(--cta-inset) + 6px);font-size:13.5px}
