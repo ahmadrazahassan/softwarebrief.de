@@ -1,0 +1,43 @@
+/* ─── Kontrast: weiße Karten müssen sich vom Hintergrund abheben ───
+   Wird zuletzt geladen. Die Seite ist hellgrau (#f4f4f4), viele Karten sind weiß mit einer fast unsichtbaren Linie.
+   Zwei Maßnahmen: farbige Flächen hinter ganzen Abschnitten und deutlichere Ränder mit Schatten an den Karten. */
+
+:root{--band:#d7e9dc;--band-soft:#e6eee8;--card-line:#a9c0b0;--card-shadow:0 16px 32px -22px rgba(22,62,38,.6)}
+
+/* Farbige Fläche über die volle Breite hinter einem Abschnitt. Der Schatten trägt die Farbe nach links und rechts,
+   clip-path hält sie oben und unten am Abschnitt. Beides erzeugt keine Scrollbreite. */
+.band,.insights-section,.pair-section,.kl-block:nth-of-type(odd){background:var(--band);box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax)}
+.kl-block:nth-of-type(odd){padding-block:56px;margin-block:0}
+.insights-section{padding-bottom:84px}
+.pair-section{padding-block:72px}
+
+/* Karten */
+.category-card,.situation-card,.pair-card,.interface-card,.spotlight-grid article,.home-guide-grid a,.principle-grid article,
+.catalog-card,.guide-cards>a,.recommendation-card,.values-bento article,.promise-row,.about-note,
+.insight-card,.bl-featured,.bl-rail-card,.bl-summary,.bl-checklist,.bl-product,.bl-pager a,
+.kl-pair,.kl-alt,.kl-steps li,.kl-panel,.kl-verdict,.kl-banner,.kl-nudge,.kl-faq,.kl-table,.kl-starter,.kl-board,
+.nl-rubric,.nl-roles,.nl-article,.nl-home-card,.nl-mail-card,.nl-hero-form,
+.plan-card,.profile-side-card,.filter-panel,.evidence-chart,.product-row{
+  border:1px solid var(--card-line);box-shadow:var(--card-shadow)
+}
+.insight-card{border-radius:24px}
+
+/* Linien und Trenner im Compare und Newsletter Bereich sind sonst nur 8 Prozent Schwarz */
+.kl{--line:rgba(31,35,40,.2);--line-strong:rgba(31,35,40,.34)}
+
+/* Auf der Farbfläche dürfen Karten beim Überfahren etwas stärker werden */
+.kl-pair:hover,.pair-card:hover,.insight-card:hover,.situation-card:hover{border-color:#5f8f6d}
+
+@media(max-width:760px){
+  .kl-block:nth-of-type(odd){padding-block:40px}
+  .pair-section{padding-block:48px}
+  .insights-section{padding-bottom:56px}
+}
+
+/* Die Ecke der Karten wird in der Farbe des Abschnitts gemalt, damit der Ausschnitt echt aussieht */
+.insights-section,.kl-block:nth-of-type(odd){--notch-bg:var(--band)}
+
+.insights-more{display:flex;justify-content:center;margin-top:32px}
+
+/* Text auf den farbigen Flächen braucht ein dunkleres Grün, damit der Kontrast reicht */
+.kl-block:nth-of-type(odd),.insights-section,.pair-section{--green:#0f6a39}

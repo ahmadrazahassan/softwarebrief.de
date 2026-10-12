@@ -1,0 +1,9 @@
+export type ProductMedia = { image: string; alt: string; caption: string; source: string; video?: { title: string; url: string; year: string } };
+export const productMedia: Record<string, ProductMedia> = {
+  fastbill: { image: "/product-media/fastbill-dashboard.webp", alt: "Finanzübersicht in FastBill mit Einnahmen, Ausgaben und Zahlungen", caption: "Herstelleransicht des Finanzbereichs; die Oberfläche kann inzwischen abweichen.", source: "https://www.fastbill.com/blog/hub/navigation-und-einstellungen-fastbill" },
+  "lexware-office": { image: "/product-media/lexware-dashboard.svg", alt: "Illustration der Finanzübersicht von Lexware Office", caption: "Herstellerillustration zur Dashboard Funktion; kein eigener Produkttest.", source: "https://www.lexware.de/funktionen/dashboard/", video: { title: "Lexware Office: Produkttour mit Dashboard", url: "https://www.youtube.com/watch?v=D-D1lbzxLqw", year: "2025" } },
+  sevdesk: { image: "", alt: "", caption: "", source: "", video: { title: "Buchhaltungssoftware erklärt in 1 Minute", url: "https://www.youtube.com/watch?v=6Z1VD7ODSco", year: "2025" } },
+  personio: { image: "", alt: "", caption: "", source: "", video: { title: "Personio für Mitarbeiter: Erste Schritte", url: "https://www.youtube.com/watch?v=yJufl3A21pA", year: "2023" } },
+  pipedrive: { image: "/product-media/pipedrive-insights.svg", alt: "Deutsche Berichtsansicht von Pipedrive mit Vertriebskennzahlen", caption: "Lokalisierte Herstelleransicht der Berichte; kein eigener Produkttest.", source: "https://www.pipedrive.com/de/features/sales-dashboard" },
+  weclapp: { image: "/product-media/weclapp-dashboard.webp", alt: "weclapp Dashboard mit Auftragsabwicklung, Angebotsstatus und Aktivitäten", caption: "Dashboard Beispiel des Herstellers; Demodaten, kein eigener Produkttest.", source: "https://www.weclapp.com/de/" },
+};

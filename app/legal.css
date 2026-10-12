@@ -1,0 +1,28 @@
+/* ─── Rechtliche Seiten: Impressum, Datenschutz, Kontakt ─── */
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.legal{padding-bottom:72px}
+.legal h2{font:900 clamp(22px,2.6vw,28px)/1.25 Lato,sans-serif!important;letter-spacing:-.4px;margin:0 0 16px!important}
+.legal section:first-child{border-top:0}
+.legal p:not(.eyebrow){max-width:720px}
+.legal a{color:#0f6a39;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.legal a:hover{text-decoration-thickness:2px}
+.legal code{padding:1px 6px;border-radius:6px;background:#e4ebe6;font-size:.92em}
+.legal-address{margin:0 0 14px;font-style:normal;font-size:17px;line-height:1.75;color:#2f3631}
+.legal-contact{display:flex;flex-direction:column;gap:6px;margin:0 0 16px;padding:0;list-style:none}
+.legal-contact li{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:17px}
+.legal-contact li span{min-width:84px;font-weight:700;color:#46504a}
+.legal-list{display:flex;flex-direction:column;gap:9px;margin:0 0 18px;padding:0 0 0 22px;max-width:720px}
+.legal-list li{font-size:17px;line-height:1.7;color:#2f3631}
+.legal-list li::marker{color:#137b42}
+.legal-table-wrap{max-width:820px;margin:0 0 16px;overflow-x:auto;background:#fff;border:1px solid #a9c0b0;border-radius:14px}
+.legal-table-wrap:focus-visible{outline:3px solid #1ec677;outline-offset:2px}
+.legal-table{width:100%;min-width:560px;border-collapse:collapse;font-size:15px;line-height:1.55}
+.legal-table th,.legal-table td{padding:12px 16px;text-align:left;vertical-align:top;border-bottom:1px solid #e1e8e3}
+.legal-table thead th{background:#f1f6f2;font:800 12.5px 'Open Sans',sans-serif;text-transform:uppercase;letter-spacing:.5px;color:#46504a}
+.legal-table tbody th{font-weight:800;color:#1f2a24;white-space:nowrap}
+.legal-table tbody tr:last-child>*{border-bottom:0}
+@media(max-width:640px){.legal-address,.legal-contact li,.legal-list li{font-size:16px}}
+
+/* Lange Überschriftswörter wie "Datenschutzerklärung" dürfen am Rand getrennt werden */
+.page-hero h1{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:480px){.page-hero h1{font-size:clamp(32px,10vw,42px)}}

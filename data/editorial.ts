@@ -1,6 +1,31 @@
 export type Editorial = { strengths: string[]; limitations: string[]; practicalCheck: string };
 
 export const editorial: Record<string, Editorial> = {
+  "sage-hr": {
+    strengths: ["Jedes Modul hat einen öffentlichen Europreis je Person, sodass sich die Kosten vor dem ersten Vertriebsgespräch genau berechnen lassen.", "Zeiterfassung, Schichtplanung, Performance und Spesen lassen sich einzeln hinzubuchen, statt ein großes Paket zu kaufen.", "Kündigung mit einem Monat Frist und ein Test ohne Zahlungsdaten senken das Risiko beim Einstieg.", "Die mobile App deckt Anträge, Genehmigungen und Belegfotos für Beschäftigte und Führungskräfte ab."],
+    limitations: ["Eine Lohnabrechnung ist nicht enthalten; dafür braucht es Sage Payroll, Sage HR & Payroll oder eine Lösung der Steuerberatung.", "Jedes Modul wird mit jeder Person multipliziert, sodass die Kosten bei wachsender Belegschaft schnell steigen.", "Recruiting kostet pauschal 175 € pro Monat und lohnt sich erst bei regelmäßigen Einstellungen."],
+    practicalCheck: "Legen Sie fest, welche Module wirklich alle Beschäftigten brauchen, und rechnen Sie den Monatspreis mit Ihrer Personenzahl aus. Vergleichen Sie das Ergebnis mit Sage HR & Payroll Essentials, falls Sie auch die Lohnabrechnung auslagern möchten.",
+  },
+  "sage-hr-payroll": {
+    strengths: ["Personalstammdaten, Arbeitszeiten, Abwesenheiten und Lohnabrechnung greifen ohne doppelte Pflege ineinander.", "Schichtplanung, Arbeitszeittabellen und Spesen sind bereits in Essentials enthalten.", "Premium bietet Korrektursimulation und automatisierte Korrekturabrechnungen, die bei vielen Beschäftigten spürbar Zeit sparen können.", "Performance und Recruiting sind in Premium ohne weiteres Modul integriert."],
+    limitations: ["Essentials schließt Baulohn, öffentlichen Dienst und Versorgungsbezüge aus.", "Standard und Premium beruhen laut Hersteller auf einer Desktop Lohnabrechnung; das ist für Betriebe wichtig, die eine reine Cloudumgebung erwarten.", "Der Grundpreis deckt nur fünf Beschäftigte ab, und die Aufpreise je Person sind als Mindestwerte angegeben.", "Standard und Premium lassen sich nicht direkt testen, sondern nur über eine Webdemo kennenlernen."],
+    practicalCheck: "Lassen Sie sich einen Monatslauf mit einem echten Sonderfall und einer Korrektur vorführen. Fragen Sie schriftlich nach, wo die Lohnabrechnung in Standard oder Premium technisch läuft und wie die Preise je Person bei Ihrer Belegschaft genau aussehen.",
+  },
+  "sage-50-handwerk": {
+    strengths: ["Die Software bildet typische Handwerksabläufe vom Aufmaß über Angebot und Auftrag bis zur Schlussrechnung ab.", "Schnittstellen wie GAEB, IDS, OCI und DATANORM verbinden Ausschreibungen und Großhandel ohne Abtippen.", "Elektronische Rechnungen in ZUGFeRD und XRechnung sind bereits in Essential enthalten.", "Enterprise erlaubt unbegrenzt viele Benutzer zu einem festen Monatspreis."],
+    limitations: ["Essential umfasst nur einen Benutzer und laut Paketübersicht keine Teil und Schlussrechnungen.", "Schnittstellen, Finanzbuchhaltung, Dokumentenmanagement und das Cloud Paket kosten extra; öffentliche Preise dafür fehlen.", "Die Software wird lokal installiert und über Fachhändler vertrieben; mobiles Arbeiten erfordert das zusätzliche Cloud Paket.", "Die Mindestlaufzeit beträgt im Standardangebot zwölf Monate."],
+    practicalCheck: "Spielen Sie einen echten Auftrag mit Aufmaß, Abschlag und Schlussrechnung durch und lassen Sie sich alle benötigten Schnittstellen im Angebot einzeln beziffern. Rechnen Sie Enterprise als Vergleichspreis, sobald Sie Teilrechnungen oder mehr als einen Arbeitsplatz brauchen.",
+  },
+  "sage-intacct": {
+    strengths: ["Sage veröffentlicht Richtpreise für nahezu alle Module, was eine frühe Budgetplanung ermöglicht.", "Nationale Konsolidierung, elektronische Rechnungen, Dashboards und der KI Assistent sind bereits im Standard enthalten.", "Umfangreiche Nachweise wie GoBD, ISO 27001, SOC 1 und SOC 2 sprechen für den Einsatz in prüfungsnahen Finanzteams.", "Mehrere Gesellschaften, Multiwährung und globale Konsolidierung lassen sich schrittweise ergänzen."],
+    limitations: ["Der Einstiegspreis enthält nur zwei Business User; jeder weitere Vollnutzer kostet 240 € pro Monat.", "Bankanbindung, Multiwährung und Anlagenbuchhaltung sind nicht im Standard enthalten.", "Einführung, Migration und Schulung werden separat berechnet und sind nicht öffentlich beziffert.", "Einen Preisrechner gibt es nicht; das Angebot entsteht erst nach einem Beratungsgespräch."],
+    practicalCheck: "Erstellen Sie vor dem Gespräch eine Liste aller Gesellschaften, Nutzerrollen, Währungen und Bankkonten. Lassen Sie Lizenzen, Module und Einführung getrennt ausweisen und vergleichen Sie die Summe über drei Jahre.",
+  },
+  "sage-sales-management": {
+    strengths: ["Die mobile App ist konsequent für den Außendienst gebaut, mit Offline Nutzung, Routenplanung und geolokalisierten Chancen.", "Sprachberichte und Visitenkartenscanner verringern die Nacherfassung nach Kundenbesuchen.", "Microsoft 365, Google Workspace, Zoom und weitere Werkzeuge lassen sich direkt anbinden.", "Grenzen wie 100.000 Datensätze je Objekt und 250 API Anfragen pro Minute sind offen dokumentiert."],
+    limitations: ["Mindestens fünf Lizenzen sind vorgeschrieben, der Einstieg liegt damit bei 275 € pro Monat.", "Angebote und Bestellungen aus dem CRM kosten 7 € je Nutzer und Monat zusätzlich.", "Eine native Anbindung an deutsche ERP Systeme wie Sage 100 wird auf der Seite nicht konkret beschrieben.", "Die Preisangabe enthält keinen Hinweis, ob es sich um einen Netto oder Bruttopreis handelt."],
+    practicalCheck: "Lassen Sie einen Kundenbesuch vom Sprachbericht bis zum Angebot vorführen und prüfen Sie die Übergabe an Ihr ERP mit echten Artikeldaten. Rechnen Sie den Teampreis mit allen benötigten Zusatzmodulen über zwölf Monate.",
+  },
   "fastbill": {
     strengths: ["Angebote, Rechnungen, Belege und die Übergabe an die Steuerberatung bilden einen klaren Arbeitsablauf für Dienstleister.", "Kleine Betriebe können mit einem schlanken Tarif beginnen und bei mehr Automatisierung aufsteigen."],
     limitations: ["Wiederkehrende Rechnungen sind erst ab Pro enthalten; automatische Belegverarbeitung liegt vor allem in Premium.", "Zusätzliche Module und mehrere Personen können den vermeintlich günstigen Einstieg deutlich verteuern."],
@@ -17,9 +42,9 @@ export const editorial: Record<string, Editorial> = {
     practicalCheck: "Prüfen Sie die aktuelle Tariftabelle mit zwei oder drei echten Geschäftsvorfällen. Fragen Sie nach dem regulären Preis nach jeder Aktion sowie nach Teamfunktionen und der Übergabe an die Kanzlei.",
   },
   "sage-active": {
-    strengths: ["Der Einstieg über Angebote und Rechnungen kann mit weiterführenden Buchhaltungsaufgaben verbunden werden.", "Essentials nennt unter anderem EÜR, Anlagenbuchhaltung und Auswertungen bis zu GuV und Bilanz."],
-    limitations: ["Starter ist kein belastbarer Preisanker, wenn doppelte Buchführung oder Personalaufgaben gebraucht werden.", "Kontingente für Nutzer und Rechnungen sowie weitere Leistungen können Mehrkosten auslösen."],
-    practicalCheck: "Fordern Sie eine Aufstellung für alle benötigten Buchhaltungsfunktionen, Nutzer und Rechnungen an. Lassen Sie sich erklären, ob Lohn und HR im konkreten Angebot enthalten sind.",
+    strengths: ["Auftragsbearbeitung, doppelte Buchführung und Lohnabrechnung laufen in einer Cloudlösung und unter einem Vertrag.", "Die Kontingente sind großzügig: Essentials enthält 10 Nutzer und 500 Rechnungen pro Monat.", "Umsatzsteuervoranmeldung über ELSTER, GuV und Bilanz in Echtzeit sowie der Export im DATEV Format sind in Essentials enthalten.", "Monatliche Kündigung und ein Test über 30 Tage machen den Einstieg risikoarm."],
+    limitations: ["Starter enthält keine eigene Buchführung; wer selbst bucht, muss Essentials vergleichen.", "Der Versand elektronischer Rechnungen ist laut Hersteller erst angekündigt, nur der Empfang ist bereits möglich.", "Jahressteuererklärung und E-Bilanz sind nicht enthalten; für die E-Bilanz verweist Sage auf eine Drittlösung.", "Weitere Personen in der Lohnabrechnung, zusätzliche Rechnungspakete und weitere Unternehmen kosten extra; eine Lagerverwaltung fehlt."],
+    practicalCheck: "Zählen Sie Rechnungen, Nutzer und Beschäftigte eines typischen Monats und rechnen Sie Essentials mit allen Aufpreisen durch. Fragen Sie nach dem verbindlichen Termin für den Versand elektronischer Rechnungen, falls Ihre Pflicht dazu 2027 oder 2028 beginnt.",
   },
   "billomat": {
     strengths: ["Dokumentenarbeit von Angebot und Rechnung bis zu Belegen und Mahnungen ist der erkennbare Kern.", "Für wachsende Teams gibt es Pakete mit mehr Nutzern und zusätzlichen Verbindungen."],
@@ -27,9 +52,9 @@ export const editorial: Record<string, Editorial> = {
     practicalCheck: "Zählen Sie Rechnungen, aktive Nutzer und benötigte Verbindungen für einen typischen Monat. Vergleichen Sie dann den dazu passenden Tarif statt ausschließlich Professional.",
   },
   "sage-payroll": {
-    strengths: ["Die Gebühr je Mitarbeiter macht die Basiskosten bei einem festen Team grundsätzlich nachvollziehbar.", "Plus verbindet die Lohnaufgabe mit ausgewählten Personalprozessen wie Zeit und Abwesenheiten."],
-    limitations: ["Korrekturen und weitere Abrechnungen können gesondert berechnet werden.", "Für einen breiteren HR Bedarf ist Plus gegen eigenständige Personalsysteme abzuwägen."],
-    practicalCheck: "Rechnen Sie mit Ihrer tatsächlichen Mitarbeiterzahl und einem normalen Jahr inklusive Korrekturen. Klären Sie schriftlich, welche Sonderfälle und HR Funktionen Ihr Tarif enthält.",
+    strengths: ["Fünf Beschäftigte sind im Grundpreis enthalten, sodass sehr kleine Betriebe ab 20 € pro Monat abrechnen können.", "Gesetzliche Meldungen einschließlich Sofortmeldungen für Branchen wie die Gastronomie sind in allen Paketen enthalten.", "Beschäftigte sehen Abrechnungen und Steuerdokumente im geschützten Zugang oder in der App, ohne unverschlüsselten E-Mail Versand.", "Laut Hersteller keine langfristige Bindung; Upgrade und Kündigung sind jederzeit möglich."],
+    limitations: ["Baulohn, Betriebsrenten und der öffentliche Dienst sind ausdrücklich ausgeschlossen.", "Das System ist auf höchstens 150 Beschäftigte ausgelegt.", "Arbeitszeiten, Genehmigungen und Onboarding gibt es erst ab Standard, Schichtplanung erst in Premium.", "Auf der Website stehen noch ältere Preise je Beschäftigtem; lassen Sie sich die gültige Preisliste bestätigen."],
+    practicalCheck: "Gleichen Sie Ihre Beschäftigungsarten mit der Ausschlussliste ab und lassen Sie einen normalen Lohnlauf sowie eine Korrektur vorführen. Rechnen Sie Ihre Personenzahl mit dem Aufpreis des gewählten Pakets durch.",
   },
   "lexware-office-lohn-gehalt": {
     strengths: ["Die Verbindung zur Lexware Office Buchhaltung vermeidet eine zusätzliche manuelle Übergabe der Personalkosten.", "Geführte Abrechnung und Meldungen sprechen kleine Arbeitgeber mit üblichen Lohnfällen an."],
@@ -117,9 +142,9 @@ export const editorial: Record<string, Editorial> = {
     practicalCheck: "Beschreiben Sie einen durchgängigen Vorgang vom Angebot bis zur Buchung und lassen Sie ihn demonstrieren. Fordern Sie getrennte Kosten für Lizenzen, Hosting, Anpassung und Betreuung an.",
   },
   "sage-100": {
-    strengths: ["Warenwirtschaft, Rechnungswesen und Produktion lassen sich entsprechend dem Unternehmensprozess kombinieren.", "Die modulare Struktur kann für Betriebe mit klar beschriebenen Anforderungen passen."],
-    limitations: ["Ein öffentlicher Einzelpreis für ein Modul ist kein Gesamtpreis für die vollständige ERP Lösung.", "Einführung, Erweiterungen und Partnerleistungen gehören in die Kalkulation."],
-    practicalCheck: "Legen Sie benötigte Module und Sonderprozesse vor einer Demo fest. Lassen Sie sich Lizenz, Implementierung, Schulung und laufenden Betrieb als vollständiges Angebot darstellen.",
+    strengths: ["Warenwirtschaft, Rechnungswesen und Produktion haben öffentliche Modulpreise je Nutzer, was für ein Mittelstands ERP selten ist.", "Unbegrenzte Mandanten sowie mehrere Sprachen und Währungen passen zu Unternehmensgruppen und internationalem Handel.", "Über 200 Partneranwendungen und zertifizierte Fachhändler decken viele Branchenanforderungen ab.", "Betrieb lokal oder in der Cloud mit deutschen Rechenzentren ist möglich."],
+    limitations: ["Die Modulpreise enthalten weder Einführung noch Zusatzlösungen wie CRM, Dokumentenmanagement, Webshop oder Lohn.", "Die Mindestlaufzeit beträgt im Standardangebot zwölf Monate bei jährlicher Rechnung.", "Für die Cloudvariante nennt Sage keinen öffentlichen Preis.", "Ohne Fachhändler und saubere Prozessbeschreibung lässt sich das System kaum sinnvoll einführen."],
+    practicalCheck: "Beschreiben Sie Ihre fünf wichtigsten Geschäftsprozesse schriftlich und lassen Sie sie von einem Fachhändler im System vorführen. Fordern Sie Lizenz, Einführung, Schulung, Anpassungen und Wartung als Gesamtkosten über drei Jahre an.",
   },
   "microsoft-dynamics-365-business-central": {
     strengths: ["Essentials verbindet Finanzen, Einkauf, Lager und Projekte für komplexere Abläufe.", "Premium ergänzt Dienstverwaltung und Fertigung, wenn diese Prozesse tatsächlich gebraucht werden."],

@@ -1,0 +1,51 @@
+/* ─── Softwarebrief Check: vier belegte Punkte unter dem Seitenkopf jedes Produktprofils ─── */
+.kc-band{margin-top:8px;padding:clamp(34px,5vw,58px) 0;background:#e3efe6;border-block:1px solid #bdd3c2}
+.kc-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 40px;margin-bottom:26px}
+.kc-head h2{margin:0;font:900 clamp(26px,3.2vw,38px)/1.12 Lato,sans-serif;letter-spacing:-.8px;color:#1f2a24}
+.kc-head>p{max-width:520px;margin:0;font-size:15px;line-height:1.7;color:#35423a}
+
+.kc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.kc-card{display:flex;flex-direction:column;align-items:center;gap:10px;padding:24px 16px 22px;background:#fff;border:1.5px solid #a9c4b0;border-radius:18px;text-align:center;box-shadow:0 14px 28px -20px rgba(24,70,40,.55)}
+.kc-card h3{margin:0;font:800 15px/1.3 Lato,sans-serif;letter-spacing:.2px;color:#1f2a24}
+.kc-card p{margin:0;font-size:13px;line-height:1.5;color:#4a554e}
+.kc-card .kc-chip{margin-top:auto}
+
+.kc-gauge{position:relative;width:100%;max-width:132px;aspect-ratio:2/1;margin-top:6px}
+.kc-gauge svg{display:block;width:100%;height:100%;overflow:visible}
+.kc-track,.kc-arc{fill:none;stroke-width:14;stroke-linecap:round}
+.kc-track{stroke:#dfe9e1}
+.kc-arc{stroke:#188049}
+.kc-value{position:absolute;left:0;right:0;bottom:3px;display:flex;justify-content:center;align-items:baseline;gap:4px;color:#137b42}
+.kc-value b{font:900 clamp(26px,2.8vw,31px)/1 Lato,sans-serif;letter-spacing:-.5px}
+.kc-value small{font:800 14px Lato,sans-serif;color:#4a554e}
+
+.kc-big{margin:8px 0 0!important;font:900 clamp(26px,2.9vw,34px)/1.1 Lato,sans-serif!important;letter-spacing:-.6px;color:#137b42!important}
+.kc-big[data-kind=quote]{color:#4a554e!important}
+
+.kc-list{display:flex;flex-direction:column;gap:5px;width:100%;margin:2px 0 4px;padding:0;list-style:none;text-align:left}
+.kc-list li{display:flex;align-items:center;gap:8px;font-size:12.5px;line-height:1.35;color:#6a756e}
+.kc-list li svg{flex:none}
+.kc-list li.is-ok{color:#1f2a24;font-weight:700}
+.kc-list li.is-ok svg{color:#137b42}
+.kc-card .kc-hint{width:100%;margin:0 0 4px;font-size:12px;line-height:1.5;text-align:left;color:#566058}
+.kc-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.kc-chip{display:inline-block;padding:4px 13px;border-radius:999px;border:1px solid transparent;font:700 12.5px 'Open Sans',sans-serif;font-style:normal}
+.kc-chip.is-full{background:#e8f6ec;border-color:#a6d6b4;color:#0f6a39}
+.kc-chip.is-part{background:#fff5dc;border-color:#e3cc86;color:#6d5300}
+.kc-chip.is-none{background:#eef1ee;border-color:#cdd5cf;color:#46504a}
+
+.kc-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px;margin-top:20px}
+.kc-note{display:flex;gap:10px;align-items:flex-start;flex:1 1 420px;color:#35423a}
+.kc-note svg{flex:none;margin-top:2px}
+.kc-note p{margin:0;max-width:none;font-size:13px;line-height:1.65}
+.kc-foot>a{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:800;color:#0f6a39}
+.kc-foot>a:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* Kurzhinweise in der Faktenzeile oben auf der Profilseite */
+.hero-fact-row .hero-rating{font-weight:800;color:#137b42}
+.hero-fact-row .hero-rating:before{content:'•';margin-right:20px;color:#606d63}
+.hero-fact-row .hero-rating:hover{color:#292d34}
+
+@media(max-width:1000px){.kc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.kc-grid{grid-template-columns:1fr}.kc-card{padding:20px 14px 18px}}

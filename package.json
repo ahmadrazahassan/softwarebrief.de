@@ -11,7 +11,12 @@
     "build": "node scripts/run-framework.mjs build",
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "test": "node --test lib/*.test.mjs",
+    "check:guides": "tsx scripts/check-guides.ts",
+    "db:generate": "drizzle-kit generate",
+    "media:upload": "node --env-file=.env.local scripts/upload-media.mjs",
+    "images:optimize": "node scripts/optimize-images.mjs",
+    "thumbnails": "node scripts/make-thumbnails.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -26,6 +31,7 @@
     "input-otp": "^1.4.2",
     "lucide-react": "^1.31.0",
     "next": "16.3.4",
+    "next-cloudinary": "^6.19.3",
     "next-themes": "^0.4.6",
     "radix-ui": "^1.6.7",
     "react": "19.2.6",
@@ -48,6 +54,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "@vitejs/plugin-rsc": "0.5.26",
+    "cloudinary": "^2.11.0",
     "drizzle-kit": "0.31.10",
     "eslint": "9.39.4",
     "eslint-config-next": "16.3.4",

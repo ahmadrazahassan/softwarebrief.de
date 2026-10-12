@@ -1,0 +1,630 @@
+{
+  "/illustrations/about-team.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/about-team-640.webp"
+      }
+    ]
+  },
+  "/illustrations/category-buchhaltung.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/category-buchhaltung-640.webp"
+      }
+    ]
+  },
+  "/illustrations/category-crm.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/category-crm-640.webp"
+      }
+    ]
+  },
+  "/illustrations/category-erp.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/category-erp-640.webp"
+      }
+    ]
+  },
+  "/illustrations/category-hr.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/category-hr-640.webp"
+      }
+    ]
+  },
+  "/illustrations/category-lohnabrechnung.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/category-lohnabrechnung-640.webp"
+      }
+    ]
+  },
+  "/illustrations/germany-footer-panorama.webp": {
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/germany-footer-panorama-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/illustrations/germany-footer-panorama-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/illustrations/germany-footer-panorama-1280.webp"
+      }
+    ]
+  },
+  "/illustrations/germany-hero-panorama.webp": {
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/germany-hero-panorama-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/illustrations/germany-hero-panorama-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/illustrations/germany-hero-panorama-1280.webp"
+      }
+    ]
+  },
+  "/illustrations/guide-buchhaltung.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/guide-buchhaltung-640.webp"
+      }
+    ]
+  },
+  "/illustrations/guide-erp.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/guide-erp-640.webp"
+      }
+    ]
+  },
+  "/illustrations/guide-lohnabrechnung.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/guide-lohnabrechnung-640.webp"
+      }
+    ]
+  },
+  "/illustrations/hero-software-choice.webp": {
+    "width": 1100,
+    "height": 733,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/hero-software-choice-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/illustrations/hero-software-choice-960.webp"
+      }
+    ]
+  },
+  "/illustrations/methodology.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/methodology-640.webp"
+      }
+    ]
+  },
+  "/illustrations/principle-sources.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/principle-sources-640.webp"
+      }
+    ]
+  },
+  "/illustrations/principle-tariffs.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/principle-tariffs-640.webp"
+      }
+    ]
+  },
+  "/illustrations/principle-tasks.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/principle-tasks-640.webp"
+      }
+    ]
+  },
+  "/illustrations/recommendation.webp": {
+    "width": 768,
+    "height": 768,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/recommendation-640.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/arbeitszeiterfassung-pflicht-software-auswahl.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/arbeitszeiterfassung-pflicht-software-auswahl-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/arbeitszeiterfassung-pflicht-software-auswahl-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/arbeitszeiterfassung-pflicht-software-auswahl-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/baulohn-und-sonderfaelle.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/baulohn-und-sonderfaelle-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/baulohn-und-sonderfaelle-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/baulohn-und-sonderfaelle-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/buchhaltungssoftware-auswaehlen.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/buchhaltungssoftware-auswaehlen-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/buchhaltungssoftware-auswaehlen-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/buchhaltungssoftware-auswaehlen-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/buchhaltungssoftware-fuer-startups-gruender.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/buchhaltungssoftware-fuer-startups-gruender-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/buchhaltungssoftware-fuer-startups-gruender-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/buchhaltungssoftware-fuer-startups-gruender-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/crm-einfuehrung-fehler-vermeiden.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/crm-einfuehrung-fehler-vermeiden-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/crm-einfuehrung-fehler-vermeiden-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/crm-einfuehrung-fehler-vermeiden-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/crm-kosten-verstehen.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/crm-kosten-verstehen-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/crm-kosten-verstehen-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/crm-kosten-verstehen-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/digitale-personalakte-dsgvo-personalsoftware.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/digitale-personalakte-dsgvo-personalsoftware-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/digitale-personalakte-dsgvo-personalsoftware-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/digitale-personalakte-dsgvo-personalsoftware-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/e-rechnung-pflicht-fristen-software.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/e-rechnung-pflicht-fristen-software-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/e-rechnung-pflicht-fristen-software-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/e-rechnung-pflicht-fristen-software-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/elektronische-rechnungen-software.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/elektronische-rechnungen-software-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/elektronische-rechnungen-software-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/elektronische-rechnungen-software-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/erp-auswahl-mittelstand-schritt-fuer-schritt.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/erp-auswahl-mittelstand-schritt-fuer-schritt-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/erp-auswahl-mittelstand-schritt-fuer-schritt-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/erp-auswahl-mittelstand-schritt-fuer-schritt-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/erp-gesamtkosten.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/erp-gesamtkosten-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/erp-gesamtkosten-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/erp-gesamtkosten-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/erp-handel-oder-dienstleistung.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/erp-handel-oder-dienstleistung-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/erp-handel-oder-dienstleistung-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/erp-handel-oder-dienstleistung-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/excel-abloesen-wann-tabellen-zum-risiko-werden.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/excel-abloesen-wann-tabellen-zum-risiko-werden-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/excel-abloesen-wann-tabellen-zum-risiko-werden-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/excel-abloesen-wann-tabellen-zum-risiko-werden-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/gobd-aufbewahrungsfristen-belege-digitalisieren.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/gobd-aufbewahrungsfristen-belege-digitalisieren-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/gobd-aufbewahrungsfristen-belege-digitalisieren-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/gobd-aufbewahrungsfristen-belege-digitalisieren-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/hr-software-einfuehren.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/hr-software-einfuehren-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/hr-software-einfuehren-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/hr-software-einfuehren-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/kleinunternehmerregelung-grenzen-rechnung-software.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/kleinunternehmerregelung-grenzen-rechnung-software-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/kleinunternehmerregelung-grenzen-rechnung-software-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/kleinunternehmerregelung-grenzen-rechnung-software-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/lohnabrechnung-auslagern-oder-selbst-machen.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/lohnabrechnung-auslagern-oder-selbst-machen-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/lohnabrechnung-auslagern-oder-selbst-machen-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/lohnabrechnung-auslagern-oder-selbst-machen-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/lohnsoftware-kosten-vergleichen.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/lohnsoftware-kosten-vergleichen-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/lohnsoftware-kosten-vergleichen-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/lohnsoftware-kosten-vergleichen-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/software-fuer-startups-die-ersten-zwoelf-monate.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/software-fuer-startups-die-ersten-zwoelf-monate-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/software-fuer-startups-die-ersten-zwoelf-monate-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/software-fuer-startups-die-ersten-zwoelf-monate-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/softwarevertrag-pruefen-laufzeit-daten-ausstieg.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/softwarevertrag-pruefen-laufzeit-daten-ausstieg-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/softwarevertrag-pruefen-laufzeit-daten-ausstieg-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/softwarevertrag-pruefen-laufzeit-daten-ausstieg-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/vertrieb-von-tabellen-ins-crm.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/vertrieb-von-tabellen-ins-crm-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/vertrieb-von-tabellen-ins-crm-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/vertrieb-von-tabellen-ins-crm-1280.webp"
+      }
+    ]
+  },
+  "/editorial-thumbnails/zeiterfassung-und-schichtplanung.webp": {
+    "width": 1536,
+    "height": 864,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/editorial-thumbnails/zeiterfassung-und-schichtplanung-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/editorial-thumbnails/zeiterfassung-und-schichtplanung-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/editorial-thumbnails/zeiterfassung-und-schichtplanung-1280.webp"
+      }
+    ]
+  },
+  "/product-media/fastbill-dashboard.webp": {
+    "width": 2550,
+    "height": 1142,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/product-media/fastbill-dashboard-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/product-media/fastbill-dashboard-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/product-media/fastbill-dashboard-1280.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/product-media/fastbill-dashboard-1600.webp"
+      }
+    ]
+  },
+  "/product-media/weclapp-dashboard.webp": {
+    "width": 809,
+    "height": 619,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/product-media/weclapp-dashboard-640.webp"
+      }
+    ]
+  },
+  "/product-media/xentral-dashboard.webp": {
+    "width": 1043,
+    "height": 905,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/product-media/xentral-dashboard-640.webp"
+      }
+    ]
+  }
+}

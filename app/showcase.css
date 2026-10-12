@@ -1,0 +1,136 @@
+/* ─── Showroom (Screenshots, PDFs) und Produktfilm auf der Profilseite ─── */
+
+/* Rahmen und Kopf */
+.vs-wrap{margin-bottom:56px}
+.vs{padding:clamp(22px,4vw,48px);background:#292d34;border-radius:28px;color:#fff}
+.vs-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px;margin-bottom:28px}
+.vs-eyebrow{margin:0 0 10px;font:900 12px Lato,sans-serif;letter-spacing:2px;color:#00d54b}
+.vs-head h2{max-width:760px;margin:0;font:900 clamp(28px,3.6vw,44px)/1.08 Lato,sans-serif;letter-spacing:-1px;text-wrap:balance;color:#fff}
+.vs-meta{display:flex;flex-direction:column;gap:2px;margin:0;text-align:right;font-size:14px;color:#d5dbd7}
+.vs-meta span{font-size:12px;color:#aeb7b1}
+
+/* Browserfenster */
+.vs-window{overflow:hidden;background:#fff;border-radius:16px;box-shadow:0 40px 80px -40px rgba(0,0,0,.75)}
+.vs-chrome{display:flex;align-items:center;gap:14px;padding:10px 14px;background:#eef1ef;border-bottom:1px solid #dde2de}
+.vs-dots{display:flex;flex:none;gap:6px}
+.vs-dots i{width:11px;height:11px;border-radius:50%;background:#cfd5d1}
+.vs-address{display:flex;flex:1;min-width:0;align-items:center;justify-content:center;gap:8px;padding:6px 14px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;border:1px solid #dde2de;border-radius:999px;background:#fff;font-size:12.5px;color:#414844}
+.vs-address b{font-weight:600;color:#5d6760}
+.vs-address span:last-child{overflow:hidden;text-overflow:ellipsis;font-weight:700;color:#292d34}
+.vs-expand{display:inline-flex;flex:none;align-items:center;gap:6px;padding:6px 12px;border:1px solid #cdd4cf;border-radius:10px!important;background:#fff;font:700 12.5px 'Open Sans',sans-serif;color:#292d34;cursor:pointer;transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.vs-expand:hover{background:#292d34;border-color:#292d34;color:#00d54b}
+
+.vs-screen{position:relative;display:grid;place-items:center;aspect-ratio:16/9;max-height:72vh;overflow:hidden;background:#f4f6f4;touch-action:pan-y}
+.vs-screen .vs-img{display:block;width:100%;height:100%;object-fit:contain;animation:vs-in .25s ease both}
+@keyframes vs-in{from{opacity:0}to{opacity:1}}
+
+.vs-arrow{display:grid;place-items:center;width:48px;height:48px;padding:0;border:1px solid rgba(41,45,52,.18);border-radius:14px!important;background:rgba(255,255,255,.95);color:#292d34;cursor:pointer;transition:background-color .2s ease,color .2s ease}
+.vs-arrow:hover{background:#292d34;color:#00d54b}
+.vs-screen .vs-arrow{position:absolute;top:50%;margin-top:-24px}
+.vs-arrow--prev{left:14px}
+.vs-arrow--next{right:14px}
+
+.vs-caption{display:flex;align-items:flex-start;gap:18px;padding:16px 20px 18px;border-top:1px solid #e3e8e4;background:#fff}
+.vs-count{flex:none;font:900 30px/1 Lato,sans-serif;letter-spacing:-1px;color:#188049;font-variant-numeric:tabular-nums}
+.vs-count small{font:700 14px Lato,sans-serif;letter-spacing:0;color:#5f6862}
+.vs-caption strong{font:800 17px/1.3 Lato,sans-serif;color:#292d34}
+.vs-caption p{margin:4px 0 0;font-size:14px;line-height:1.55;color:#414844}
+
+/* Tour Leiste */
+.vs-rail{display:flex;gap:10px;margin-top:16px;padding:4px 2px 12px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#5b636c transparent}
+.vs-step{flex:none;display:flex;flex-direction:column;gap:8px;width:176px;padding:8px;border:1.5px solid rgba(255,255,255,.16);border-radius:14px!important;background:rgba(255,255,255,.04);color:#d5dbd7;text-align:left;cursor:pointer;scroll-snap-align:center;transition:border-color .2s ease,background-color .2s ease}
+.vs-step:hover{background:rgba(255,255,255,.1)}
+.vs-step[aria-selected=true]{border-color:#00d54b;background:rgba(0,213,75,.12);color:#fff}
+.vs-thumb{display:block;aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#f4f6f4}
+.vs-thumb img{display:block;width:100%;height:100%;object-fit:contain}
+.vs-step-label{display:flex;flex-direction:column;gap:1px;min-width:0;font:700 13px/1.3 'Open Sans',sans-serif}
+.vs-step-label>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vs-step-label small{font:900 11px Lato,sans-serif;letter-spacing:.5px;color:#00d54b}
+.vs-arrow:focus-visible,.vs-expand:focus-visible,.vs-step:focus-visible,.vs-lb-bar button:focus-visible{outline:3px solid #1ec677;outline-offset:2px}
+
+/* Unterlagen */
+.vs-library{margin-top:36px;padding-top:32px;border-top:1px solid rgba(255,255,255,.16)}
+.vs-library h3{margin:0 0 18px;font:900 22px/1.2 Lato,sans-serif;color:#fff}
+.vs-library ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.vs-library li{display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:#fff;color:#292d34}
+.vs-cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:#e9edea}
+.vs-cover img{object-fit:cover;object-position:center top}
+.vs-cover{display:block;width:100%;padding:0;border:0;cursor:pointer;text-align:left}
+.vs-kind{position:absolute;left:10px;top:10px;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.18);font:700 12px 'Open Sans',sans-serif;color:#137b42}
+.vs-read{position:absolute;right:10px;bottom:10px;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:#292d34;color:#fff;font:700 12.5px 'Open Sans',sans-serif;transition:background-color .2s ease,color .2s ease}
+.vs-cover:hover .vs-read{background:#00d54b;color:#292d34}
+.vs-cover:focus-visible{outline:3px solid #1ec677;outline-offset:-3px}
+.vs-doc{display:flex;flex:1;flex-direction:column;gap:6px;padding:16px 16px 18px}
+.vs-doc strong{font:800 15.5px/1.35 Lato,sans-serif}
+.vs-doc p{margin:0;font-size:13px;line-height:1.55;color:#414844}
+.vs-doc small{font-size:12px;color:#5f6862}
+
+.vs-note{display:flex;align-items:flex-start;gap:10px;margin-top:28px;color:#aeb7b1}
+.vs-note svg{flex:none;margin-top:2px}
+.vs-note p{margin:0;font-size:12.5px;line-height:1.65}
+.vs-note a{font-weight:700;color:#7ee9a3;white-space:nowrap}
+.vs-note a:hover{color:#fff}
+
+/* Vollbild */
+dialog.vs-lightbox{max-width:none;width:min(96vw,1560px);max-height:94vh;padding:0;overflow:hidden;border:0;border-radius:20px;background:#101214;color:#fff}
+dialog.vs-lightbox[open]{display:flex;flex-direction:column}
+dialog.vs-lightbox::backdrop{background:rgba(8,10,12,.86)}
+.vs-lb-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 14px 12px 20px;font-size:13.5px;color:#d5dbd7}
+.vs-lb-bar button{display:grid;place-items:center;width:40px;height:40px;padding:0;border:1px solid rgba(255,255,255,.2);border-radius:12px!important;background:transparent;color:#fff;cursor:pointer}
+.vs-lb-bar button:hover{background:#fff;color:#101214}
+.vs-lb-body{display:flex;flex:1;align-items:center;justify-content:center;gap:12px;min-height:0;padding:0 12px}
+.vs-lb-body img{display:block;width:auto;max-width:100%;height:auto;max-height:calc(94vh - 150px);object-fit:contain;border-radius:8px;background:#fff}
+.vs-lb-body .vs-arrow{flex:none}
+.vs-lb-caption{margin:0;padding:14px 20px 18px;font-size:14px;line-height:1.55;color:#d5dbd7}
+
+/* Produktfilm in der Übersicht */
+.film{margin:28px 0 10px}
+.film-frame{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:20px;background:#101214;box-shadow:0 30px 60px -40px rgba(31,35,40,.65)}
+.film-frame video{display:block;width:100%;height:100%;background:#000}
+.film-start{position:absolute;inset:0;display:block;width:100%;height:100%;padding:0;border:0;background:#101214;color:#fff;cursor:pointer}
+.film-start img{object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.film-start:hover img{transform:scale(1.03)}
+.film-start::after{content:"";position:absolute;inset:0;background:rgba(16,18,20,.3)}
+.film-start:focus-visible{outline:3px solid #1ec677;outline-offset:-4px}
+.film-tag{position:absolute;left:16px;top:16px;z-index:2;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.96);font:700 12.5px 'Open Sans',sans-serif;color:#292d34}
+.film-play{position:absolute;left:50%;top:50%;z-index:2;display:grid;place-items:center;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:24px;background:#00d54b;color:#292d34;transition:transform .25s ease,background-color .25s ease}
+.film-start:hover .film-play{transform:scale(1.08);background:#1ec677}
+.film-time{position:absolute;right:16px;bottom:16px;z-index:2;padding:5px 11px;border-radius:8px;background:rgba(16,18,20,.85);font:700 13px 'Open Sans',sans-serif;font-variant-numeric:tabular-nums}
+.film figcaption{margin-top:14px}
+.film strong{font:800 18px/1.35 Lato,sans-serif;color:#292d34}
+.film figcaption p{margin:6px 0 0;max-width:720px;font-size:14px;line-height:1.65;color:#414844}
+.film figcaption p.film-small{font-size:12.5px;color:#5f6862}
+
+@media(max-width:1100px){
+  .vs-library ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .vs-wrap{margin-bottom:36px}
+  .vs{border-radius:22px}
+  .vs-meta{text-align:left}
+  .vs-address span:first-child,.vs-address b{display:none}
+  .vs-expand span{display:none}
+  .vs-expand{padding:7px 9px}
+  .vs-arrow{width:40px;height:40px}
+  .vs-screen .vs-arrow{margin-top:-20px}
+  .vs-caption{flex-direction:column;gap:6px;padding:14px 16px 16px}
+  .vs-step{width:152px}
+  .vs-library ul{grid-template-columns:1fr}
+  .film-play{width:68px;height:68px;margin:-34px 0 0 -34px;border-radius:20px}
+  dialog.vs-lightbox{width:100vw;max-height:100vh;border-radius:0}
+  .vs-lb-body{padding:0 6px}
+  .vs-lb-body .vs-arrow{position:absolute;bottom:90px;z-index:2}
+  .vs-lb-body .vs-arrow:first-child{left:10px}
+  .vs-lb-body .vs-arrow:last-child{right:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  .vs-screen .vs-img{animation:none}
+  .vs-expand,.vs-arrow,.vs-step,.film-start img,.film-play{transition:none}
+}
+
+/* Startseite: Bereich "Einblick in die Oberfläche" mit sechs Karten. Auf dem Handy als Wischleiste statt sechs Karten untereinander. */
+.interface-card-body>a+a:not(.interface-profile){margin-top:6px}
+@media(max-width:700px){
+  .interface-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:86%;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;padding-bottom:10px}
+  .interface-grid>.interface-card{scroll-snap-align:start}
+}

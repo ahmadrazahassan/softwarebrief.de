@@ -1,7 +1,7 @@
 {
   "lexware-office": {
-    "asset": "/logos/lexware-office.png",
-    "source": "https://www.lexware.de/apple-touch-icon.png",
+    "asset": "/logos/lexware-office-icon.svg",
+    "source": "https://www.lexware.de/_assets/d2a8d400651672af0bc262c14fd1c0b7/Images/logo_lexware.svg",
     "page": "https://www.lexware.de/preise/",
     "vendor": "Lexware Office"
   },
@@ -61,8 +61,8 @@
     "vendor": "HubSpot Sales Hub"
   },
   "superoffice-crm": {
-    "asset": "/logos/superoffice-crm.png",
-    "source": "https://www.superoffice.de/static/favicons/apple-touch-icon.png",
+    "asset": "/logos/superoffice-crm-icon.svg",
+    "source": "https://www.superoffice.de/",
     "page": "https://www.superoffice.de/preise/",
     "vendor": "SuperOffice CRM"
   },
@@ -79,8 +79,8 @@
     "vendor": "Xentral"
   },
   "lexware-office-lohn-gehalt": {
-    "asset": "/logos/lexware-office.png",
-    "source": "https://www.lexware.de/apple-touch-icon.png",
+    "asset": "/logos/lexware-office-icon.svg",
+    "source": "https://www.lexware.de/_assets/d2a8d400651672af0bc262c14fd1c0b7/Images/logo_lexware.svg",
     "page": "https://www.lexware.de/preise/",
     "vendor": "Lexware Office Lohn & Gehalt"
   },
@@ -150,5 +150,35 @@
     "source": "https://cdn.simpleicons.org/personio",
     "page": "https://simpleicons.org/?q=personio",
     "vendor": "Personio Payroll"
+  },
+  "sage-hr": {
+    "asset": "/logos/sage-active.png",
+    "source": "https://cdn.simpleicons.org/sage",
+    "page": "https://simpleicons.org/?q=sage",
+    "vendor": "Sage HR"
+  },
+  "sage-hr-payroll": {
+    "asset": "/logos/sage-active.png",
+    "source": "https://cdn.simpleicons.org/sage",
+    "page": "https://simpleicons.org/?q=sage",
+    "vendor": "Sage HR & Payroll"
+  },
+  "sage-50-handwerk": {
+    "asset": "/logos/sage-active.png",
+    "source": "https://cdn.simpleicons.org/sage",
+    "page": "https://simpleicons.org/?q=sage",
+    "vendor": "Sage 50 Handwerk"
+  },
+  "sage-intacct": {
+    "asset": "/logos/sage-active.png",
+    "source": "https://cdn.simpleicons.org/sage",
+    "page": "https://simpleicons.org/?q=sage",
+    "vendor": "Sage Intacct"
+  },
+  "sage-sales-management": {
+    "asset": "/logos/sage-active.png",
+    "source": "https://cdn.simpleicons.org/sage",
+    "page": "https://simpleicons.org/?q=sage",
+    "vendor": "Sage Sales Management"
   }
 }

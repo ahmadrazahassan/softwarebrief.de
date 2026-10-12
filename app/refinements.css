@@ -1,0 +1,153 @@
+/* ─── Layout refinements: homepage, product profile, comparison ───────
+   Loaded last. Surfaces that carry a decision (search, prices, product
+   cards) use the soft radius of the CTA system; editorial blocks stay square. */
+:root{--surface-radius:18px;--price-tint:#f3f8f4;--label-green:#188049;--line:#dfe5e0;--lift:0 18px 40px -26px rgba(41,45,52,.38)}
+
+/* Small uppercase label used above every price */
+.product-price small,.spotlight-price small,.side-price small{display:block;font:900 10px/1 Lato,sans-serif;letter-spacing:1.3px;text-transform:uppercase;color:var(--label-green)}
+
+/* ═══ Homepage ═══ */
+
+/* Hero – the skyline spans ~28–83 % of the image height, and the image
+   height is 56.25 % of the width. A min-height of 40vw and a 60 % focal
+   point keep spires and waterline in frame at every desktop width. */
+@media(min-width:701px){
+  .hero-stage{background-position:center,center 60%}
+  .hero-stage .hero{min-height:clamp(640px,40vw,820px)}
+}
+
+/* Hero card */
+.hero-stage .hero-aside{border-radius:var(--surface-radius);padding:28px 28px 26px;box-shadow:0 30px 60px -30px rgba(21,24,28,.6)}
+.hero-visual .hero-aside p{margin:16px 0 20px}
+.hero-visual .hero-aside .aside-rule{margin-bottom:14px}
+.hero-visual .hero-aside span{padding:7px 0;font-size:13.5px}
+.hero-visual .hero-aside a.cta{margin-top:24px}
+
+/* Search */
+.search-wrap{border:1px solid #d3dad5;border-radius:16px;background:#fff;padding:6px 6px 6px 20px;min-height:66px;box-shadow:0 1px 2px rgba(41,45,52,.05),0 14px 34px -22px rgba(41,45,52,.4);transition:border-color .2s,box-shadow .2s}
+.search-wrap:focus-within{border-color:#1ec677;box-shadow:0 0 0 4px rgba(30,198,119,.16),0 14px 34px -22px rgba(41,45,52,.4)}
+.search-wrap .hero-search{background:transparent!important;flex:1}
+.search-wrap .hero-search:focus-visible{outline:none}
+
+/* Product list */
+.product-row{grid-template-columns:64px 210px minmax(160px,1fr) 190px auto;gap:24px;padding:18px 12px;transition:background-color .2s}
+.product-price{display:flex;flex-direction:column;gap:5px;font:800 14px/1.35 'Open Sans',sans-serif;color:#292d34}
+.product-row .row-cta{--h:40px;font-size:13px;padding-right:16px}
+.product-row .row-cta .cta-label{padding-left:12px}
+.product-row:hover .row-cta{background:#292d34;color:#fff;box-shadow:none}
+.product-row:hover .row-cta .cta-icon{background:#00d54b;box-shadow:none}
+.product-row:hover .row-cta .cta-icon svg{transform:translateX(3px)}
+.results-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+@media(max-width:1020px){.product-row{grid-template-columns:54px 160px 1fr 150px auto;gap:16px}}
+@media(max-width:700px){
+  .product-row{grid-template-columns:46px 1fr auto;gap:6px 12px;padding:16px 4px}
+  .product-row .row-cta{grid-column:3;grid-row:1/span 3;align-self:center;padding-right:5px}
+  .product-row .row-cta .cta-label{display:none}
+  .results-actions .cta{width:100%}
+}
+
+/* Spotlight cards (Auswahl nach Einstieg / Aufgabe) */
+.software-spotlights{padding-top:88px}
+.spotlight-grid{gap:14px}
+.spotlight-grid article{border:1px solid var(--line);border-radius:var(--surface-radius);padding:22px;min-height:0;transition:box-shadow .25s,border-color .25s,transform .25s}
+.spotlight-grid article:hover{border-color:#c9d7cc;box-shadow:var(--lift);transform:translateY(-2px)}
+.spotlight-grid h3{margin:18px 0 8px}
+.spotlight-grid p{font-size:13px;line-height:1.6;margin-bottom:18px}
+.spotlight-price{display:flex;flex-direction:column;gap:7px;background:var(--price-tint);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.spotlight-price strong{font:900 19px/1.25 Lato,sans-serif;letter-spacing:-.2px;color:#292d34}
+.spotlight-actions{border-top:0;padding-top:0;gap:8px}
+.spotlight-actions a.cta{font-size:13px}
+
+/* Recommendation band – illustration sized to the band, never cropped */
+.home-recommendation{padding:56px 0;overflow:hidden}
+.home-recommendation-inner>div>a.cta{margin-top:32px}
+@media(min-width:701px){
+  .home-recommendation-inner{grid-template-columns:minmax(0,1fr) minmax(300px,440px);gap:56px;align-items:center}
+  .home-recommendation-inner>.recommendation-art{max-width:440px;justify-self:end}
+}
+.recommendation-art>img{width:100%;height:auto;max-height:440px;object-fit:contain}
+.recommendation-art::before{inset:4%;background:radial-gradient(circle,rgba(0,213,75,.2),rgba(41,45,52,0) 68%);filter:blur(28px)}
+@media(max-width:700px){.home-recommendation-inner>.recommendation-art{max-width:340px}}
+
+/* ═══ Product profile ═══ */
+@media(min-width:901px){.product-hero-grid{grid-template-columns:minmax(0,1fr) 320px;gap:64px}}
+.profile-hero-price{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--surface-radius);padding:26px 24px 22px;box-shadow:var(--lift)}
+.profile-hero-price::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:#00d54b}
+.profile-hero-price small{color:var(--label-green);font:900 10px/1 Lato,sans-serif;letter-spacing:1.3px}
+.profile-hero-price strong{font:900 28px/1.15 Lato,sans-serif;letter-spacing:-.5px;margin:12px 0 10px;color:#292d34}
+.profile-hero-price p{font-size:13px;line-height:1.6;color:#58615c;margin:0 0 18px}
+.profile-hero-actions{display:flex;flex-direction:column;gap:8px}
+.profile-hero-price a.cta{font-size:14px}
+
+.profile-section>h3{font:900 20px/1.3 Lato,sans-serif;margin:34px 0 10px}
+.profile-inline-actions{gap:10px;margin-top:26px}
+.alternatives-grid a{border-radius:14px;transition:box-shadow .25s,border-color .25s,background-color .2s}
+.alternatives-grid a:hover{box-shadow:var(--lift);border-color:#c9d7cc}
+.alternative-note{margin:14px 0 18px}
+.cost-check-grid>div{border-radius:14px;padding:20px}
+
+.side-price{display:flex;flex-direction:column;gap:7px;background:var(--price-tint);border-radius:12px;padding:14px 16px;margin:16px 0 4px;transition:background-color .2s}
+.side-price strong{font:900 18px/1.25 Lato,sans-serif;color:#292d34}
+.side-price span{font-size:12px;font-weight:700;color:#137b42}
+.side-price:hover{background:#e6f3e9}
+.profile-side-card{border-radius:var(--surface-radius);padding:24px}
+
+/* ═══ Comparison ═══ */
+.compare-controls{gap:20px;padding-bottom:22px}
+.comparison-chart{border-radius:var(--surface-radius);padding:32px}
+.compare-scroll{border-radius:var(--surface-radius);border-color:var(--line)}
+.compare-product-header{gap:12px}
+.compare-price-chip{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;background:#ecf9ee;color:#0f6f3b;font:800 12px/1.3 'Open Sans',sans-serif}
+.compare-row-highlight th,.compare-row-highlight td{background:#f5fbf6}
+.compare-table tbody .compare-row-highlight th:first-child{background:#dff2e3}
+.compare-row-highlight td strong{font-size:21px;letter-spacing:-.3px;color:#292d34}
+.compare-table td .cta{margin-top:12px}
+
+.compare-next{border-radius:var(--surface-radius);padding:30px;margin-top:28px;border:1px solid var(--line)}
+.compare-next h2{margin:0 0 18px}
+.compare-next ol{list-style:none;counter-reset:step;padding:0;margin:0;gap:12px}
+.compare-next li{counter-increment:step;display:flex;gap:14px;align-items:baseline;background:var(--price-tint);border-radius:12px;padding:16px 18px}
+.compare-next li::before{content:counter(step,decimal-leading-zero);font:900 13px Lato,sans-serif;color:var(--label-green);flex:none}
+.compare-disclosure{margin-top:16px}
+.compare-empty{border-radius:var(--surface-radius)}
+.compare-empty a.cta{margin-top:18px}
+
+/* ═══ Shared: pill label above section headings ═══ */
+.section-chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 10px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);font-size:13px;font-weight:600;color:#3d4540}
+.section-chip svg{color:#292d34}
+.section-chip-dark{background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);color:#e9eeea}
+.section-chip-dark svg{color:#00d54b}
+
+/* ═══ Homepage: Ratgeber cards ═══
+   The arrow sits in a notch cut out of the card's corner. The notch is painted in the
+   page background; its two concave corners are radial gradients of the same colour. */
+.insights-section{--notch-bg:#f4f4f4;--notch-r:20px;padding:96px 0 40px}
+.insights-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:44px}
+.insights-head h2{font:800 clamp(38px,4.4vw,60px)/1.04 Lato,sans-serif;letter-spacing:-1.8px;margin:20px 0 18px}
+.insights-head p{max-width:420px;margin:0;font-size:17px;line-height:1.6;color:#58615c}
+.insight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.insight-card{position:relative;display:flex;flex-direction:column;background:#fff;border-radius:24px;padding:8px;min-height:540px;transition:box-shadow .3s ease}
+.insight-card:hover{box-shadow:0 26px 50px -34px rgba(41,45,52,.45)}
+.insight-media{border-radius:17px;overflow:hidden;background:#f4f4f4;aspect-ratio:16/9}
+.insight-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.insight-card:hover .insight-media img{transform:scale(1.04)}
+.insight-body{padding:22px 18px 0}
+.insight-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;color:#5d6760}
+.insight-chip{padding:6px 13px;border-radius:999px;background:#eef1ef;color:#3d4540;font-weight:600}
+.insight-card h3{font:700 21px/1.4 Lato,sans-serif;letter-spacing:-.2px;margin:22px 0 0;color:#292d34}
+.insight-foot{margin-top:auto;padding:24px 18px 20px;font-size:14px;color:#5d6760}
+.insight-corner{position:absolute;right:0;bottom:0;padding:9px 0 0 9px;background:var(--notch-bg);border-top-left-radius:var(--notch-r)}
+.insight-corner::before,.insight-corner::after{content:"";position:absolute;width:var(--notch-r);height:var(--notch-r);background:radial-gradient(circle at 0 0,transparent calc(var(--notch-r) - .5px),var(--notch-bg) var(--notch-r))}
+.insight-corner::before{right:0;bottom:100%}
+.insight-corner::after{right:100%;bottom:0}
+.insight-corner>span{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#00d54b;color:#292d34;transition:background-color .25s ease,color .25s ease}
+.insight-corner svg{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.insight-card:hover .insight-corner>span{background:#292d34;color:#00d54b}
+.insight-card:hover .insight-corner svg{transform:translateX(3px)}
+@media(max-width:1000px){.insight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+  .insights-section{padding:64px 0 20px}
+  .insights-head{flex-direction:column;align-items:flex-start;gap:22px;margin-bottom:28px}
+  .insight-grid{grid-template-columns:1fr}
+  .insight-card{min-height:0}
+}

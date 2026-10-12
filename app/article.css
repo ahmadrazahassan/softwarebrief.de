@@ -1,0 +1,109 @@
+/* ─── Ausführliche Ratgeberartikel: Listen, Tabellen, Hinweisboxen, Kurzfassung, Fragen, Quellen ─── */
+.bl-sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Fließtext: Links und Zwischenüberschriften */
+.bl-section a{color:#0f6a39;font-weight:600;text-decoration:underline;text-decoration-color:rgba(15,106,57,.35);text-underline-offset:3px}
+.bl-section a:hover{text-decoration-color:currentColor}
+.bl-section h3{margin:36px 0 12px;font:800 clamp(20px,2vw,23px)/1.3 Lato,sans-serif;letter-spacing:-.3px;color:var(--ink)}
+.bl-section strong{color:var(--ink)}
+
+.bl-list{margin:0 0 24px;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.bl-list li{position:relative;padding-left:28px;font-size:18px;line-height:1.7;color:#3a413c}
+.bl-list li::before{content:"";position:absolute;left:4px;top:.72em;width:9px;height:9px;border-radius:50%;background:#16a34a}
+.bl-list--ordered{counter-reset:bl-step}
+.bl-list--ordered li{counter-increment:bl-step;padding-left:40px}
+.bl-list--ordered li::before{content:counter(bl-step);left:0;top:.2em;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#e1f0e5;color:#0f6a39;font:800 13px Lato,sans-serif}
+
+/* Tabellen */
+.bl-table{margin:8px 0 28px}
+.bl-table-scroll{overflow-x:auto;background:#fff;border:1px solid #a9c0b0;border-radius:14px;box-shadow:0 14px 28px -22px rgba(22,62,38,.55)}
+.bl-table table{width:100%;min-width:520px;border-collapse:collapse;font-size:15px;line-height:1.5}
+.bl-table-title{margin:0 0 10px;font:800 16px/1.4 Lato,sans-serif;color:var(--ink)}
+.bl-table th,.bl-table td{padding:12px 18px;text-align:left;vertical-align:top;border-bottom:1px solid #e1e8e3;color:#3a413c}
+.bl-table thead th{background:#f6f9f7;font:800 13px/1.4 'Open Sans',sans-serif;text-transform:uppercase;letter-spacing:.5px;color:#46504a;white-space:nowrap}
+.bl-table tbody th{font-weight:800;color:var(--ink);min-width:150px}
+.bl-table tbody tr:last-child>*{border-bottom:0}
+.bl-table figcaption{margin-top:10px;font-size:13.5px;line-height:1.6;color:var(--muted)}
+
+/* Hinweisboxen */
+.bl-callout{display:flex;gap:14px;align-items:flex-start;margin:8px 0 28px;padding:18px 20px;border-radius:14px;border:1.5px solid;background:#fff}
+.bl-callout svg{flex:none;margin-top:2px}
+.bl-callout p{margin:0!important;font-size:16px!important;line-height:1.7!important}
+.bl-callout .bl-callout-title{margin-bottom:4px!important;font:800 16px/1.4 Lato,sans-serif!important;color:var(--ink)}
+.bl-callout.is-tipp{border-color:#8cc99f;background:#eaf6ee}
+.bl-callout.is-tipp svg{color:#137b42}
+.bl-callout.is-achtung{border-color:#e3c26b;background:#fff6dd}
+.bl-callout.is-achtung svg{color:#8a6100}
+.bl-callout.is-fakt{border-color:#a8c3dc;background:#eaf2fa}
+.bl-callout.is-fakt svg{color:#235f95}
+
+/* Kurzfassung und Rechtsstand oberhalb des Artikels */
+.bl-takeaways{margin:0 0 8px;padding:26px 28px;background:#fff;border:1.5px solid #8cc99f;border-radius:var(--r-md);box-shadow:0 14px 28px -22px rgba(22,62,38,.55)}
+.bl-takeaways h2{margin:0 0 14px;font:800 20px/1.3 Lato,sans-serif;color:var(--ink)}
+.bl-takeaways ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.bl-takeaways li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.65;color:#2f3631}
+.bl-takeaways li svg{flex:none;margin-top:4px;color:#137b42}
+.bl-legalnote{display:flex;gap:12px;align-items:flex-start;margin:16px 0 0;padding:14px 18px;border-radius:12px;background:#fff6dd;border:1px solid #e3c26b;font-size:14.5px;line-height:1.65;color:#5c4300}
+.bl-legalnote svg{flex:none;margin-top:3px}
+.bl-legalnote p{margin:0}
+
+.bl-meta-line{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 20px;font-size:14px;color:var(--muted)}
+
+/* Häufige Fragen */
+.bl-faq-wrap{margin-top:56px;scroll-margin-top:32px}
+.bl-faq-wrap h2{margin:8px 0 20px;font:800 clamp(24px,2.4vw,30px)/1.2 Lato,sans-serif;letter-spacing:-.6px;color:var(--ink)}
+.bl-faq{display:flex;flex-direction:column;gap:10px}
+.bl-faq details{background:#fff;border:1.5px solid #a9c0b0;border-radius:14px;box-shadow:0 12px 24px -20px rgba(22,62,38,.55)}
+.bl-faq summary{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:18px 20px;cursor:pointer;list-style:none;font:800 17px/1.4 Lato,sans-serif;color:var(--ink)}
+.bl-faq summary::-webkit-details-marker{display:none}
+.bl-faq summary:focus-visible{outline:3px solid #1ec677;outline-offset:2px;border-radius:12px}
+.bl-faq-plus{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#e1f0e5;color:#0f6a39;font:800 18px/1 Lato,sans-serif;transition:transform .2s}
+.bl-faq details[open] .bl-faq-plus{transform:rotate(45deg)}
+.bl-faq details p{margin:0;padding:0 20px 20px;font-size:16.5px;line-height:1.75;color:#3a413c}
+.bl-faq details a{color:#0f6a39;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+/* Quellen */
+.bl-sources{margin-top:56px;padding:26px 28px;background:#fff;border:1.5px solid #a9c0b0;border-radius:var(--r-md);box-shadow:0 14px 28px -22px rgba(22,62,38,.55)}
+.bl-sources h2{margin:0 0 6px;font:800 22px/1.3 Lato,sans-serif;color:var(--ink)}
+.bl-sources>p{margin:0 0 14px;font-size:14.5px;line-height:1.65;color:var(--muted)}
+.bl-sources ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+.bl-sources li{border-top:1px solid #d9e4dc}
+.bl-sources a{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:4px 14px;padding:12px 0;font-size:15px;line-height:1.5;color:#0f6a39;font-weight:600}
+.bl-sources a>span:first-child{flex:1 1 240px;min-width:0;overflow-wrap:anywhere}
+.bl-sources a:hover span:first-child{text-decoration:underline;text-underline-offset:3px}
+.bl-sources small{flex:none;font-size:12.5px;font-weight:400;color:var(--muted)}
+
+/* Weitere Ratgeber zum Thema */
+.bl-more-guides{margin-top:48px}
+.bl-more-guides h2{margin:0 0 14px;font:800 22px/1.3 Lato,sans-serif;color:var(--ink)}
+.bl-more-guides ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.bl-more-guides a{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 18px;background:#fff;border:1.5px solid #a9c0b0;border-radius:12px;font:800 16px/1.4 Lato,sans-serif;color:var(--ink);box-shadow:0 12px 24px -20px rgba(22,62,38,.55)}
+.bl-more-guides a:hover{border-color:#5f8f6d}
+.bl-more-guides svg{flex:none;color:#137b42}
+
+/* Auf schmalen Bildschirmen wird jede Tabellenzeile zu einer Karte, damit nichts seitlich gescrollt werden muss. */
+@media(max-width:640px){
+  .bl-table-scroll{overflow:visible;background:transparent;border:0;box-shadow:none}
+  .bl-table table,.bl-table tbody,.bl-table tr,.bl-table th,.bl-table td{display:block;min-width:0;width:100%}
+  .bl-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .bl-table tbody{display:flex;flex-direction:column;gap:12px}
+  .bl-table tr{background:#fff;border:1.5px solid #a9c0b0;border-radius:14px;box-shadow:0 12px 24px -20px rgba(22,62,38,.55);overflow:hidden}
+  .bl-table tbody th{min-width:0;padding:12px 16px;background:#eef5f0;border-bottom:1px solid #d3e0d6;font-size:15px}
+  .bl-table td{padding:10px 16px;border-bottom:1px solid #e9efea;font-size:15px}
+  .bl-table td:last-child{border-bottom:0}
+  .bl-table td::before{content:attr(data-label);display:block;margin-bottom:2px;font:800 11.5px/1.4 'Open Sans',sans-serif;text-transform:uppercase;letter-spacing:.5px;color:#5a665e}
+}
+@media(max-width:760px){
+  .bl-list li{font-size:17px}
+  .bl-takeaways,.bl-sources{padding:20px}
+  .bl-callout{padding:16px}
+  .bl-faq summary{padding:16px;font-size:16px}
+  .bl-faq details p{padding:0 16px 16px}
+}
+
+/* Lange deutsche Wörter (zum Beispiel Umsatzsteuerdurchführungsverordnung) dürfen am Zeilenende getrennt werden, statt die Seite zu verbreitern */
+.bl-article,.bl-article-hero h1,.bl-article-hero .kl-lead,.bl-callout{overflow-wrap:break-word;hyphens:auto}
+.bl-article-hero h1{font-size:clamp(30px,4.6vw,58px)}
+.bl-table th,.bl-table td{overflow-wrap:anywhere}
+@media(min-width:641px){.bl-table th,.bl-table td{overflow-wrap:normal}}
+.bl-products .kl-btn{max-width:100%;height:auto;min-height:44px;padding-block:10px;white-space:normal;text-align:center;justify-content:center}

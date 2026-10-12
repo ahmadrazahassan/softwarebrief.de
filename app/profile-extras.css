@@ -1,0 +1,99 @@
+/* ─── Profilseite: Handlungsaufforderungen, mobile Leiste und PDF Leser ─── */
+
+/* Buttons im Showroom, unter dem Film und am Seitenende */
+.pcta{margin-top:28px}
+.pcta--panel{margin-top:36px;padding-top:30px;border-top:1px solid rgba(255,255,255,.16)}
+.pcta--inline{margin-top:16px}
+.pcta-copy strong{display:block;font:900 clamp(20px,2.4vw,26px)/1.2 Lato,sans-serif;letter-spacing:-.4px;color:#fff}
+.pcta-copy p{max-width:660px;margin:8px 0 0;font-size:15px;line-height:1.65;color:#d5dbd7}
+.pcta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.pcta--inline .pcta-row{margin-top:0}
+.pcta-note{margin:14px 0 0;font-size:12.5px;line-height:1.6;color:#5f6862}
+.pcta--panel .pcta-note,.pband .pcta-note{color:#aeb7b1}
+
+/* Heller Button auf dunklem Grund: durchscheinende Fläche mit feinem Rand */
+.pcta--panel .cta.cta--light,.pband .cta.cta--light{background:rgba(255,255,255,.1);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.24)}
+.pcta--panel .cta.cta--light:hover,.pband .cta.cta--light:hover{background:rgba(255,255,255,.18);color:#fff}
+.pcta--panel .cta.cta--light .cta-icon,.pband .cta.cta--light .cta-icon{background:rgba(255,255,255,.16);color:#fff;box-shadow:none}
+.pcta--panel .cta.cta--light:hover .cta-icon,.pband .cta.cta--light:hover .cta-icon{background:#00d54b;color:#292d34}
+
+/* Abschlussband */
+.pband-wrap{margin-top:56px}
+.pband{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;padding:clamp(26px,4vw,56px);border-radius:28px;background:#292d34;color:#fff}
+.pband-eyebrow{margin:0 0 12px;font:900 12px Lato,sans-serif;letter-spacing:2px;color:#00d54b}
+.pband h2{margin:0 0 14px;font:900 clamp(28px,3.4vw,42px)/1.1 Lato,sans-serif;letter-spacing:-1px;color:#fff}
+.pband p:not(.pband-eyebrow):not(.pcta-note){max-width:520px;margin:0;font-size:16px;line-height:1.7;color:#d5dbd7}
+.pband-actions{display:flex;flex-direction:column;gap:12px}
+.pband-actions .pcta-note{margin:4px 0 0}
+
+/* Feste Leiste am unteren Rand, nur Handy */
+.mcb{display:none}
+@media(max-width:760px){
+  .mcb{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:flex;align-items:center;gap:10px;padding:10px 10px 10px 16px;border-radius:18px;background:#292d34;color:#fff;box-shadow:0 18px 40px -12px rgba(0,0,0,.6);transform:translateY(150%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
+  .mcb.is-visible{transform:none;visibility:visible;transition:transform .25s ease,visibility 0s}
+  .mcb-text{display:flex;flex:1;flex-direction:column;min-width:0}
+  .mcb-text strong{overflow:hidden;font:800 14px/1.25 Lato,sans-serif;text-overflow:ellipsis;white-space:nowrap}
+  .mcb-text span{overflow:hidden;font-size:12px;color:#c3cac5;text-overflow:ellipsis;white-space:nowrap}
+  .mcb .cta{flex:none}
+  .mcb-compare{display:grid;flex:none;place-items:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.14);color:#fff}
+  .mcb-compare:hover{background:#00d54b;color:#292d34}
+  .mcb-compare:focus-visible{outline:3px solid #1ec677;outline-offset:2px}
+}
+
+/* PDF Karten */
+.vs-doc-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:12px}
+
+/* PDF Leser */
+dialog.pr{width:min(97vw,1500px);max-width:none;height:min(94vh,980px);padding:0;overflow:hidden;border:0;border-radius:20px;background:#101214;color:#fff}
+dialog.pr[open]{display:flex;flex-direction:column}
+dialog.pr::backdrop{background:rgba(8,10,12,.86)}
+.pr-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;padding:12px 14px 12px 20px;border-bottom:1px solid rgba(255,255,255,.14)}
+.pr-title{display:flex;flex-direction:column;gap:2px;min-width:0}
+.pr-title span{font:700 11.5px 'Open Sans',sans-serif;letter-spacing:.8px;text-transform:uppercase;color:#7ee9a3}
+.pr-title strong{overflow:hidden;font:800 17px/1.3 Lato,sans-serif;text-overflow:ellipsis;white-space:nowrap}
+.pr-actions{display:flex;align-items:center;gap:10px}
+.pr-close{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.22);border-radius:12px!important;background:transparent;color:#fff;cursor:pointer}
+.pr-close:hover{background:#fff;color:#101214}
+.pr-close:focus-visible,.pr-pages button:focus-visible,.pr-foot a:focus-visible{outline:3px solid #1ec677;outline-offset:2px}
+.pr-body{display:flex;flex:1;min-height:0}
+.pr-pages{display:flex;flex:none;flex-direction:column;gap:10px;width:148px;margin:0;padding:12px;overflow-y:auto;list-style:none;border-right:1px solid rgba(255,255,255,.14);scrollbar-width:thin;scrollbar-color:#5b636c transparent}
+.pr-pages li{flex:none}
+.pr-pages button{position:relative;display:block;width:100%;padding:0;overflow:hidden;border:2px solid transparent;border-radius:8px!important;background:#fff;cursor:pointer;opacity:.72;transition:opacity .2s ease,border-color .2s ease}
+.pr-pages button:hover{opacity:1}
+.pr-pages button[aria-current=page]{border-color:#00d54b;opacity:1}
+.pr-pages img{display:block;width:100%;height:auto;min-height:64px;background:#e9edea}
+.pr-pages span{position:absolute;left:6px;bottom:6px;min-width:22px;padding:2px 6px;border-radius:6px;background:rgba(16,18,20,.88);font:700 11.5px 'Open Sans',sans-serif;text-align:center}
+.pr-stage{display:flex;flex:1;align-items:center;justify-content:center;gap:12px;min-width:0;padding:14px}
+.pr-stage img{display:block;min-width:0;max-width:100%;max-height:calc(min(94vh,980px) - 150px);object-fit:contain;border-radius:6px;background:#fff;box-shadow:0 24px 60px -30px rgba(0,0,0,.85);animation:vs-in .2s ease both}
+.pr-stage .vs-arrow{flex:none}
+.pr-stage .vs-arrow:disabled{opacity:.3;cursor:not-allowed}
+.pr-stage .vs-arrow:disabled:hover{background:rgba(255,255,255,.95);color:#292d34}
+.pr-foot{display:flex;justify-content:space-between;gap:12px;padding:10px 20px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;color:#d5dbd7}
+.pr-foot a{display:inline-flex;align-items:center;gap:4px;font-weight:700;color:#7ee9a3}
+.pr-foot a:hover{color:#fff}
+
+@media(max-width:1000px){
+  .pband{grid-template-columns:minmax(0,1fr);gap:28px}
+  .pband>*{min-width:0}
+  .pband-actions .cta{white-space:normal;text-align:left}
+}
+@media(max-width:760px){
+  .pcta-row .cta{width:100%}
+  .pband-wrap{margin-top:36px}
+  .pband{border-radius:22px}
+  dialog.pr{width:100vw;height:100dvh;max-height:100dvh;border-radius:0}
+  .pr-bar{padding:10px 10px 10px 14px}
+  .pr-actions .cta-label{display:none}
+  .pr-actions .cta{padding-right:var(--cta-inset)}
+  .pr-body{flex-direction:column}
+  .pr-pages{flex-direction:row;width:auto;height:96px;padding:10px;overflow-x:auto;overflow-y:hidden;border-right:0;border-bottom:1px solid rgba(255,255,255,.14)}
+  .pr-pages li{width:58px}
+  .pr-pages img{min-height:0}
+  .pr-stage{padding:8px;gap:6px}
+  .pr-stage img{max-height:calc(100dvh - 230px)}
+  .pr-stage .vs-arrow{width:36px;height:36px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mcb,.mcb.is-visible,.pr-pages button{transition:none}
+  .pr-stage img{animation:none}
+}

@@ -1,0 +1,193 @@
+import type { GuideBody } from "../guide-types";
+import { achtung, fakt, h3, ol, p, table, tipp, ul } from "./helpers";
+
+export const body: GuideBody = {
+  legalNote: "Rechtsstand: 13. Oktober 2026. Dieser Ratgeber gibt einen Überblick für Betriebe und ersetzt keine Rechtsberatung. Bei größeren Verträgen oder Streit lassen Sie die Bedingungen von einer Anwältin oder einem Anwalt prüfen.",
+  keyTakeaways: [
+    "Die wichtigsten Punkte sind Laufzeit und Kündigung, Preisänderungen, Verfügbarkeit und Support, Auftragsverarbeitung, Datenexport und Haftung. Lesen Sie sie vor dem Kauf, nicht bei der Kündigung.",
+    "Die Bedingungen der Hersteller unterscheiden sich stark: monatlich kündbar bei Sage Active, 24 Monate Laufzeit bei sevdesk, zwölf Monate Mindestlaufzeit bei Sage 100 und Agenda.",
+    "Verarbeitet der Anbieter personenbezogene Daten in Ihrem Auftrag, brauchen Sie einen Vertrag zur Auftragsverarbeitung nach Artikel 28 DSGVO.",
+    "Der Data Act der Europäischen Union gibt Kunden von Cloud Diensten seit dem 12. September 2025 Wechselrechte. Ab dem 12. Januar 2027 dürfen Anbieter für den Wechsel keine Entgelte mehr verlangen.",
+    "Aufbewahrungspflichten bleiben bestehen, auch wenn Sie kündigen. Sichern Sie Exporte oder einen Lesezugang für die Dauer der Fristen.",
+  ],
+  sections: [
+    {
+      heading: "Warum Sie den Vertrag vor dem Klick lesen sollten",
+      blocks: [
+        p("Software wird heute meist online bestellt: Tarif wählen, Zahlungsdaten eingeben, bestätigen. Die Bedingungen stehen irgendwo im Kleingedruckten. Das ist bequem, bis ein Problem auftaucht: Der Preis steigt, der Dienst fällt aus, der Anbieter wird verkauft, oder Sie wollen wechseln und kommen nicht an Ihre Daten. Dann entscheiden Sätze, die Sie nie gelesen haben."),
+        p("Für Verbraucher gibt es Schutzvorschriften, etwa den Kündigungsbutton für Verbraucherverträge im Onlinehandel (§ 312k BGB). Im Geschäftsverkehr gelten sie nicht. Betriebe haben eine größere Vertragsfreiheit und tragen die Verantwortung selbst. Allgemeine Geschäftsbedingungen unterliegen zwar auch im Geschäftsverkehr einer Inhaltskontrolle, aber Sie sollten sich nicht darauf verlassen, dass eine Klausel später unwirksam ist."),
+        fakt("Faustregel", "Ein Vertrag ist gut, wenn Sie ihn im Streitfall verstehen, die Kündigung selbst auslösen können und Ihre Daten jederzeit herausbekommen."),
+      ],
+    },
+    {
+      heading: "Laufzeit, Verlängerung und Kündigung",
+      blocks: [
+        p("Die Laufzeit ist die erste Frage, denn sie bestimmt, wie lange Sie gebunden sind. Prüfen Sie drei Dinge: die Mindestlaufzeit, die Kündigungsfrist und die automatische Verlängerung."),
+        table("Beispiele aus den Herstellerangaben im Katalog", ["Programm", "Was der Hersteller nennt", "Bedeutung"], [
+          ["[Sage Active](/software/buchhaltung/sage-active)", "Listenpreise monatlich kündbar, das Abonnement verlängert sich monatlich. Nach einer Kündigung endet der Zugriff auf die Daten mit dem Vertrag, nach sechs Monaten werden sie gelöscht.", "Maximale Flexibilität, aber der Datenexport muss vor Vertragsende erfolgen."],
+          ["[sevdesk](/software/buchhaltung/sevdesk)", "Preise bei 24 Monaten Laufzeit, andere Laufzeiten können abweichen.", "Lange Bindung, dafür niedrigerer Monatspreis. Prüfen Sie Laufzeitalternativen."],
+          ["[Sage 100](/software/erp/sage-100)", "Modulpreise bei jährlicher Rechnung und zwölf Monaten Mindestlaufzeit, andere Laufzeiten optional.", "Mindestbindung von einem Jahr. Einführung und Zusatzlösungen kommen separat."],
+          ["[Agenda Personalwesen](/software/lohnabrechnung/agenda-personalwesen)", "Zwölf Monate Mindestlaufzeit laut Hersteller.", "Planen Sie ein volles Jahr ein."],
+          ["[Sage HR](/software/hr/sage-hr)", "Kündigung mit einem Monat Frist, Test über 30 Tage ohne Zahlungsdaten.", "Geringes Einstiegsrisiko."],
+          ["[Sage Payroll](/software/lohnabrechnung/sage-payroll)", "Laut Hersteller keine langfristige Bindung, Upgrade und Kündigung jederzeit.", "Flexibel, aber Fristen im Vertrag prüfen."],
+        ], "Stand der Herstellerangaben: 25. und 27. September 2026. Maßgeblich sind die Vertragsbedingungen zum Zeitpunkt Ihrer Bestellung."),
+        ul(
+          "**Mindestlaufzeit:** Wie lange können Sie nicht kündigen? Eine lange Laufzeit kann sich lohnen, wenn Sie das Produkt sicher einsetzen werden.",
+          "**Automatische Verlängerung:** Verlängert sich der Vertrag stillschweigend um ein Jahr, wenn Sie eine Frist versäumen? Tragen Sie die Fristen in den Kalender ein.",
+          "**Form der Kündigung:** Ist sie per Klick, E-Mail oder nur per Brief möglich?",
+          "**Sonderkündigung:** Gibt es Rechte bei Preiserhöhung, Funktionsabbau oder Übernahme des Anbieters?",
+        ),
+        tipp("Setzen Sie sich einen Termin", "Tragen Sie das Ende der Kündigungsfrist als Termin in den Kalender ein, mit Erinnerung vier Wochen vorher. So entscheiden Sie bewusst über die Verlängerung."),
+      ],
+    },
+    {
+      heading: "Preise und Preisänderungen",
+      blocks: [
+        p("Der Listenpreis ist selten der ganze Preis. Achten Sie auf die folgenden Punkte, bevor Sie unterschreiben:"),
+        table("Prüfpunkte zum Preis", ["Prüfpunkt", "Warum er zählt"], [
+          ["Netto oder brutto", "Hersteller nennen häufig Nettopreise. Rechnen Sie die Umsatzsteuer ein, wenn Sie nicht vorsteuerabzugsberechtigt sind."],
+          ["Aktionspreise", "Rabatte für Neukunden gelten oft nur befristet, zum Beispiel drei Monate. Rechnen Sie mit dem regulären Preis."],
+          ["Zahlungsweise", "Jährliche Zahlung ist oft günstiger als monatliche. Prüfen Sie, was bei Kündigung mit bereits gezahlten Beträgen geschieht."],
+          ["Kontingente", "Nutzer, Rechnungen, Aufträge oder Speicher sind begrenzt. Was kostet die Überschreitung?"],
+          ["Zusatzmodule", "Schnittstellen, Recruiting oder Zeiterfassung sind oft Aufpreis."],
+          ["Preisanpassung", "Darf der Anbieter Preise einseitig erhöhen? Mit welcher Frist? Haben Sie ein Sonderkündigungsrecht?"],
+          ["Einmalkosten", "Einrichtung, Migration, Schulung."],
+        ]),
+        p("Wie Preise bei einzelnen Programmen aufgebaut sind, zeigen die Ratgeber [Software für Startups](/ratgeber/software-fuer-startups-die-ersten-zwoelf-monate) und [ERP auswählen im Mittelstand](/ratgeber/erp-auswahl-mittelstand-schritt-fuer-schritt)."),
+      ],
+    },
+    {
+      heading: "Verfügbarkeit, Support und Haftung",
+      blocks: [
+        p("Software ist Teil Ihres Betriebs. Fällt sie aus, stehen Abläufe. Deshalb gehören Zusagen zu Verfügbarkeit und Support in die Prüfung, auch wenn kleine Anbieter selten individuelle Zusagen machen."),
+        ul(
+          "**Verfügbarkeit:** Nennt der Anbieter eine Zielverfügbarkeit, und was geschieht bei Ausfällen?",
+          "**Wartungsfenster:** Wann wird gewartet, und wie werden Sie informiert?",
+          "**Support:** Erreichbarkeit, Reaktionszeiten, Kanäle, Sprache. Gibt es einen Ansprechpartner für Störungen?",
+          "**Sicherungen:** Wie oft werden Daten gesichert, wie lange bewahrt, wie schnell lassen sie sich wiederherstellen?",
+          "**Haftung:** Auf welchen Betrag ist die Haftung begrenzt, und welche Fälle sind ausgeschlossen?",
+          "**Änderung des Dienstes:** Darf der Anbieter Funktionen einstellen? Wie werden Sie informiert?",
+        ),
+        achtung("Haftungsgrenzen realistisch einordnen", "Viele Anbieter begrenzen die Haftung auf die Jahresgebühr. Das ist üblich. Prüfen Sie, ob der mögliche Schaden bei Ausfall oder Datenverlust in einem sinnvollen Verhältnis dazu steht, und sichern Sie Daten zusätzlich selbst."),
+      ],
+    },
+    {
+      heading: "Datenschutz und Auftragsverarbeitung",
+      blocks: [
+        p("Sobald eine Software personenbezogene Daten von Kunden, Beschäftigten oder Bewerbern verarbeitet, handelt der Anbieter in der Regel als **Auftragsverarbeiter**. Dann verlangt Artikel 28 der Datenschutz Grundverordnung einen schriftlichen oder elektronischen Vertrag. Er muss unter anderem regeln:"),
+        ul(
+          "Gegenstand, Dauer, Art und Zweck der Verarbeitung, Art der Daten und Kategorien betroffener Personen,",
+          "dass der Anbieter Daten nur auf Ihre dokumentierte Weisung verarbeitet,",
+          "die Verpflichtung der Mitarbeitenden zur Vertraulichkeit,",
+          "geeignete technische und organisatorische Maßnahmen zur Sicherheit,",
+          "die Bedingungen für den Einsatz weiterer Auftragsverarbeiter,",
+          "Unterstützung bei Anfragen betroffener Personen und bei Pflichten zu Sicherheit und Meldungen,",
+          "Löschung oder Rückgabe aller Daten nach Ende der Leistung,",
+          "Nachweise und die Möglichkeit von Kontrollen.",
+        ),
+        p("Viele Anbieter stellen den Vertrag als Vorlage bereit. Lesen Sie ihn und achten Sie besonders auf **Standort der Daten**, **Unterauftragnehmer** und **Drittländer**. Werden Daten außerhalb der Europäischen Union verarbeitet, braucht es dafür eine tragfähige Grundlage. Der Ratgeber [Digitale Personalakte und DSGVO](/ratgeber/digitale-personalakte-dsgvo-personalsoftware) vertieft die Fragen für Personaldaten."),
+      ],
+    },
+    {
+      heading: "Daten, Export und Ausstieg",
+      blocks: [
+        p("Der wichtigste Satz im Vertrag steht oft am Ende: Was passiert mit Ihren Daten, wenn Sie kündigen? Klären Sie drei Dinge: **in welchem Format** Sie Daten erhalten, **wie lange** der Zugriff nach Vertragsende möglich ist und **wann** der Anbieter löscht."),
+        table("Fragen zum Ausstieg", ["Frage", "Warum sie wichtig ist"], [
+          ["Welche Daten lassen sich exportieren?", "Nicht nur Stammdaten, auch Belege, Buchungen, Protokolle, Dokumente."],
+          ["In welchen Formaten?", "Offene Formate wie CSV oder strukturierte Dateien erleichtern den Wechsel."],
+          ["Wie lange bleibt der Zugriff nach Kündigung?", "Sie brauchen Zeit für Export und Prüfung."],
+          ["Wann werden Daten gelöscht?", "Nach Fristen im Vertrag. Bei Sage Active nennt der Hersteller sechs Monate nach Kündigung."],
+          ["Wer unterstützt beim Wechsel?", "Kostenlos oder gegen Entgelt, in welcher Frist?"],
+        ]),
+        achtung("Aufbewahrungspflichten enden nicht mit dem Vertrag", "Rechnungen und Buchungsbelege müssen Sie acht Jahre, Bücher zehn Jahre aufbewahren. Danach darf die Finanzverwaltung bei Prüfungen auf die Daten zugreifen. Sichern Sie deshalb vor dem Ende der Software einen Export oder einen Lesezugang. Mehr dazu im Ratgeber [GoBD und Aufbewahrungsfristen](/ratgeber/gobd-aufbewahrungsfristen-belege-digitalisieren)."),
+        h3("Neue Wechselrechte durch den Data Act"),
+        p("Die Verordnung (EU) 2023/2854, der Data Act, gilt seit dem 12. September 2025. Sie enthält Regeln für den Wechsel zwischen Anbietern von Datenverarbeitungsdiensten, zu denen auch viele Cloud Angebote zählen. Nach Artikel 25 muss der Vertrag unter anderem eine Ankündigungsfrist für den Wechsel von höchstens zwei Monaten vorsehen, einen Übergangszeitraum von höchstens 30 Kalendertagen und eine Frist von mindestens 30 Kalendertagen, in der Sie Ihre Daten abrufen können. Wechselentgelte sind bis zum 12. Januar 2027 nur in ermäßigter Höhe zulässig und danach nicht mehr (Artikel 29)."),
+        p("Ob ein Angebot im Einzelfall unter diese Regeln fällt, hängt von der Art des Dienstes ab. Sie sollten sich nicht darauf verlassen, sondern den Ausstieg im Vertrag selbst klären. Fragen Sie den Anbieter, ob und wie die neuen Wechselregeln in seinen Bedingungen umgesetzt sind."),
+      ],
+    },
+    {
+      heading: "Klauseln im Klartext",
+      blocks: [
+        p("Vertragstexte sind oft formelhaft. Die folgende Übersicht erklärt Begriffe, auf die Sie in Bedingungen von Softwareanbietern stoßen, und was Sie dazu fragen können."),
+        table("Häufige Klauseln und ihre Bedeutung", ["Begriff", "Bedeutung", "Worauf Sie achten"], [
+          ["Service Level (SLA)", "Zusage zu Verfügbarkeit und Reaktionszeiten", "Gibt es eine konkrete Zahl, und was folgt bei Verfehlung?"],
+          ["Haftungsbeschränkung", "Begrenzung des Schadensersatzes, häufig auf die Jahresgebühr", "Steht die Grenze im Verhältnis zu möglichen Schäden?"],
+          ["Preisanpassungsklausel", "Recht des Anbieters, Preise zu ändern", "Mit welcher Frist, wie oft, und haben Sie ein Sonderkündigungsrecht?"],
+          ["Automatische Verlängerung", "Vertrag läuft nach Ablauf weiter", "Wie lang ist die Verlängerung, und bis wann kündigen Sie?"],
+          ["Leistungsänderung", "Anbieter darf Funktionen ändern oder einstellen", "Wie werden Sie informiert, und was gilt bei wesentlichen Änderungen?"],
+          ["Unterauftragsverarbeiter", "Weitere Dienstleister des Anbieters, die Daten verarbeiten", "Gibt es eine Liste, und werden Sie über Änderungen informiert?"],
+          ["Gerichtsstand und anwendbares Recht", "Wo und nach welchem Recht gestritten wird", "Deutsches oder europäisches Recht, Gerichtsstand im Inland?"],
+          ["Nutzungsrechte an Daten", "Was der Anbieter mit Ihren Daten tun darf", "Nur zur Leistungserbringung, keine Weitergabe zu eigenen Zwecken?"],
+          ["Ausschluss der Weitergabe", "Darf Ihr Unternehmen die Software für Dritte nutzen?", "Gilt das für verbundene Unternehmen, Steuerberatung oder Dienstleister?"],
+        ]),
+        p("Wenn eine Klausel unklar ist, fragen Sie schriftlich nach und lassen Sie sich die Antwort bestätigen. Eine freundliche E-Mail genügt, sie schafft einen Nachweis."),
+      ],
+    },
+    {
+      heading: "Eine E-Mail an den Anbieter: Fragen, die sich schriftlich lohnen",
+      blocks: [
+        p("Viele Fragen lassen sich in zehn Minuten klären, wenn Sie sie vor dem Kauf stellen. Die folgenden Punkte können Sie als Vorlage für eine kurze Anfrage nutzen:"),
+        ol(
+          "Welche Mindestlaufzeit und welche Kündigungsfrist gelten für den Tarif, den wir buchen möchten?",
+          "Wie und wann können Preise angepasst werden, und welche Sonderkündigung gilt in diesem Fall?",
+          "Stellen Sie einen Vertrag zur Auftragsverarbeitung bereit? Wo werden die Daten gespeichert, und welche Unterauftragnehmer sind beteiligt?",
+          "In welchen Formaten können wir alle Daten exportieren, und wie lange haben wir nach Kündigung Zugriff?",
+          "Wann werden unsere Daten nach Vertragsende gelöscht?",
+          "Welche Zusagen gibt es zur Verfügbarkeit, und wie erreichen wir den Support?",
+          "Welche Funktionen und Kontingente sind im Tarif enthalten, welche kosten extra?",
+          "Gibt es Einmalkosten für Einrichtung, Schulung oder Datenübernahme?",
+        ),
+        tipp("Bewahren Sie die Antworten auf", "Legen Sie die Antworten zusammen mit dem Angebot und der Bestellbestätigung ab. Im Streitfall helfen sie, Zusagen nachzuweisen."),
+      ],
+    },
+    {
+      heading: "Recht, Gerichtsstand und Verhandlung",
+      blocks: [
+        p("Bei Verträgen mit Anbietern aus dem Ausland ist wichtig, welches Recht gilt und wo gestritten wird. Bei Anbietern mit Sitz in der Europäischen Union ist das meist unproblematisch. Bei Anbietern außerhalb sollten Sie genau lesen und gegebenenfalls Rat einholen."),
+        p("Kleine Betriebe handeln selten Standardbedingungen aus. Dennoch lohnt sich die Nachfrage, vor allem bei Software, die Sie über Jahre nutzen werden: Verlängerung der Testphase, Anpassung der Kündigungsfrist, Preisbindung für zwölf Monate, schriftliche Zusage zu Exportformaten. Bei Partnern und Fachhändlern, wie bei Sage 100 oder Business Central, sind Einführung und Betrieb Verhandlungssache und sollten schriftlich fixiert werden."),
+        ol(
+          "Lesen Sie Laufzeit, Verlängerung und Kündigung.",
+          "Rechnen Sie Preise und Preisänderungen für zwölf und 24 Monate.",
+          "Prüfen Sie den Vertrag zur Auftragsverarbeitung.",
+          "Klären Sie Exportformat, Zugriff nach Kündigung und Löschfristen.",
+          "Notieren Sie Zusagen aus Demos und lassen Sie sie bestätigen.",
+          "Tragen Sie Fristen in den Kalender ein.",
+        ),
+      ],
+    },
+  ],
+  checklist: [
+    "Wie lang ist die Mindestlaufzeit, wie lang die Kündigungsfrist, und verlängert sich der Vertrag automatisch?",
+    "Darf der Anbieter Preise einseitig erhöhen, und haben wir dann ein Sonderkündigungsrecht?",
+    "Was kosten Kontingente, Zusatzmodule und Einrichtung?",
+    "Welche Zusagen gibt es zu Verfügbarkeit, Support und Sicherungen?",
+    "Haben wir einen Vertrag zur Auftragsverarbeitung, und sind Standort und Unterauftragnehmer klar?",
+    "In welchem Format erhalten wir alle Daten, und wie lange nach Kündigung?",
+    "Wann löscht der Anbieter unsere Daten?",
+    "Wie sichern wir Daten für gesetzliche Aufbewahrungsfristen?",
+    "Wie ist die Haftung geregelt, und was gilt bei Ausfall?",
+    "Sind Zusagen aus der Demo schriftlich bestätigt?",
+  ],
+  faq: [
+    { q: "Gilt der Kündigungsbutton auch für Unternehmen?", a: "Nein. Die Pflicht zum Kündigungsbutton in § 312k BGB betrifft Verbraucherverträge im elektronischen Geschäftsverkehr. Für Verträge zwischen Unternehmen gilt sie nicht. Prüfen Sie die Kündigungsmöglichkeit deshalb selbst." },
+    { q: "Brauche ich einen Vertrag zur Auftragsverarbeitung?", a: "Ja, wenn der Anbieter personenbezogene Daten in Ihrem Auftrag verarbeitet, zum Beispiel Kundendaten oder Personaldaten. Der Vertrag ist in Artikel 28 der Datenschutz Grundverordnung vorgeschrieben." },
+    { q: "Was ist der Data Act und was bedeutet er für mich?", a: "Der Data Act ist eine Verordnung der Europäischen Union (2023/2854), die seit dem 12. September 2025 gilt. Sie stärkt unter anderem das Recht, Anbieter von Cloud Diensten zu wechseln. Ab dem 12. Januar 2027 dürfen Anbieter für den Wechsel keine Entgelte mehr erheben. Ob Ihre Software betroffen ist, hängt vom Einzelfall ab." },
+    { q: "Wie lange müssen Daten nach Vertragsende verfügbar sein?", a: "Das regelt der Vertrag. Unabhängig davon müssen Sie Buchungsbelege acht und Bücher zehn Jahre aufbewahren und der Finanzverwaltung bei Prüfungen Zugriff geben können. Sichern Sie deshalb Exporte oder einen Lesezugang." },
+    { q: "Kann ich mich auf die Preise der Preisseite verlassen?", a: "Nur zum Zeitpunkt der Bestellung. Preise, Aktionen und Tarifgrenzen können sich ändern. Halten Sie Tarif, Preis und Leistungsumfang bei der Bestellung schriftlich fest, zum Beispiel mit einem Bestellbeleg." },
+    { q: "Lohnt sich eine lange Laufzeit für einen niedrigeren Preis?", a: "Nur, wenn Sie das Produkt sicher einsetzen werden und den Ausstieg kennen. In der Gründungsphase ist Flexibilität meist wertvoller als ein Rabatt, weil Anforderungen sich ändern." },
+  ],
+  sources: [
+    { label: "Art. 28 DSGVO: Auftragsverarbeiter", url: "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679" },
+    { label: "Data Act, Verordnung (EU) 2023/2854", url: "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32023R2854" },
+    { label: "§ 312k BGB: Kündigung von Verbraucherverträgen im elektronischen Geschäftsverkehr", url: "https://www.gesetze-im-internet.de/bgb/__312k.html" },
+    { label: "§ 147 Abgabenordnung: Aufbewahrung von Unterlagen", url: "https://www.gesetze-im-internet.de/ao_1977/__147.html" },
+    { label: "Sage Active: Pakete und Vertragsbedingungen", url: "https://www.sage.com/de-de/produkte/sage-active/" },
+    { label: "sevdesk: Preise und Laufzeit", url: "https://sevdesk.de/preise/" },
+    { label: "Sage 100: Module, Preise und Vertragsbedingungen", url: "https://www.sage.com/de-de/produkte/sage-100/" },
+    { label: "Sage HR: Modulpreise und Kündigung", url: "https://www.sage.com/de-de/sage-business-cloud/hr/" },
+    { label: "Data Act, Artikel 25: Vertragsbestimmungen für den Wechsel", url: "https://www.springlex.eu/de/packages/data-act/data-act-regulation/article-25/" },
+    { label: "Data Act, Artikel 29: Schrittweise Abschaffung von Wechselentgelten", url: "https://www.springlex.eu/de/packages/data-act/data-act-regulation/article-29/" },
+  ],
+  related: ["sage-active", "sevdesk", "sage-100", "sage-hr", "agenda-personalwesen"],
+  relatedGuides: ["digitale-personalakte-dsgvo-personalsoftware", "gobd-aufbewahrungsfristen-belege-digitalisieren", "erp-auswahl-mittelstand-schritt-fuer-schritt"],
+};

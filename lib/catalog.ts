@@ -1,7 +1,8 @@
 import records from "@/data/catalog.json";
+import { withAffiliateLink } from "@/lib/affiliate";
 
 export type Product = (typeof records)[number] & { linkType?: "direct" | "affiliate" };
-export const products: Product[] = records;
+export const products: Product[] = records.map(withAffiliateLink);
 export const categorySlugs = ["buchhaltung", "lohnabrechnung", "hr", "crm", "erp"] as const;
 export type CategorySlug = (typeof categorySlugs)[number];
 export const categories: Record<CategorySlug, { name: string; number: string; kicker: string; intro: string; question: string; criteria: string[] }> = {
@@ -36,12 +37,12 @@ export function byCategory(slug: CategorySlug) { return products.filter((p) => p
 export function findProduct(category: string, slug: string) { return products.find((p) => p.categorySlug === category && p.slug === slug); }
 export function compactPrice(product: Product) {
   const labels: Record<string, string> = {
-    "fastbill": "ab 10 € monatlich",
-    "lexware-office": "ab 7,90 € monatlich",
-    "sevdesk": "ab 12,90 € monatlich",
-    "sage-active": "ab 25 € monatlich",
+    "fastbill": "ab 10 € monatlich, netto",
+    "lexware-office": "ab 7,90 € monatlich, netto",
+    "sevdesk": "ab 12,90 € monatlich, 24 Monate",
+    "sage-active": "ab 25 € monatlich, netto",
     "billomat": "ab 29 € monatlich",
-    "sage-payroll": "ab 6,50 € je Person und Monat",
+    "sage-payroll": "ab 20 € monatlich für 5 Personen",
     "lexware-office-lohn-gehalt": "ab 12,90 € monatlich",
     "datev-lohn-und-gehalt": "Lizenz und Nutzung prüfen",
     "agenda-personalwesen": "ab 50 € monatlich plus Nutzung",
@@ -51,14 +52,19 @@ export function compactPrice(product: Product) {
     "kenjo": "Preis auf Anfrage",
     "hr-works": "Preis auf Anfrage",
     "hibob-bob": "Preis auf Anfrage",
-    "pipedrive": "ab 14 USD je Nutzer und Monat",
+    "pipedrive": "Europreis auf Anfrage",
     "hubspot-sales-hub": "ab 7 € je Lizenz und Monat",
     "centralstationcrm": "Kostenloser Einstieg",
     "zoho-crm": "Kostenlose Edition",
     "superoffice-crm": "ab 45 € je Nutzer und Monat",
     "weclapp": "ab 39 € je Nutzer und Monat",
     "xentral": "ab 99 € monatlich plus Aufträge",
-    "odoo": "Preis in US Dollar",
+    "odoo": "Eine App kostenlos; Europreis auf Anfrage",
+    "sage-hr": "ab 4,50 € je Person und Monat, netto",
+    "sage-hr-payroll": "ab 40 € monatlich für 5 Personen",
+    "sage-50-handwerk": "ab 19,90 € monatlich, jährlich",
+    "sage-intacct": "ab 1.390 € monatlich, netto",
+    "sage-sales-management": "55 € je Nutzer, mindestens 5",
     "sage-100": "ab 56 € je Nutzer und Monat",
     "microsoft-dynamics-365-business-central": "ab 69,30 € je Nutzer und Monat",
   };

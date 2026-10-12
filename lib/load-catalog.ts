@@ -1,5 +1,6 @@
 import { products, type Product } from "@/lib/catalog";
 import { supabaseGet } from "@/lib/supabase";
+import { withAffiliateLink } from "@/lib/affiliate";
 
 type CatalogRow = { profile: Product };
 type OutboundRow = { product_slug: string; destination_url: string; link_type: "direct" | "affiliate" };
@@ -16,7 +17,7 @@ export async function loadCatalog(): Promise<Product[]> {
     return products.map((product) => {
       const profile = current.get(product.slug) ?? product;
       const destination = destinations.get(product.slug);
-      return { ...profile, vendorUrl: destination?.destination_url ?? profile.vendorUrl, linkType: destination?.link_type ?? "direct" };
+      return withAffiliateLink({ ...profile, vendorUrl: destination?.destination_url ?? profile.vendorUrl, linkType: destination?.link_type ?? profile.linkType ?? "direct" });
     });
   } catch {
     return products;

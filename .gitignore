@@ -44,3 +44,6 @@ next-env.d.ts
 /.codex/
 /outputs/
 /work/
+
+# Unkomprimierte Originalvideos (zu groß für statische Auslieferung, siehe research/herstellermaterial-sage-2026-10-13.md)
+/media-originals/

@@ -1,0 +1,10 @@
+# Dateien, die nur zur Bearbeitung im Projekt liegen. Sie werden nicht mit der Website ausgeliefert.
+/editorial-thumbnails/*.zip
+/editorial-thumbnails/*.png
+/editorial-thumbnails/index.html
+/editorial-thumbnails/manifest.json
+/editorial-thumbnails/README.md
+/illustrations/*.png
+/illustrations/README.md
+/product-media/*.png
+/market-reference/

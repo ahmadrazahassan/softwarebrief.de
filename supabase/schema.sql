@@ -1,4 +1,4 @@
--- Klarlotse: run once in the Supabase SQL editor. No private credentials belong in this repository.
+-- Softwarebrief: run once in the Supabase SQL editor. No private credentials belong in this repository.
 create extension if not exists pgcrypto;
 
 create table if not exists public.catalog_products (
