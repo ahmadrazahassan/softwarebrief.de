@@ -626,5 +626,27 @@
         "src": "/product-media/xentral-dashboard-640.webp"
       }
     ]
+  },
+  "/illustrations/footer-frankfurt.webp": {
+    "width": 2160,
+    "height": 728,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/illustrations/footer-frankfurt-640.webp"
+      },
+      {
+        "w": 960,
+        "src": "/illustrations/footer-frankfurt-960.webp"
+      },
+      {
+        "w": 1280,
+        "src": "/illustrations/footer-frankfurt-1280.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/illustrations/footer-frankfurt-1600.webp"
+      }
+    ]
   }
 }

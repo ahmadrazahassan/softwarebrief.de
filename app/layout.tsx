@@ -17,8 +17,10 @@ import "./profile-extras.css";
 import "./article.css";
 import "./legal.css";
 import "./contrast.css";
+import "./footer.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { SiteAnalytics } from "@/components/site-analytics";
 import { siteUrl } from "@/lib/site";
 
 /* Zwei Schutzmaßnahmen, die vor dem Framework laufen müssen.
@@ -48,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className="antialiased"><script dangerouslySetInnerHTML={{ __html: earlyGuards }} /><link rel="preload" as="font" type="font/woff2" href="/fonts/lato-900-latin.woff2" crossOrigin="anonymous" /><link rel="preload" as="font" type="font/woff2" href="/fonts/open-sans-latin.woff2" crossOrigin="anonymous" /><SiteHeader />{children}<SiteFooter /></body>
+      <body className="antialiased"><script dangerouslySetInnerHTML={{ __html: earlyGuards }} /><link rel="preload" as="font" type="font/woff2" href="/fonts/lato-900-latin.woff2" crossOrigin="anonymous" /><link rel="preload" as="font" type="font/woff2" href="/fonts/open-sans-latin.woff2" crossOrigin="anonymous" /><SiteHeader />{children}<SiteFooter /><SiteAnalytics /></body>
     </html>
   );
 }

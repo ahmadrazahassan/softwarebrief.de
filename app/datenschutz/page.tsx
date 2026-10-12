@@ -17,7 +17,7 @@ export default function PrivacyPage() {
 
       <section aria-labelledby="kurz"><h2 id="kurz">Das Wichtigste in Kürze</h2>
         <ul className="legal-list">
-          <li>Wir setzen keine Cookies und keine Dienste zur Reichweitenmessung, Analyse oder Werbung ein.</li>
+          <li>Wir verwenden Vercel Web Analytics für zusammengefasste Besuchsstatistiken. Der Dienst arbeitet ohne Cookies. URL-Parameter und Newsletter-Bestätigungsseiten nehmen wir von der Messung aus.</li>
           <li>Beim Aufruf der Seiten verarbeitet unser Hoster technische Verbindungsdaten, zum Beispiel Ihre IP Adresse.</li>
           <li>Bilder, Videos und Dokumente von Herstellern laden Ihr Browser von Servern des Dienstleisters Cloudinary. Dabei erhält Cloudinary technische Verbindungsdaten.</li>
           <li>Suche, Filter, Vergleich und Empfehlungsweg arbeiten in Ihrem Browser. Ihre Eingaben dort senden wir nicht an uns.</li>
@@ -42,6 +42,11 @@ export default function PrivacyPage() {
 
       <section aria-labelledby="cookies"><h2 id="cookies">Cookies und Eingaben im Browser</h2>
         <p>Wir setzen keine Cookies zur Wiedererkennung, Reichweitenmessung oder Werbung. Suche, Filter, Produktvergleich und Empfehlungsweg werten Ihre Eingaben im Browser aus. Sie werden nicht an uns übertragen und nicht gespeichert. Die Adresse eines Vergleichs enthält nur die Namen der gewählten Produkte.</p>
+      </section>
+
+      <section aria-labelledby="analytics"><h2 id="analytics">Besuchsstatistiken mit Vercel Web Analytics</h2>
+        <p>Wir nutzen Vercel Web Analytics von Vercel Inc. (USA), um zu sehen, welche Seiten gelesen werden und wie die Website genutzt wird. Die Auswertung umfasst Seitenaufrufe, Verweisquellen sowie Angaben zu Browser, Betriebssystem, Gerät und ungefährer Region. Wir sehen zusammengefasste Statistiken. Der Dienst verwendet keine Cookies; nach Angaben von Vercel wird eine aus dem eingehenden Aufruf erzeugte Besucherkennung nach 24 Stunden verworfen.</p>
+        <p>Vor der Übermittlung entfernen wir URL-Parameter und Sprungmarken aus der erfassten Seitenadresse. Die Seite zur Newsletter-Bestätigung wird nicht erfasst. E-Mail-Adressen, Bestätigungstoken, Suchbegriffe und Antworten im Empfehlungsweg senden wir nicht als Analyseereignisse. Weitere Angaben stehen in den <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener noreferrer">Datenschutzhinweisen zu Vercel Web Analytics<span className="visually-hidden"> (öffnet in neuem Tab)</span></a>.</p>
       </section>
 
       <section aria-labelledby="kontakt"><h2 id="kontakt">Kontakt aufnehmen</h2>
@@ -69,7 +74,7 @@ export default function PrivacyPage() {
           <table className="legal-table">
             <thead><tr><th scope="col">Dienstleister</th><th scope="col">Wofür</th><th scope="col">Verarbeitung</th></tr></thead>
             <tbody>
-              <tr><th scope="row">{operator.hosting.name}</th><td>Betrieb der Website, Server Protokolle</td><td>{operator.hosting.country}, Absicherung über EU-US Data Privacy Framework und Standardvertragsklauseln</td></tr>
+              <tr><th scope="row">{operator.hosting.name}</th><td>Betrieb der Website, Server Protokolle und zusammengefasste Besuchsstatistiken mit Vercel Web Analytics</td><td>{operator.hosting.country}, Absicherung über EU-US Data Privacy Framework und Standardvertragsklauseln</td></tr>
               <tr><th scope="row">Cloudinary</th><td>Auslieferung von Bildern, Videos und Dokumentseiten</td><td>EU, USA, Vereinigtes Königreich, Singapur, Israel; Teilnahme am EU-US Data Privacy Framework</td></tr>
               <tr><th scope="row">Resend</th><td>Bestätigungsmail und Kontaktverwaltung, Newsletter nach Ihrer Bestätigung</td><td>USA</td></tr>
               <tr><th scope="row">Supabase</th><td>Speicherung eingereichter Erfahrungsberichte, nur wenn Sie einen Beitrag senden</td><td>Auftragsverarbeitung</td></tr>

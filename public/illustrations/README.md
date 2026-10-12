@@ -24,4 +24,5 @@ Panorama prompt direction: original 16:9 illustrated composites of recognizable 
 | `methodology` | Software researcher verifying information against original sources; methodology page |
 | `about-team` | Editorial team making software choices clearer; About page |
 | `germany-hero-panorama` | Brandenburg Gate, Cologne Cathedral, Hamburg Elbphilharmonie and Berlin city cues; full-width homepage hero background |
-| `germany-footer-panorama` | Berlin, Cologne, Hamburg and Munich landmark silhouettes; full-width footer background |
+| `germany-footer-panorama` | Previous dark footer artwork; retained source asset |
+| `footer-frankfurt` | Original Frankfurt-inspired architectural drawing; current light footer panorama. Generation prompt and provenance: [footer-frankfurt.prompt.md](footer-frankfurt.prompt.md) |

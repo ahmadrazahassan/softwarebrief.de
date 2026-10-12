@@ -59,6 +59,7 @@
 @media(max-width:700px){.situation-section{padding:48px 0}.situation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.situation-card{min-height:240px;padding:16px}.situation-card h3{font-size:18px;margin-top:26px}.categories-section{padding-bottom:56px}.home-process{padding:55px 0}.process-grid{grid-template-columns:1fr;gap:25px;margin:30px 0}.process-grid h3{margin:12px 0 6px}.pair-section{padding:55px 0}.pair-grid{grid-template-columns:1fr}.pair-card{min-height:0}.pair-card h3{margin-top:18px}.home-trust{padding:55px 0}.home-faq{grid-template-columns:1fr;gap:30px;padding:55px 0 80px}}
 @media(max-width:700px){.interface-section{padding:55px 0}.interface-grid{grid-template-columns:1fr}.interface-media{height:220px}}
 @media(max-width:380px){.situation-grid{grid-template-columns:1fr}.situation-card{min-height:0}}
+@media(max-width:700px){.situation-section .section-heading>a{max-width:100%;white-space:normal;line-height:1.6}.situation-section .section-heading>a svg{flex:none}}
 
 .interface-price{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:19px;padding-top:16px;border-top:1px solid #cddbd0}
 .interface-price span{font:900 10px Lato,sans-serif;text-transform:uppercase;letter-spacing:.5px;color:#4a5d51}
@@ -85,7 +86,6 @@
 .partner-card .cta.cta--sm{font-size:13px;padding-right:14px}
 .partner-card .cta .cta-label{gap:6px;padding:7px 0 7px 10px}
 .partner-card .cta .vendor-link-text{flex:0 1 auto}
-.site-footer .footer-brand-logo{display:block;width:240px;max-width:100%;height:auto;object-fit:contain}
 @media(max-width:1150px){.partner-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.partner-section{padding:42px 0}.partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.partner-heading{align-items:start;gap:16px;flex-direction:column}.partner-disclosure{padding:16px}.partner-card{padding:16px}}
 @media(max-width:540px){.partner-grid{grid-template-columns:1fr}.partner-card h3{margin-top:16px}.partner-card .cta.cta--sm{font-size:14px}.partner-card .cta .cta-label{gap:8px;padding-left:16px}}
