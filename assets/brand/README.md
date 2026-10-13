@@ -38,4 +38,3 @@ Keep transparent alpha background. No extra text, no tagline, no variants, no pr
 ## Reversed variant prompt
 
 Use case: precise-object-edit / logo-brand. Produce the reversed color variant of this exact Softwarebrief logo for charcoal backgrounds. Keep the complete existing geometry, exact "Softwarebrief" wordmark, typography, proportions, alignment, spacing, and canvas size unchanged. Change only all charcoal/dark ribbon regions and the charcoal wordmark to pure white #ffffff. Preserve the vivid green ribbon #00d54b. Flat fills, no shadows or gradients. Actual transparent background, no background color or mockup, no extra text.
-
