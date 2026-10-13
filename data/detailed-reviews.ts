@@ -16,7 +16,7 @@ export type DetailedReview = {
 
 export const detailedReviews: Record<string, DetailedReview> = {
   "sage-active": {
-    checked: "27. September 2026",
+    checked: "13. Oktober 2026",
     summary: "Sage Active verbindet Auftragsbearbeitung, doppelte Buchführung und Lohnabrechnung für kleine Betriebe in einer Cloudlösung. Das Preismodell ist klar, die Kontingente sind großzügig. Beim Versand elektronischer Rechnungen und bei der Übermittlung von Jahresabschlüssen sollten Sie die aktuellen Grenzen kennen.",
     bestFor: ["Kleine Unternehmen mit Geschäftskunden, die selbst buchen und bis zu zehn Nutzer brauchen", "Betriebe mit wenigen Beschäftigten, die Lohn und Buchhaltung nicht in zwei Programmen pflegen möchten", "Teams, die per Browser und App arbeiten und monatlich kündbar bleiben wollen"],
     notFor: ["Händler mit Lagerbestand, denn eine Lagerverwaltung fehlt", "Betriebe, die sofort elektronische Rechnungen versenden müssen", "Unternehmen, die Jahressteuererklärung und E-Bilanz direkt aus der Buchhaltung übermitteln wollen"],
@@ -27,7 +27,7 @@ export const detailedReviews: Record<string, DetailedReview> = {
       ] },
       { heading: "Was zusätzlich kostet", paragraphs: [
         "Jede weitere Person in der Lohnabrechnung kostet 3 € pro Monat und wird für den vollen Monat berechnet. Wer mehr Rechnungen schreibt als enthalten, bucht Pakete: 100 Rechnungen für 10 €, 500 für 40 €, 1.000 für 65 €, 5.000 für 250 € und 10.000 für 500 €. Jede Rechnung über das gewählte Paket hinaus kostet 0,15 €. Weitere Unternehmen lassen sich unbegrenzt anlegen, werden aber jeweils ab dem Tag der Anlage berechnet; einen Betrag dafür nennt die Produktseite nicht.",
-        "Für Verträge vor Februar 2026 gelten laut Hersteller andere Kontingente mit zwei beziehungsweise vier Nutzern. Die Neukundenaktion mit 50 % Rabatt für drei Monate gilt bis 30. September 2026; danach zählt der Listenpreis. Sage Copilot ist laut Seite für kurze Zeit ohne Aufpreis enthalten, ein späterer Preis ist nicht genannt.",
+        "Für Verträge vor Februar 2026 gelten laut Hersteller andere Kontingente mit zwei beziehungsweise vier Nutzern. Sage bietet Neukunden 50 % Rabatt für die ersten drei Monate. Laut Hersteller läuft die Aktion bis zum 4. Januar 2027; ab dem vierten Monat gilt der reguläre Listenpreis. Maßgeblich sind die aktuellen Konditionen bei Sage. Sage Copilot ist laut Seite für kurze Zeit ohne Aufpreis enthalten, ein späterer Preis ist nicht genannt.",
       ] },
       { heading: "Elektronische Rechnungen, Steuern und Abschluss", paragraphs: [
         "Eingehende elektronische Rechnungen im Format XRechnung und ZUGFeRD liest Sage Active in beiden Paketen ein. Den Versand elektronischer Rechnungen kündigt Sage als Funktion an, die in Kürze folgen soll. Für Betriebe, deren Pflicht zum Versand im inländischen Geschäftsverkehr je nach Vorjahresumsatz 2027 oder 2028 beginnt, ist das ein wichtiger Punkt für die Planung.",

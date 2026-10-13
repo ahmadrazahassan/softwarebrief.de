@@ -1,15 +1,36 @@
-import { Info } from "lucide-react";
+import { ArrowUpRight, Info } from "lucide-react";
+import { CtaContent, ctaClass } from "@/components/cta";
 import { PdfLibrary } from "@/components/pdf-library";
 import { ProfileCtas } from "@/components/profile-ctas";
 import { ShowcaseTour } from "@/components/showcase-tour";
-import { vendorMedia } from "@/data/vendor-media";
+import { vendorMedia, vendorSources } from "@/data/vendor-media";
 import type { Product } from "@/lib/catalog";
 
-/** Showroom mit Screenshots und den PDF Unterlagen des Herstellers. Zeigt nichts, wenn es kein Material gibt. */
+/** Freigegebenes Herstellermaterial oder ein direkter Verweis auf die offizielle Quelle. */
 export function ProductShowcase({ product }: { product: Product }) {
   const { slug, name } = product;
   const kit = vendorMedia[slug];
-  if (!kit || (!kit.images.length && !kit.documents)) return null;
+  const source = vendorSources[slug];
+  if (!kit || (!kit.images.length && !kit.documents?.length)) {
+    if (!source) return null;
+    return (
+      <section className="shell vs-wrap" id="einblicke" aria-labelledby="einblicke-title">
+        <div className="vs vs--source">
+          <div className="vs-source-content">
+            <div>
+              <p className="vs-eyebrow">OFFIZIELLE HERSTELLERSEITE</p>
+              <h2 id="einblicke-title">Einblicke in {name}. Direkt bei {source.vendor}.</h2>
+              <p>Die aktuellen Produktinformationen und verfügbaren Demos finden Sie beim Hersteller. Prüfen Sie dort die Oberfläche, das Angebot und die Unterlagen für Ihren Betrieb.</p>
+            </div>
+            <a href={source.url} target="_blank" rel="noopener noreferrer" className={ctaClass({ variant: "dark" })}>
+              <CtaContent icon={<ArrowUpRight size={18} strokeWidth={1.75} />}>Bei {source.vendor} ansehen</CtaContent>
+            </a>
+          </div>
+          <p className="vs-source-credit">Quelle: {source.vendor} · {new URL(source.url).hostname.replace(/^www\./, "")}. Produktabbildungen, Videos und Unterlagen auf der verlinkten Seite stammen vom Hersteller. Die Rechte liegen bei den jeweiligen Rechteinhabern.</p>
+        </div>
+      </section>
+    );
+  }
   const { images, documents } = kit;
 
   return (

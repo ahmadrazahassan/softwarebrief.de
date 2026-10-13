@@ -1,7 +1,6 @@
-/* Herstellermaterial von Sage (Screenshots, Videos, PDFs) für die Profilseiten.
-   Alle Dateien liegen in Cloudinary (IDs nach dem Muster klarlotse/<produkt>/<name>) und werden über
-   lib/cloudinary.ts ausgeliefert. Maße, Seitenzahlen und Größen stammen aus data/cloudinary-assets.json.
-   Aussagen im Material sind Herstellerangaben, kein Test von Softwarebrief.
+/* Archiv des Sage Herstellermaterials. Ohne dokumentierte schriftliche Freigabe
+   erscheinen weder Abbildungen noch Videos oder PDF Kopien auf der Website.
+   Stattdessen verweisen die Profilseiten über vendorSources auf Sage.
 
    Hochgeladen, aber nicht eingebunden, weil es dazu keine Produktprofile gibt: klarlotse/sage-x3 und
    klarlotse/sage-operations (Sage X3, Sage Distribution and Manufacturing Operations). */
@@ -13,6 +12,8 @@ export type MediaVideo = { id: string; title: string; description: string; durat
 export type MediaDocument = { id: string; fallback: string; kind: "Produktbroschüre" | "Leitfaden" | "Studie" | "E-Book" | "Datenblatt"; title: string; description: string; pages: number; sizeMb: number };
 export type MediaKit = {
   vendor: string;
+  /** Referenz auf die schriftliche Veröffentlichungsfreigabe; null sperrt das Material. Quellenangaben sind keine Freigabe. */
+  publicationApproval: string | null;
   /** Produktseite des Herstellers, auf die als Herkunft verwiesen wird. */
   source: string;
   images: MediaImage[];
@@ -36,9 +37,10 @@ const doc = (product: string, name: string, fallback: string, kind: MediaDocumen
   return { id, fallback, kind, title, description, pages: pages ?? 0, sizeMb: Math.round(bytes / 104857.6) / 10 };
 };
 
-export const vendorMedia: Record<string, MediaKit> = {
+const mediaArchive: Record<string, MediaKit> = {
   "sage-active": {
     vendor: "Sage",
+    publicationApproval: null,
     source: "https://www.sage.com/de-de/produkte/sage-active/",
     featured: 0,
     images: [
@@ -56,6 +58,7 @@ export const vendorMedia: Record<string, MediaKit> = {
 
   "sage-100": {
     vendor: "Sage",
+    publicationApproval: null,
     source: "https://www.sage.com/de-de/produkte/sage-100/",
     featured: 5,
     images: [
@@ -79,6 +82,7 @@ export const vendorMedia: Record<string, MediaKit> = {
 
   "sage-intacct": {
     vendor: "Sage",
+    publicationApproval: null,
     source: "https://www.sage.com/de-de/sage-business-cloud/intacct/pricing/",
     featured: 0,
     images: [
@@ -96,6 +100,7 @@ export const vendorMedia: Record<string, MediaKit> = {
 
   "sage-payroll": {
     vendor: "Sage",
+    publicationApproval: null,
     source: "https://www.sage.com/de-de/sage-business-cloud/lohnabrechnung/",
     featured: 0,
     images: [
@@ -117,3 +122,13 @@ export const vendorMedia: Record<string, MediaKit> = {
     note: "Die Ansichten zeigen eine Demofirma des Herstellers.",
   },
 };
+
+/** Nur Material mit dokumentierter Freigabe darf von öffentlichen Komponenten gerendert werden. */
+export const vendorMedia: Record<string, MediaKit> = Object.fromEntries(
+  Object.entries(mediaArchive).filter(([, kit]) => Boolean(kit.publicationApproval?.trim())),
+);
+
+/** Offizielle Quellen dürfen unabhängig von einer Medienfreigabe verlinkt werden. */
+export const vendorSources: Record<string, { vendor: string; url: string }> = Object.fromEntries(
+  Object.entries(mediaArchive).map(([slug, kit]) => [slug, { vendor: kit.vendor, url: kit.source }]),
+);

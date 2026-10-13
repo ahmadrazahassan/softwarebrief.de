@@ -32,6 +32,7 @@ export default function ImprintPage() {
 
       <section aria-labelledby="marken"><h2 id="marken">Marken, Logos und Herstellermaterial</h2>
         <p>Produktnamen, Firmenzeichen und Logos gehören ihren Inhabern. Wir zeigen sie, damit Sie die Programme erkennen. Die Darstellung eines Logos allein begründet keine Partnerschaft. Bestehende Affiliate Partnerschaften nennen wir in der <Link href="/methodik#affiliate-offenlegung">Affiliate Offenlegung</Link>. Abbildungen, Videos und Broschüren von Herstellern sind als solche gekennzeichnet. Die Rechte daran liegen bei den jeweiligen Herstellern.</p>
+        <p>Für Produktansichten, Videos und Unterlagen von Sage verweisen wir auf die offiziellen Sage Seiten. Sage und die Sage Produktnamen sind Marken ihrer jeweiligen Rechteinhaber. Der Quellenverweis begründet keine Affiliate Partnerschaft oder Freigabe durch Sage.</p>
       </section>
 
       <section aria-labelledby="urheber"><h2 id="urheber">Urheberrecht</h2>

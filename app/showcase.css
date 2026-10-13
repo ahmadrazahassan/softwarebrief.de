@@ -9,6 +9,17 @@
 .vs-meta{display:flex;flex-direction:column;gap:2px;margin:0;text-align:right;font-size:14px;color:#d5dbd7}
 .vs-meta span{font-size:12px;color:#aeb7b1}
 
+/* Offizielle Quelle, wenn keine Freigabe für die Veröffentlichung von Medien vorliegt. */
+.vs--source{background:#eaf2ec;color:#292d34;border:1px solid #d6e3d9}
+.vs-source-content{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px 48px}
+.vs--source .vs-eyebrow{color:#35664d}
+.vs-source-content h2{max-width:800px;margin:0;font:900 clamp(26px,3vw,38px)/1.15 Lato,sans-serif;letter-spacing:-.7px;text-wrap:balance}
+.vs-source-content p:not(.vs-eyebrow){max-width:780px;margin:18px 0 0;font-size:15px;line-height:1.75;color:#4d5952}
+.vs-source-content>.cta{min-width:210px}
+.vs-source-credit{margin:28px 0 0;padding-top:20px;border-top:1px solid #cdded2;max-width:100%;font-size:12.5px;line-height:1.65;color:#4d5952}
+@media(max-width:900px){.vs-source-content{grid-template-columns:1fr}.vs-source-content>.cta{width:fit-content;max-width:100%}}
+@media(max-width:480px){.vs-source-content>.cta{width:100%;min-width:0}}
+
 /* Browserfenster */
 .vs-window{overflow:hidden;background:#fff;border-radius:16px;box-shadow:0 40px 80px -40px rgba(0,0,0,.75)}
 .vs-chrome{display:flex;align-items:center;gap:14px;padding:10px 14px;background:#eef1ef;border-bottom:1px solid #dde2de}

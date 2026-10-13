@@ -31,7 +31,7 @@ const popularPairs = [
   { title: "Pipedrive oder HubSpot?", text: "Pipeline, Nutzer und Zusatzfunktionen", href: "/vergleich/pipedrive-vs-hubspot-sales-hub", category: "CRM" },
   { title: "weclapp oder Xentral?", text: "ERP für Dienstleistung und Handel", href: "/vergleich/weclapp-vs-xentral", category: "ERP" },
 ];
-/* Obere Reihe: Produkte mit einzelner Herstelleransicht. Untere Reihe: Sage Produkte mit eigener Galerie im Profil. */
+/* Herstelleransichten erscheinen nur, wenn sie öffentlich eingebunden werden dürfen. */
 const interfaceSlugs = ["fastbill", "pipedrive", "weclapp", "sage-active", "sage-payroll", "sage-100"];
 
 /** Vorschaubild für die Startseite: erst die einzelne Herstelleransicht, sonst das gewählte Bild der Galerie. */
@@ -42,6 +42,7 @@ function shot(slug: string): Shot | null {
   const kit = vendorMedia[slug];
   if (!kit) return null;
   const image = kit.images[kit.featured];
+  if (!image) return null;
   return { image: "", cloudinary: { id: image.id, width: image.width, height: image.height }, alt: image.alt, caption: `Herstelleransicht: ${image.caption}. Kein eigener Produkttest.`, source: kit.source };
 }
 

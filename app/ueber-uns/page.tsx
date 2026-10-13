@@ -4,6 +4,7 @@ import { ArrowRight, BadgeInfo, Compass, Euro, Flag, Globe, ListChecks, MessageS
 import { AboutProcess, type ProcessStep } from "@/components/about-process";
 import { CtaContent, ctaClass } from "@/components/cta";
 import { categorySlugs, products } from "@/lib/catalog";
+import { operator } from "@/data/operator";
 
 export const metadata = { title: "Über Softwarebrief", description: "Softwarebrief hilft deutschen Unternehmen, Geschäftssoftware mit nachvollziehbaren Informationen auszuwählen.", alternates: { canonical: "/ueber-uns" } };
 
@@ -53,7 +54,7 @@ export default function AboutPage() {
       <Link className={ctaClass({ variant: "dark" })} href="/methodik"><CtaContent>Unsere Methodik</CtaContent></Link>
       <figure className="about-media">
         <Image src="/illustrations/germany-hero-panorama.webp" alt="Illustrierte Skyline deutscher Städte am Wasser" width={1600} height={900} sizes="(max-width: 1320px) 94vw, 1240px" priority />
-        <figcaption><span />Redaktionelle Recherche · Quellenstand September 2026</figcaption>
+        <figcaption><span />Redaktionelle Recherche · Quellenstand im jeweiligen Produktprofil</figcaption>
       </figure>
     </section>
 
@@ -88,7 +89,7 @@ export default function AboutPage() {
       <h2 id="contact-title">Mit uns in Kontakt</h2>
       <div className="contact-panel">
         <ul className="topic-list">{topics.map((t) => <li key={t.title}><Link href={t.href}><strong>{t.title}</strong><span className="topic-tags">{t.tags.map((tag) => <span key={tag}>{tag}</span>)}</span><ArrowRight size={18} aria-hidden="true" /></Link></li>)}</ul>
-        <aside className="operator-card"><h3>Angaben zum Betreiber</h3><p>Die rechtlichen Angaben zum Betreiber werden vor einer öffentlichen Freigabe mit den tatsächlichen Unternehmensdaten ergänzt. Bis dahin ist Softwarebrief ein privater Entwurf.</p><Link className={ctaClass({ variant: "light", block: true })} href="/impressum"><CtaContent>Impressum ansehen</CtaContent></Link></aside>
+        <aside className="operator-card"><h3>Angaben zum Betreiber</h3><p>Softwarebrief wird von {operator.name} betrieben. Die vollständige Anschrift, Kontaktdaten und Angaben zur redaktionellen Verantwortung finden Sie im Impressum.</p><Link className={ctaClass({ variant: "light", block: true })} href="/impressum"><CtaContent>Impressum ansehen</CtaContent></Link></aside>
       </div>
       <ul className="promise-row">{promises.map(({ icon: Icon, title, body }) => <li key={title}><span><Icon size={18} strokeWidth={1.75} aria-hidden="true" /></span><div><strong>{title}</strong><small>{body}</small></div></li>)}</ul>
     </section>

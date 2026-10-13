@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <ul className="legal-list">
           <li>Wir verwenden Vercel Web Analytics für zusammengefasste Besuchsstatistiken. Der Dienst arbeitet ohne Cookies. URL-Parameter und Newsletter-Bestätigungsseiten nehmen wir von der Messung aus.</li>
           <li>Beim Aufruf der Seiten verarbeitet unser Hoster technische Verbindungsdaten, zum Beispiel Ihre IP Adresse.</li>
-          <li>Bilder, Videos und Dokumente von Herstellern laden Ihr Browser von Servern des Dienstleisters Cloudinary. Dabei erhält Cloudinary technische Verbindungsdaten.</li>
+          <li>Die eingebundenen Bilder laden Sie von unserem Hoster. Externe Herstellerseiten und Videos öffnen sich erst, wenn Sie den jeweiligen Link anklicken.</li>
           <li>Suche, Filter, Vergleich und Empfehlungsweg arbeiten in Ihrem Browser. Ihre Eingaben dort senden wir nicht an uns.</li>
           <li>Personenbezogene Daten geben Sie nur an, wenn Sie uns kontaktieren, sich für den Newsletter anmelden oder eine Erfahrung einreichen.</li>
         </ul>
@@ -31,9 +31,9 @@ export default function PrivacyPage() {
         <p>Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung nach Artikel 28 DSGVO. Verarbeitet der Hoster Daten in den USA, stützt er sich nach eigenen Angaben auf seine Zertifizierung unter dem EU-US Data Privacy Framework und ersatzweise auf die Standardvertragsklauseln der Europäischen Kommission. Mehr dazu in der <a href={operator.hosting.privacyUrl} target="_blank" rel="noopener noreferrer">Datenschutzerklärung des Hosters<span className="visually-hidden"> (öffnet in neuem Tab)</span></a>.</p>
       </section>
 
-      <section aria-labelledby="medien"><h2 id="medien">Bilder, Videos und Dokumente (Cloudinary)</h2>
-        <p>Auf einigen Seiten zeigen wir Bildschirmfotos, Videos und Broschüren von Herstellern, vor allem in den Profilen der Sage Produkte und in Vorschauen auf der Startseite. Diese Dateien liegen beim Dienstleister Cloudinary (Cloudinary Ltd. und verbundene Unternehmen) und werden über dessen Server ausgeliefert. Wenn Sie eine solche Seite öffnen, baut Ihr Browser eine Verbindung zu <code>res.cloudinary.com</code> auf. Dabei erhält Cloudinary technische Daten, vor allem Ihre IP Adresse sowie Angaben zu Browser und Gerät. Videos können bereits beim Laden der Seite vorgeladen werden. Beim Blättern in Broschüren laden wir einzelne Seitenbilder nach.</p>
-        <p><strong>Zweck:</strong> schnelle und zuverlässige Darstellung der Medien. <strong>Rechtsgrundlage:</strong> Artikel 6 Absatz 1 Buchstabe f DSGVO. <strong>Auftragsverarbeitung und Drittländer:</strong> Mit Cloudinary besteht ein Vertrag zur Auftragsverarbeitung. Nach eigenen Angaben verarbeitet Cloudinary Daten in der Europäischen Union, den USA, dem Vereinigten Königreich, Singapur und Israel und nimmt am EU-US Data Privacy Framework teil. Mehr dazu in der <a href="https://cloudinary.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Cloudinary<span className="visually-hidden"> (öffnet in neuem Tab)</span></a>.</p>
+      <section aria-labelledby="medien"><h2 id="medien">Bilder und externe Herstellermedien</h2>
+        <p>Die auf Softwarebrief eingebundenen Bilder liegen bei unserem Hoster. Für Sage Produktansichten, Demos und Unterlagen verlinken wir auf die offiziellen Herstellerseiten. Andere Produktvideos öffnen sich über einen Link, zum Beispiel bei YouTube. Diese externen Medien werden auf Softwarebrief nicht eingebettet oder automatisch geladen.</p>
+        <p>Erst wenn Sie einen solchen Link öffnen, stellt Ihr Browser eine Verbindung zum jeweiligen Anbieter her. Dieser erhält dabei technische Verbindungsdaten, etwa Ihre IP Adresse. Für die weitere Verarbeitung gelten die Datenschutzinformationen der geöffneten Website.</p>
       </section>
 
       <section aria-labelledby="schriften"><h2 id="schriften">Schriftarten</h2>
@@ -75,7 +75,6 @@ export default function PrivacyPage() {
             <thead><tr><th scope="col">Dienstleister</th><th scope="col">Wofür</th><th scope="col">Verarbeitung</th></tr></thead>
             <tbody>
               <tr><th scope="row">{operator.hosting.name}</th><td>Betrieb der Website, Server Protokolle und zusammengefasste Besuchsstatistiken mit Vercel Web Analytics</td><td>{operator.hosting.country}, Absicherung über EU-US Data Privacy Framework und Standardvertragsklauseln</td></tr>
-              <tr><th scope="row">Cloudinary</th><td>Auslieferung von Bildern, Videos und Dokumentseiten</td><td>EU, USA, Vereinigtes Königreich, Singapur, Israel; Teilnahme am EU-US Data Privacy Framework</td></tr>
               <tr><th scope="row">Resend</th><td>Bestätigungsmail und Kontaktverwaltung, Newsletter nach Ihrer Bestätigung</td><td>USA</td></tr>
               <tr><th scope="row">Supabase</th><td>Speicherung eingereichter Erfahrungsberichte, nur wenn Sie einen Beitrag senden</td><td>Auftragsverarbeitung</td></tr>
             </tbody>

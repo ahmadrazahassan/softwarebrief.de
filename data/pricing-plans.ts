@@ -22,7 +22,7 @@ export const pricingPlans: Record<string, PricingPlanData> = {
     { name: "Buchhaltung", price: "25,90 €", unit: "pro Monat", detail: "Belege und Bank verbinden", highlights: ["Buchhaltungsablauf", "Kanzleiübergabe prüfen"], featured: true },
     { name: "Buchhaltung Pro", price: "34,90 €", unit: "pro Monat", detail: "Mehr Funktionen und Automatisierung", highlights: ["Erweiterte Abläufe", "Tarifgrenzen prüfen"] },
   ] },
-  "sage-active": { basis: "Listenpreise pro Monat, zzgl. MwSt., monatlich kündbar. Die befristete Neukundenaktion ist nicht eingerechnet.", checked: "27. September 2026", plans: [
+  "sage-active": { basis: "Listenpreise pro Monat, zzgl. MwSt., monatlich kündbar. Die befristete Neukundenaktion ist nicht eingerechnet.", checked: "13. Oktober 2026", plans: [
     { name: "Starter", price: "25 €", unit: "pro Monat", detail: "Angebote und Rechnungen", highlights: ["1 Unternehmen, 5 Nutzer", "300 Rechnungen pro Monat", "Belegerfassung und Bankabgleich", "Keine eigene Buchführung"] },
     { name: "Essentials", price: "49 €", unit: "pro Monat", detail: "Buchhaltung und Lohn", highlights: ["10 Nutzer, 500 Rechnungen", "Doppelte Buchführung, GuV und Bilanz", "Umsatzsteuervoranmeldung über ELSTER", "Lohn für 2 Personen, jede weitere 3 €"], featured: true },
   ] },
