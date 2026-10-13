@@ -18,6 +18,7 @@ import "./article.css";
 import "./legal.css";
 import "./contrast.css";
 import "./footer.css";
+import "./brand.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteAnalytics } from "@/components/site-analytics";
@@ -38,8 +39,13 @@ export const metadata: Metadata = {
   title: "Softwarebrief | Software finden, die zu Ihrem Betrieb passt",
   description: "Vergleichen Sie Buchhaltung, Lohnabrechnung, Personalsoftware, CRM und ERP mit nachvollziehbaren Quellen und klaren Einschätzungen.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [
+      { url: "/brand/softwarebrief-favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/brand/softwarebrief-favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/brand/softwarebrief-favicon-48.png", sizes: "48x48", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: { url: "/brand/softwarebrief-favicon-180.png", sizes: "180x180", type: "image/png" },
   },
 };
 

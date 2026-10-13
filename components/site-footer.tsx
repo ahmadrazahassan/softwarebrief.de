@@ -15,9 +15,9 @@ export function SiteFooter() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="footer-brand-logo"
-                src="/brand/softwarebrief-logo.png"
+                src="/brand/softwarebrief-logo-web.png"
                 width="720"
-                height="113"
+                height="121"
                 alt="Softwarebrief"
                 loading="lazy"
                 decoding="async"

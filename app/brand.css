@@ -1,0 +1,53 @@
+.site-header .wordmark {
+  flex: none;
+  min-height: 44px;
+  max-width: calc(100% - 64px);
+}
+.header-brand-logo {
+  display: block;
+  width: 228px;
+  max-width: 100%;
+  height: auto;
+}
+.site-header .header-inner { gap: 28px; }
+.brand-mark {
+  display: inline-block;
+  flex: none;
+  width: 28px;
+  height: 32px;
+  border: 0;
+  transform: none;
+  background: url('/brand/softwarebrief-mark.png') center / contain no-repeat;
+}
+.about-note-mark .brand-mark,
+.about-final-mark .brand-mark {
+  width: 30px;
+  height: 34px;
+  margin: 0;
+  border: 0;
+  background-image: url('/brand/softwarebrief-mark-light.png');
+}
+@media (max-width: 1100px) {
+  .site-header .main-nav,
+  .site-header .header-action { display: none; }
+  .site-header .mobile-menu-button { display: block; margin-left: auto; }
+  .site-header .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 10px 16px 20px;
+    border-top: 1px solid #dbe0dc;
+  }
+  .site-header .mobile-nav a {
+    padding: 13px 2px;
+    border-bottom: 1px solid #edf0ed;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 700px) {
+  .header-brand-logo { width: 210px; }
+}
+@media (max-width: 360px) {
+  .header-brand-logo { width: 196px; }
+}

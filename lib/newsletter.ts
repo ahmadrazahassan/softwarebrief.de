@@ -132,7 +132,7 @@ export async function subscribe(email: string, options: Options = {}): Promise<S
     const token = await createConfirmationToken(email, config.tokenSecret, now);
     const url = `${config.siteUrl}/newsletter/bestaetigt?token=${encodeURIComponent(token)}`;
     const message = renderConfirmationEmail({ confirmationUrl: url, siteUrl: config.siteUrl, logoUrl: "cid:softwarebrief-logo" });
-    const response = await api("/emails", config.apiKey, fetchImpl, "POST", { from: config.from, to: [email], ...message, attachments: [{ filename: "softwarebrief-logo.png", content: readFileSync(path.join(process.cwd(), "public/brand/softwarebrief-logo.png")).toString("base64"), content_type: "image/png", content_id: "softwarebrief-logo" }] });
+    const response = await api("/emails", config.apiKey, fetchImpl, "POST", { from: config.from, to: [email], ...message, attachments: [{ filename: "softwarebrief-logo.png", content: readFileSync(path.join(process.cwd(), "public/brand/softwarebrief-logo-web.png")).toString("base64"), content_type: "image/png", content_id: "softwarebrief-logo" }] });
     return response.ok ? { status: "ok" } : failure(response);
   } catch {
     console.error("[newsletter] Resend ist nicht erreichbar.");
