@@ -24,7 +24,7 @@ The site works immediately with the checked in research catalog. No database cre
 
 The partner section appears immediately after the homepage guides. Official FreshBooks and easybill SVG marks are downloaded from their own websites; provenance is in data/logo-sources.json. CTA labels wrap within their buttons, including translated labels.
 
-The five confirmed Affiliate Partners (FastBill, Lexware, sevdesk, FreshBooks and easybill) and the exact operator supplied tracking URLs live in `lib/affiliate.ts`. The overrides run on both the local catalog and the merged Supabase catalog, so older remote destinations cannot undo these links. Both Lexware Office profiles use the Lexware partner URL. `VendorLink` applies the same override for every provider CTA, including tariff cards and the mobile bar, and adds the visible `Werbung` label plus `rel="sponsored"`. The homepage shows all five partners; FreshBooks and easybill link directly to their vendors and do not claim to have researched catalog profiles. Affiliate disclosure appears before the partner cards, in the global footer, on partner profiles, and at `/methodik#affiliate-offenlegung`. Editorial source links keep their original destinations.
+The six confirmed Affiliate Partners (FastBill, Lexware, sevdesk, FreshBooks, easybill and Sage) and the exact operator supplied tracking URLs live in `lib/affiliate.ts`. The overrides run on both the local catalog and the merged Supabase catalog, so older remote destinations cannot undo these links. Both Lexware Office profiles use the Lexware partner URL. `VendorLink` applies the same override for every provider CTA, including tariff cards and the mobile bar, and adds the visible `Werbung` label plus `rel="sponsored"`. The homepage shows all six partners; FreshBooks and easybill link directly to their vendors and do not claim to have researched catalog profiles. Affiliate disclosure appears before the partner cards, in the global footer, on partner profiles, and at `/methodik#affiliate-offenlegung`. Editorial source links keep their original destinations.
 
 The review form appears after Supabase is connected. Submitted reviews remain `pending` and are invisible to visitors. Review each submission in the Supabase console, then set `moderation_status` to `published` and `published_at` to the publication time. No fabricated ratings or testimonials are included. The public anon key can insert pending reviews but cannot approve them or edit catalog entries.
 
@@ -41,6 +41,17 @@ The newsletter page lives at `/newsletter`. Sign-up forms also appear at the end
 **Local preview.** NEWSLETTER_PROVIDER=dev validates the form and logs a masked address without sending or storing anything. This mode is disabled in production. For actual signup, the form only succeeds after Resend accepts the confirmation email and contact storage has been checked. Confirmation errors and expired links never display a successful subscription. Add request rate limiting at the hosting edge before public signup; the existing form honeypot remains active.
 
 Copy lives in `data/newsletter.ts`; the sample issue is built from the existing CRM guide in `data/newsletter-sample.ts`. The sample is labelled as such and is not presented as a sent issue. Run the tests with `npm test`.
+
+## Sage affiliate links and banners
+
+Sage is a confirmed partner via Impact (program 27498). The operator confirmed the approval on 13 October 2026.
+
+- **Links.** `lib/affiliate.ts` sends every Sage profile through `https://sagegmbh.sjv.io/QYg9aa?u=<product page>`. `sageDestinations` must equal `vendorUrl` in `data/catalog.json` (a test enforces it). `VendorLink` takes an optional `placement` that is appended as `subId1`, so Impact reports show which button converts (`profil-<slug>-kopf`, `-mobil`, `-tarif`, `-abschluss` and so on).
+- **Banners.** `lib/sage-banners.ts` holds the 25 official creatives from Sage's export (`data/sage-ads-export.csv`); a test cross-checks every ad number, size, landing page and click link against that file. `components/sage-banner.tsx` renders one creative per slot, picks the size by viewport width, keeps the space reserved (no layout shift), labels it "Werbung" and adds `rel="sponsored"`. Placements are data: `homeBanners`, `categoryBanners`, `profileBanners`. A format a set cannot fill (the ERP set has no wide sizes) throws instead of showing a wrong banner.
+- **Delivery.** Images load from Impact's CDN (`bannerImageBase`), without a referrer and lazily. This is disclosed in `/datenschutz`. To self-host instead, copy the PNGs to `public/` and change `bannerImageBase`; then the privacy page can drop the Impact image paragraph.
+- **Not used.** No impression pixel, no pop ups, no overlays, no auto redirects, no edited creatives.
+- **Health check.** `npm run check:banners` sends a header only request for each of the 25 images. Run it before launch and after Sage changes creatives.
+- Notes on rules, placements and open points: `research/sage-affiliate-integration-2026-10-13.md` (one level above this folder).
 
 ## Media on Cloudinary (screenshots, videos, PDFs)
 

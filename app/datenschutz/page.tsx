@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <ul className="legal-list">
           <li>Wir verwenden Vercel Web Analytics für zusammengefasste Besuchsstatistiken. Der Dienst arbeitet ohne Cookies. URL-Parameter und Newsletter-Bestätigungsseiten nehmen wir von der Messung aus.</li>
           <li>Beim Aufruf der Seiten verarbeitet unser Hoster technische Verbindungsdaten, zum Beispiel Ihre IP Adresse.</li>
-          <li>Die eingebundenen Bilder laden Sie von unserem Hoster. Externe Herstellerseiten und Videos öffnen sich erst, wenn Sie den jeweiligen Link anklicken.</li>
+          <li>Die eingebundenen Bilder laden Sie von unserem Hoster. Eine Ausnahme sind die Werbebanner von Sage: Sie lädt Ihr Browser vom Partnernetzwerk Impact (Abschnitt „Werbebanner von Sage“). Externe Herstellerseiten und Videos öffnen sich erst, wenn Sie den jeweiligen Link anklicken.</li>
           <li>Suche, Filter, Vergleich und Empfehlungsweg arbeiten in Ihrem Browser. Ihre Eingaben dort senden wir nicht an uns.</li>
           <li>Personenbezogene Daten geben Sie nur an, wenn Sie uns kontaktieren, sich für den Newsletter anmelden oder eine Erfahrung einreichen.</li>
         </ul>
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
       </section>
 
       <section aria-labelledby="medien"><h2 id="medien">Bilder und externe Herstellermedien</h2>
-        <p>Die auf Softwarebrief eingebundenen Bilder liegen bei unserem Hoster. Für Sage Produktansichten, Demos und Unterlagen verlinken wir auf die offiziellen Herstellerseiten. Andere Produktvideos öffnen sich über einen Link, zum Beispiel bei YouTube. Diese externen Medien werden auf Softwarebrief nicht eingebettet oder automatisch geladen.</p>
+        <p>Die auf Softwarebrief eingebundenen Bilder liegen bei unserem Hoster, mit Ausnahme der Werbebanner von Sage (Abschnitt „Werbebanner von Sage“). Für Sage Produktansichten, Demos und Unterlagen verlinken wir auf die offiziellen Herstellerseiten. Andere Produktvideos öffnen sich über einen Link, zum Beispiel bei YouTube. Diese externen Medien werden auf Softwarebrief nicht eingebettet oder automatisch geladen.</p>
         <p>Erst wenn Sie einen solchen Link öffnen, stellt Ihr Browser eine Verbindung zum jeweiligen Anbieter her. Dieser erhält dabei technische Verbindungsdaten, etwa Ihre IP Adresse. Für die weitere Verarbeitung gelten die Datenschutzinformationen der geöffneten Website.</p>
       </section>
 
@@ -41,12 +41,20 @@ export default function PrivacyPage() {
       </section>
 
       <section aria-labelledby="cookies"><h2 id="cookies">Cookies und Eingaben im Browser</h2>
-        <p>Wir setzen keine Cookies zur Wiedererkennung, Reichweitenmessung oder Werbung. Suche, Filter, Produktvergleich und Empfehlungsweg werten Ihre Eingaben im Browser aus. Sie werden nicht an uns übertragen und nicht gespeichert. Die Adresse eines Vergleichs enthält nur die Namen der gewählten Produkte.</p>
+        <p>Wir setzen keine Cookies zur Wiedererkennung, Reichweitenmessung oder Werbung. Suche, Filter, Produktvergleich und Empfehlungsweg werten Ihre Eingaben im Browser aus. Sie werden nicht an uns übertragen und nicht gespeichert. Die Adresse eines Vergleichs enthält nur die Namen der gewählten Produkte. Klicken Sie auf einen Werbelink oder ein Werbebanner, können der Anbieter und das Partnernetzwerk Cookies setzen (Abschnitt „Werbebanner von Sage“).</p>
       </section>
 
       <section aria-labelledby="analytics"><h2 id="analytics">Besuchsstatistiken mit Vercel Web Analytics</h2>
         <p>Wir nutzen Vercel Web Analytics von Vercel Inc. (USA), um zu sehen, welche Seiten gelesen werden und wie die Website genutzt wird. Die Auswertung umfasst Seitenaufrufe, Verweisquellen sowie Angaben zu Browser, Betriebssystem, Gerät und ungefährer Region. Wir sehen zusammengefasste Statistiken. Der Dienst verwendet keine Cookies; nach Angaben von Vercel wird eine aus dem eingehenden Aufruf erzeugte Besucherkennung nach 24 Stunden verworfen.</p>
         <p>Vor der Übermittlung entfernen wir URL-Parameter und Sprungmarken aus der erfassten Seitenadresse. Die Seite zur Newsletter-Bestätigung wird nicht erfasst. E-Mail-Adressen, Bestätigungstoken, Suchbegriffe und Antworten im Empfehlungsweg senden wir nicht als Analyseereignisse. Weitere Angaben stehen in den <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener noreferrer">Datenschutzhinweisen zu Vercel Web Analytics<span className="visually-hidden"> (öffnet in neuem Tab)</span></a>.</p>
+      </section>
+
+      <section aria-labelledby="werbebanner"><h2 id="werbebanner">Werbebanner von Sage</h2>
+        <p>Auf der Startseite, auf Kategorieseiten und auf einigen Produktprofilen zeigen wir Werbebanner von Sage. Sage stellt die Banner im Affiliate Programm über das Partnernetzwerk Impact bereit. Sie sind als „Werbung“ gekennzeichnet und werden von uns unverändert eingebunden.</p>
+        <p><strong>Was beim Laden geschieht:</strong> Sobald ein Banner in den sichtbaren Bereich kommt, lädt Ihr Browser die Bilddatei direkt von den Servern von Impact (Adresse a.impactradius-go.com). Impact erhält dabei technische Verbindungsdaten, insbesondere Ihre IP Adresse, Datum und Uhrzeit, die angeforderte Bilddatei und Angaben zu Ihrem Browser. Wir senden keine Herkunftsseite mit. Nach unserer Prüfung am 13. Oktober 2026 setzt die Auslieferung der Bilddatei keine Cookies. Einen Zählpixel für Anzeigenaufrufe binden wir nicht ein.</p>
+        <p><strong>Zweck und Rechtsgrundlage:</strong> Anzeige der Werbebanner zur Finanzierung von Softwarebrief. <strong>Rechtsgrundlage:</strong> Artikel 6 Absatz 1 Buchstabe f DSGVO. Unser berechtigtes Interesse ist die Finanzierung unseres redaktionellen Angebots durch Werbung. Sie können dieser Verarbeitung nach Artikel 21 DSGVO widersprechen (Kontakt siehe oben). Sie können die Verbindung auch vermeiden, indem Sie Werbeinhalte in Ihrem Browser blockieren. Die Website bleibt dann vollständig nutzbar.</p>
+        <p><strong>Wenn Sie auf ein Banner oder einen Werbelink klicken:</strong> Ihr Browser wird über die Adresse sagegmbh.sjv.io von Impact zu Sage weitergeleitet. Impact kann dabei Cookies oder ähnliche Kennungen setzen und verarbeitet Ihre IP Adresse, um den Besuch Softwarebrief zuzuordnen und eine Provision abzurechnen. Wir hängen an den Link eine Kennung der Stelle an, an der Sie geklickt haben, zum Beispiel den Kopfbereich eines Profils. Diese Angabe enthält nichts über Ihre Person. Nach der Weiterleitung gilt die Datenschutzerklärung von Sage.</p>
+        <p><strong>Empfänger:</strong> Impact Tech, Inc., Santa Barbara, USA. Nach eigenen Angaben stützt Impact Übermittlungen aus dem Europäischen Wirtschaftsraum auf Standardvertragsklauseln. Mehr dazu in der <a href="https://impact.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Impact<span className="visually-hidden"> (öffnet in neuem Tab)</span></a>.</p>
       </section>
 
       <section aria-labelledby="kontakt"><h2 id="kontakt">Kontakt aufnehmen</h2>
@@ -65,8 +73,8 @@ export default function PrivacyPage() {
       </section>
 
       <section aria-labelledby="links"><h2 id="links">Links zu anderen Websites</h2>
-        <p>Einige Anbieterlinks sind Affiliate Links und als Werbung gekennzeichnet. Sie enthalten Angaben zur Herkunft des Besuchs, damit der Anbieter einen Besuch Softwarebrief zuordnen kann. Softwarebrief setzt dafür keine eigenen Tracking Cookies. Nach dem Klick verarbeitet der Anbieter den Besuch nach seinen eigenen Datenschutzbestimmungen.</p>
-        <p>Softwarebrief verlinkt auf Herstellerseiten und andere Quellen. Solange Sie einen solchen Link nicht anklicken, werden keine Daten an diese Anbieter übertragen. Nach dem Klick gilt die Datenschutzerklärung des jeweiligen Anbieters. Auf Seiten, die zu einem Herstellerlink führen, weisen wir darauf hin, dass Sie die Website verlassen.</p>
+        <p>Einige Anbieterlinks sind Affiliate Links und als Werbung gekennzeichnet. Sie enthalten Angaben zur Herkunft des Besuchs, damit der Anbieter einen Besuch Softwarebrief zuordnen kann. Softwarebrief setzt dafür keine eigenen Tracking Cookies. Nach dem Klick verarbeitet der Anbieter den Besuch nach seinen eigenen Datenschutzbestimmungen. Bei Sage läuft der Klick über das Partnernetzwerk Impact (Abschnitt „Werbebanner von Sage“).</p>
+        <p>Softwarebrief verlinkt auf Herstellerseiten und andere Quellen. Solange Sie einen solchen Link nicht anklicken, werden keine Daten an diese Anbieter übertragen. Ausgenommen sind die Werbebanner von Sage, deren Bilddateien Impact ausliefert. Nach dem Klick gilt die Datenschutzerklärung des jeweiligen Anbieters. Auf Seiten, die zu einem Herstellerlink führen, weisen wir darauf hin, dass Sie die Website verlassen.</p>
       </section>
 
       <section aria-labelledby="empfaenger"><h2 id="empfaenger">Empfänger Ihrer Daten im Überblick</h2>
@@ -76,6 +84,7 @@ export default function PrivacyPage() {
             <tbody>
               <tr><th scope="row">{operator.hosting.name}</th><td>Betrieb der Website, Server Protokolle und zusammengefasste Besuchsstatistiken mit Vercel Web Analytics</td><td>{operator.hosting.country}, Absicherung über EU-US Data Privacy Framework und Standardvertragsklauseln</td></tr>
               <tr><th scope="row">Resend</th><td>Bestätigungsmail und Kontaktverwaltung, Newsletter nach Ihrer Bestätigung</td><td>USA</td></tr>
+              <tr><th scope="row">Impact (Impact Tech, Inc.)</th><td>Auslieferung der Sage Werbebanner. Nach einem Klick auf Banner oder Werbelinks: Zuordnung des Besuchs zu Softwarebrief und Provisionsabrechnung</td><td>USA, Standardvertragsklauseln nach Angaben von Impact</td></tr>
               <tr><th scope="row">Supabase</th><td>Speicherung eingereichter Erfahrungsberichte, nur wenn Sie einen Beitrag senden</td><td>Auftragsverarbeitung</td></tr>
             </tbody>
           </table>

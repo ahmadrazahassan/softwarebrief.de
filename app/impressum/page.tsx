@@ -32,7 +32,7 @@ export default function ImprintPage() {
 
       <section aria-labelledby="marken"><h2 id="marken">Marken, Logos und Herstellermaterial</h2>
         <p>Produktnamen, Firmenzeichen und Logos gehören ihren Inhabern. Wir zeigen sie, damit Sie die Programme erkennen. Die Darstellung eines Logos allein begründet keine Partnerschaft. Bestehende Affiliate Partnerschaften nennen wir in der <Link href="/methodik#affiliate-offenlegung">Affiliate Offenlegung</Link>. Abbildungen, Videos und Broschüren von Herstellern sind als solche gekennzeichnet. Die Rechte daran liegen bei den jeweiligen Herstellern.</p>
-        <p>Für Produktansichten, Videos und Unterlagen von Sage verweisen wir auf die offiziellen Sage Seiten. Sage und die Sage Produktnamen sind Marken ihrer jeweiligen Rechteinhaber. Der Quellenverweis begründet keine Affiliate Partnerschaft oder Freigabe durch Sage.</p>
+        <p>Softwarebrief nimmt am Affiliate Programm von Sage teil und zeigt von Sage bereitgestellte Werbebanner, die als Werbung gekennzeichnet sind. Für Produktansichten, Videos und Unterlagen von Sage verweisen wir weiterhin auf die offiziellen Sage Seiten. Sage und die Sage Produktnamen sind Marken ihrer jeweiligen Rechteinhaber. Die Teilnahme am Affiliate Programm ist keine Freigabe, Abbildungen, Videos oder Unterlagen von Sage selbst zu veröffentlichen.</p>
       </section>
 
       <section aria-labelledby="urheber"><h2 id="urheber">Urheberrecht</h2>

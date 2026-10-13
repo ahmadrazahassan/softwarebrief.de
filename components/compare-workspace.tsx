@@ -176,7 +176,7 @@ export function CompareWorkspace({ initial, products }: { initial: string[]; pro
       id: "quellen", title: "Quellen", intro: "Jede Angabe lässt sich an der Herstellerquelle nachprüfen.",
       rows: [
         { key: "src", label: "Herstellerquellen", render: (p) => <ul className="kl-sources">{p.sources.map((s) => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer" className="kl-link">{s.label}<ArrowUpRight size={14} /></a></li>)}</ul> },
-        { key: "next", label: "Nächster Schritt", render: (p) => <div className="kl-cell-actions"><VendorLink product={p} className="kl-btn kl-btn--dark kl-btn--sm kl-btn--block" /><Link href={`/software/${p.categorySlug}/${p.slug}`} className="kl-link">Profil lesen<ChevronRight size={15} /></Link></div> },
+        { key: "next", label: "Nächster Schritt", render: (p) => <div className="kl-cell-actions"><VendorLink product={p} placement={`vergleich-${p.slug}`} className="kl-btn kl-btn--dark kl-btn--sm kl-btn--block" /><Link href={`/software/${p.categorySlug}/${p.slug}`} className="kl-link">Profil lesen<ChevronRight size={15} /></Link></div> },
       ],
     },
   ];
@@ -326,7 +326,7 @@ export function CompareWorkspace({ initial, products }: { initial: string[]; pro
                 <p className="kl-card-rating"><strong>{cov.covered} von {cov.total}</strong><span>Kernfunktionen belegt</span></p>
                 <p className="kl-card-price"><small>Einstieg</small>{compactPrice(p)}</p>
                 {winnerKeys(p).length > 0 && <ul className="kl-badges">{winnerKeys(p).map((v) => <li key={v.key}>{v.label}</li>)}</ul>}
-                <div className="kl-card-actions"><VendorLink product={p} className="kl-btn kl-btn--dark kl-btn--sm kl-btn--block" /><Link href={`/software/${p.categorySlug}/${p.slug}`} className="kl-link">Profil lesen<ChevronRight size={15} /></Link></div>
+                <div className="kl-card-actions"><VendorLink product={p} placement={`vergleich-${p.slug}`} className="kl-btn kl-btn--dark kl-btn--sm kl-btn--block" /><Link href={`/software/${p.categorySlug}/${p.slug}`} className="kl-link">Profil lesen<ChevronRight size={15} /></Link></div>
               </div>;
             })}
           </div>

@@ -115,7 +115,7 @@ export default async function PairPage({ params }: Props) {
             <div className="kl-panel-head"><ProductLogo product={p} /><div><p className="kl-kicker">Passt, wenn Sie …</p><h3>{p.name}</h3></div></div>
             <p>{displayText(p.fit)}</p>
             <p className="kl-panel-strong">{editorial[p.slug]?.strengths[0]}</p>
-            <div className="kl-panel-actions"><VendorLink product={p} className="kl-btn kl-btn--dark kl-btn--sm" /><Link href={`/software/${p.categorySlug}/${p.slug}`} className="kl-link">Profil lesen<ChevronRight size={15} /></Link></div>
+            <div className="kl-panel-actions"><VendorLink product={p} placement={`vergleich-${p.slug}`} className="kl-btn kl-btn--dark kl-btn--sm" /><Link href={`/software/${p.categorySlug}/${p.slug}`} className="kl-link">Profil lesen<ChevronRight size={15} /></Link></div>
           </article>
         ))}
       </div>

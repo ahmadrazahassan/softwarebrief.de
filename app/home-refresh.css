@@ -70,7 +70,7 @@
 .partner-disclosure{padding:18px 22px;background:#fff;border:1px solid #c8ddce;border-radius:12px;margin-bottom:24px}
 .partner-disclosure strong{font:900 13px Lato,sans-serif;color:#183e25}
 .partner-disclosure p{font-size:13px;line-height:1.75;color:#42594b;margin:7px 0 0;max-width:1040px}
-.partner-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.partner-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .partner-card{display:flex;flex-direction:column;min-width:0;padding:20px;background:#fff;border:1px solid #d2e0d6;border-radius:16px}
 .partner-card-head{display:grid;grid-template-rows:48px auto;align-content:start;justify-items:start;gap:12px;min-height:84px}
 .partner-brand-frame{display:flex;align-items:center;width:100%;min-width:0;height:48px;overflow:hidden}

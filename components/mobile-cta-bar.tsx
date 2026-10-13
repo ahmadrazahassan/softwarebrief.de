@@ -27,7 +27,7 @@ export function MobileCtaBar({ product }: { product: Product }) {
   return (
     <div className={`mcb${visible ? " is-visible" : ""}`} role="region" aria-label={`Schnellzugriff ${product.name}`} aria-hidden={!visible}>
       <div className="mcb-text"><strong>{product.name}</strong><span>{compactPrice(product)}</span></div>
-      <VendorLink product={product} label="Anbieter" cta={{ variant: "brand", size: "sm" }} />
+      <VendorLink product={product} label="Anbieter" placement={`profil-${product.slug}-mobil`} cta={{ variant: "brand", size: "sm" }} />
       <Link href={`/vergleich?produkte=${product.slug}`} className="mcb-compare" aria-label={`${product.name} vergleichen`} tabIndex={visible ? 0 : -1}><GitCompareArrows size={20} aria-hidden="true" /></Link>
     </div>
   );

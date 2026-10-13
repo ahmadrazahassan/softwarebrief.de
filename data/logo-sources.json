@@ -192,5 +192,11 @@
     "source": "https://www.easybill.de/wp-content/uploads/2026/02/EasyBillLogo-1.svg",
     "page": "https://www.easybill.de/",
     "vendor": "easybill"
+  },
+  "sage": {
+    "asset": "/logos/sage-active.png",
+    "source": "https://cdn.simpleicons.org/sage",
+    "page": "https://simpleicons.org/?q=sage",
+    "vendor": "Sage"
   }
 }

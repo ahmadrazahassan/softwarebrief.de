@@ -17,6 +17,8 @@ import { vendorMedia } from "@/data/vendor-media";
 import { CloudImage } from "@/components/cloud-image";
 import { AffiliatePartners } from "@/components/affiliate-partners";
 import { affiliateDisclosure } from "@/lib/affiliate";
+import { SageAds } from "@/components/sage-banner";
+import { homeBanners } from "@/lib/sage-banners";
 
 const situations = [
   { number: "01", title: "Rechnungen und Belege ordnen", text: "Von der ersten Rechnung bis zur Zusammenarbeit mit der Steuerberatung.", href: "/software/buchhaltung", tag: "Buchhaltung" },
@@ -99,6 +101,8 @@ export function HomeContent({ products }: { products: Product[] }) {
         <div><h3>{categories[slug].name}</h3><p>{categories[slug].kicker}</p></div><ArrowUpRight size={22} />
       </Link>)}</div>
     </section>
+
+    <div className="shell home-ad"><SageAds banners={[homeBanners.categories]} slot="start-kategorien" /></div>
 
     <section className="home-process"><div className="shell"><div className="process-heading"><p className="eyebrow">SO FUNKTIONIERT SOFTWAREBRIEF</p><h2>Vom Bedarf zur fundierten Auswahl.</h2><p>Sie entscheiden selbst. Wir ordnen öffentlich belegte Angaben so, dass Sie Unterschiede erkennen und gezielt nachfragen können.</p></div><div className="process-grid">{steps.map((step) => <article key={step.number}><span>{step.number}</span><h3>{step.title}</h3><p>{step.text}</p></article>)}</div><Link href="/methodik">Recherche und Methodik ansehen <ArrowRight size={17} /></Link></div></section>
 

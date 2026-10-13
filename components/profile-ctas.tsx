@@ -24,7 +24,7 @@ export function ProfileCtas({ product, variant }: { product: Product; variant: "
     <div className={`pcta pcta--${variant}`}>
       {panel && <div className="pcta-copy"><strong>Überzeugt Sie, was Sie sehen?</strong><p>Prüfen Sie jetzt Preise und Bedingungen beim Anbieter oder stellen Sie {product.name} anderen Programmen gegenüber.</p></div>}
       <div className="pcta-row">
-        <VendorLink product={product} cta={{ variant: panel ? "brand" : "dark", size }} />
+        <VendorLink product={product} placement={`profil-${product.slug}-${panel ? "showroom" : "film"}`} cta={{ variant: panel ? "brand" : "dark", size }} />
         <a className={ctaClass({ variant: "light", size })} href="#preise"><CtaContent icon={<ArrowDown size={18} strokeWidth={1.75} />}>Preise im Detail</CtaContent></a>
         <Link className={ctaClass({ variant: "light", size })} href={`/vergleich?produkte=${product.slug}`}><CtaContent icon={<GitCompareArrows size={18} strokeWidth={1.75} />}>Alternativen vergleichen</CtaContent></Link>
       </div>
@@ -44,7 +44,7 @@ export function ProfileCtaBand({ product }: { product: Product }) {
           <p>Holen Sie sich beim Anbieter ein Angebot für Ihr konkretes Team. Oder lassen Sie sich in vier Fragen passende Alternativen nennen.</p>
         </div>
         <div className="pband-actions">
-          <VendorLink product={product} cta={{ variant: "brand", size: "lg", block: true }} />
+          <VendorLink product={product} placement={`profil-${product.slug}-abschluss`} cta={{ variant: "brand", size: "lg", block: true }} />
           <Link className={ctaClass({ variant: "light", size: "lg", block: true })} href={`/vergleich?produkte=${product.slug}`}><CtaContent icon={<GitCompareArrows size={18} strokeWidth={1.75} />}>Mit Alternativen vergleichen</CtaContent></Link>
           <Link className={ctaClass({ variant: "light", size: "lg", block: true })} href="/empfehlung"><CtaContent icon={<Sparkles size={18} strokeWidth={1.75} />}>Empfehlung erhalten</CtaContent></Link>
           <p className="pcta-note">{vendorNote(product)}</p>
