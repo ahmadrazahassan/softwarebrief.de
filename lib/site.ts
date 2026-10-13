@@ -8,7 +8,11 @@ export function siteUrl(): string | null {
   if (!raw) return null;
   try {
     const url = new URL(raw);
-    return url.protocol === "https:" || url.protocol === "http:" ? url.origin : null;
+    if (url.protocol !== "https:" && url.protocol !== "http:") return null;
+    // Vercel redirects the production apex to www. Normalize older env values too,
+    // so canonical URLs, the sitemap and email links use the actual serving host.
+    if (url.hostname === "softwarebrief.de" || url.hostname === "www.softwarebrief.de") return operator.siteUrl;
+    return url.origin;
   } catch {
     return null;
   }

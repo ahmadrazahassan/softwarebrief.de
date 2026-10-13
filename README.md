@@ -71,7 +71,7 @@ Every product profile opens with four facts computed from verified site data: ta
 
 ## SEO and public address
 
-The public address is `https://softwarebrief.de`, set once as `siteUrl` in `data/operator.ts`. It drives canonical addresses, Open Graph URLs, absolute URLs in the structured data, `robots.txt` with the sitemap line, a filled `sitemap.xml` and the newsletter confirmation link. A `NEXT_PUBLIC_SITE_URL` environment variable (at build time and as a server variable) overrides it, for example for a preview deployment.
+The public address is `https://www.softwarebrief.de`, set once as `siteUrl` in `data/operator.ts`. Vercel redirects the apex domain to www. `lib/site.ts` normalizes older production env values to the serving host for canonical addresses, Open Graph URLs, structured data, `robots.txt`, `sitemap.xml` and newsletter confirmation links. A `NEXT_PUBLIC_SITE_URL` environment variable can still select another origin for preview deployments.
 
 ## Quality checks
 
@@ -113,7 +113,7 @@ Real local environment variables are not pushed to GitHub. Configure them separa
 
 Import the GitHub repository as a new Vercel project. The app is at the repository root; use the Next.js framework preset, Node.js 24.x, npm ci and npm run build. vercel.json declares the framework and commands. No custom output directory or Cloudflare bindings are needed.
 
-Add the values from your private .env.local to Vercel Project Settings → Environment Variables for Production (and Preview if needed). Required newsletter keys: NEWSLETTER_PROVIDER=resend, RESEND_API_KEY, RESEND_CONTACTS_API_KEY, RESEND_FROM_EMAIL, RESEND_SEGMENT_ID and NEWSLETTER_TOKEN_SECRET. Keep the token secret stable. Set NEXT_PUBLIC_SITE_URL=https://softwarebrief.de for production and add the softwarebrief.de domain in Vercel. For preview signup tests, set the public origin to that preview URL. NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME is the only Cloudinary value the site needs for delivery; Cloudinary API secrets are for the local upload script only. Supabase keys are optional and not required for the catalog.
+Add the values from your private .env.local to Vercel Project Settings → Environment Variables for Production (and Preview if needed). Required newsletter keys: NEWSLETTER_PROVIDER=resend, RESEND_API_KEY, RESEND_CONTACTS_API_KEY, RESEND_FROM_EMAIL, RESEND_SEGMENT_ID and NEWSLETTER_TOKEN_SECRET. Keep the token secret stable. Set NEXT_PUBLIC_SITE_URL=https://www.softwarebrief.de for production and add the softwarebrief.de domain in Vercel. For preview signup tests, set the public origin to that preview URL. NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME is the only Cloudinary value the site needs for delivery; Cloudinary API secrets are for the local upload script only. Supabase keys are optional and not required for the catalog.
 
 The real env file stays out of GitHub. A new hosting environment does not inherit local credentials. Redeploy after changing environment variables.
 

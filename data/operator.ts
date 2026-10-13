@@ -15,7 +15,7 @@ export const operator = {
   /** Pflichtangabe im Impressum neben der Anschrift. Erscheint auf Impressum, Kontakt, Datenschutz und im Seitenfuß. */
   email: "niklas.winterfeld@softwarebrief.de" as string | undefined,
   /** Öffentliche Adresse der Website. Eine gesetzte Umgebungsvariable NEXT_PUBLIC_SITE_URL hat Vorrang. */
-  siteUrl: "https://softwarebrief.de",
+  siteUrl: "https://www.softwarebrief.de",
   /** Umsatzsteuer Identifikationsnummer, falls vorhanden. */
   vatId: undefined as string | undefined,
   /** Zuständige Aufsichtsbehörde für den Datenschutz (Sitz des Betreibers in Hamburg). */
