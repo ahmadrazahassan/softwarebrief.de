@@ -1,9 +1,11 @@
 import { ArrowUpRight, Info } from "lucide-react";
 import { CtaContent, ctaClass } from "@/components/cta";
 import { PdfLibrary } from "@/components/pdf-library";
-import { ProfileCtas } from "@/components/profile-ctas";
+import { ProfileCtas, vendorNote } from "@/components/profile-ctas";
 import { ShowcaseTour } from "@/components/showcase-tour";
+import { VendorLink } from "@/components/vendor-link";
 import { vendorMedia, vendorSources } from "@/data/vendor-media";
+import { withAffiliateLink } from "@/lib/affiliate";
 import type { Product } from "@/lib/catalog";
 
 /** Freigegebenes Herstellermaterial oder ein direkter Verweis auf die offizielle Quelle. */
@@ -13,6 +15,8 @@ export function ProductShowcase({ product }: { product: Product }) {
   const source = vendorSources[slug];
   if (!kit || (!kit.images.length && !kit.documents?.length)) {
     if (!source) return null;
+    // Affiliate Partner (Sage) laufen über den Netzwerklink, damit Impact den Klick zählt und die Werbung gekennzeichnet ist.
+    const affiliate = withAffiliateLink(product).linkType === "affiliate";
     return (
       <section className="shell vs-wrap" id="einblicke" aria-labelledby="einblicke-title">
         <div className="vs vs--source">
@@ -22,11 +26,13 @@ export function ProductShowcase({ product }: { product: Product }) {
               <h2 id="einblicke-title">Einblicke in {name}. Direkt bei {source.vendor}.</h2>
               <p>Die aktuellen Produktinformationen und verfügbaren Demos finden Sie beim Hersteller. Prüfen Sie dort die Oberfläche, das Angebot und die Unterlagen für Ihren Betrieb.</p>
             </div>
-            <a href={source.url} target="_blank" rel="noopener noreferrer" className={ctaClass({ variant: "dark" })}>
-              <CtaContent icon={<ArrowUpRight size={18} strokeWidth={1.75} />}>Bei {source.vendor} ansehen</CtaContent>
-            </a>
+            {affiliate
+              ? <VendorLink product={product} label={`Bei ${source.vendor} ansehen`} placement={`profil-${slug}-einblicke`} cta={{ variant: "dark" }} />
+              : <a href={source.url} target="_blank" rel="noopener noreferrer" className={ctaClass({ variant: "dark" })}>
+                  <CtaContent icon={<ArrowUpRight size={18} strokeWidth={1.75} />}>Bei {source.vendor} ansehen</CtaContent>
+                </a>}
           </div>
-          <p className="vs-source-credit">Quelle: {source.vendor} · {new URL(source.url).hostname.replace(/^www\./, "")}. Produktabbildungen, Videos und Unterlagen auf der verlinkten Seite stammen vom Hersteller. Die Rechte liegen bei den jeweiligen Rechteinhabern.</p>
+          <p className="vs-source-credit">Quelle: {source.vendor} · {new URL(source.url).hostname.replace(/^www\./, "")}. Produktabbildungen, Videos und Unterlagen auf der verlinkten Seite stammen vom Hersteller. Die Rechte liegen bei den jeweiligen Rechteinhabern.{affiliate && ` ${vendorNote(product)}`}</p>
         </div>
       </section>
     );

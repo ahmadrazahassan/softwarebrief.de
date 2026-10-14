@@ -12,8 +12,9 @@ export type AffiliatePartner = VendorDestination & {
   destinations?: Readonly<Record<string, string>>;
 };
 
-/** Netzwerklink von Sage (Impact). Die Zusage stammt vom Betreiber, Stand 13. Oktober 2026. */
-export const SAGE_TRACKING_LINK = "https://sagegmbh.sjv.io/QYg9aa";
+/** Netzwerklink von Sage (Impact). Die Zusage stammt vom Betreiber, der Link wurde am 14. Oktober 2026 ersetzt.
+    Jeder Sage Button führt über diesen Link, damit Impact den Klick zählt. */
+export const SAGE_TRACKING_LINK = "https://sagegmbh.sjv.io/X4qb2G";
 
 /** Zielseiten der Sage Profile. Sie müssen mit vendorUrl in data/catalog.json übereinstimmen; der Test prüft das. */
 export const sageDestinations: Readonly<Record<string, string>> = {
