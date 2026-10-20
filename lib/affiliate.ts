@@ -33,8 +33,18 @@ export const sageDestinations: Readonly<Record<string, string>> = {
 
 /** Kurzlinks je Sage Profil aus dem Impact Fenster "Create a link": Programm Sage Germany, Landing Page = Zielseite aus
     sageDestinations, Media Property www.softwarebrief.de, unter "Advanced" keine Sub IDs (subId1 hängt withPlacement an).
-    Profile ohne Eintrag führen über SAGE_TRACKING_LINK mit der Zielseite im Parameter u. */
-export const sageProductLinks: Readonly<Record<string, string>> = {};
+    Profile ohne Eintrag führen über SAGE_TRACKING_LINK mit der Zielseite im Parameter u.
+    Erzeugt vom Betreiber am 20. Oktober 2026. Ein Testklick auf den Sage Active Link kam mit irclickid auf der Zielseite an. */
+export const sageProductLinks: Readonly<Record<string, string>> = {
+  "sage-active": "https://sagegmbh.sjv.io/OYQW5K",
+  "sage-payroll": "https://sagegmbh.sjv.io/4aDqKL",
+  "sage-100": "https://sagegmbh.sjv.io/7XrQxV",
+  "sage-hr": "https://sagegmbh.sjv.io/k43Nbx",
+  "sage-hr-payroll": "https://sagegmbh.sjv.io/qW3BNb",
+  "sage-50-handwerk": "https://sagegmbh.sjv.io/QYrWea",
+  "sage-intacct": "https://sagegmbh.sjv.io/5kQxxb",
+  "sage-sales-management": "https://sagegmbh.sjv.io/GbB22n",
+};
 
 /** Confirmed partnerships and exact destinations supplied by the site operator. */
 export const affiliatePartners: AffiliatePartner[] = [

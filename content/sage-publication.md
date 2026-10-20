@@ -26,7 +26,7 @@ Die Sage Logos dienen der Identifikation des jeweiligen Produkts.
 
 Der Betreiber hat am 13. Oktober 2026 bestätigt, dass die Zulassung zum Sage Affiliate Programm (Netzwerk Impact, Programm 27498) vorliegt. Softwarebrief nennt Sage deshalb in der Affiliate Offenlegung (`lib/affiliate.ts`, Methodik, FAQ, Impressum, Datenschutz).
 
-- **Links:** Alle Sage Profile führen über den Netzwerklink https://sagegmbh.sjv.io/X4qb2G auf die jeweilige Produktseite (Parameter `u`). Die Stelle der Seite geht als `subId1` an Impact.
+- **Links:** Jedes Sage Profil führt über einen eigenen Impact Kurzlink auf seine Produktseite (`sageProductLinks`, am 20. Oktober 2026 im Impact Fenster „Create a link“ mit der Produktseite als Landing Page erzeugt). Der allgemeine Link https://sagegmbh.sjv.io/X4qb2G führt auf die Sage Startseite und dient der Partnerkarte. Die Stelle der Seite geht als `subId1` an Impact.
 - **Herkunft:** Werbelinks und Banner tragen `rel="sponsored noopener"` ohne `noreferrer` und senden die Adresse der Website als Herkunft (`strict-origin-when-cross-origin`). Nur so sieht Impact die verweisende Domain und ordnet den Klick Softwarebrief zu. `npm run build` bricht ab, wenn ein Werbelink davon abweicht.
 - **Banner:** Die 25 von Sage bereitgestellten Banner (Export `data/sage-ads-export.csv`) werden unverändert eingebunden (`lib/sage-banners.ts`, `components/sage-banner.tsx`). Jedes Banner trägt den Hinweis "Werbung".
 - **Auslieferung:** Die Bilddateien lädt der Browser von Impact (`a.impactradius-go.com`). Das ist in der Datenschutzerklärung beschrieben. Wer die Dateien selbst hosten will, ändert `bannerImageBase` in `lib/sage-banners.ts`.
