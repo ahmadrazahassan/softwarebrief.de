@@ -58,6 +58,15 @@ export const affiliatePartners: AffiliatePartner[] = [
   },
 ];
 
+/** Attribute für jeden Werbelink und jedes Werbebanner (VendorLink, SageBanner). Nicht je Komponente neu schreiben.
+    - Kein "noreferrer": Ohne Herkunftsangabe sieht das Partnernetzwerk nicht, von welcher Website der Klick kommt.
+      Impact zeigt den Klick dann ohne verweisende Domain und kann ihn nicht der eingetragenen Website zuordnen.
+    - "noopener" trennt den neuen Tab von unserer Seite und lässt die Herkunftsangabe unberührt.
+    - referrerPolicy: Der Browser sendet nur die Adresse der Website (https://www.softwarebrief.de/), nicht die einzelne
+      Seite mit Suchbegriffen oder Parametern. Die Angabe am Link gilt auch, wenn später eine strengere Richtlinie für die
+      ganze Seite gesetzt wird. Welche Stelle geklickt wurde, steht in subId1 (withPlacement). */
+export const affiliateLinkAttributes = { rel: "sponsored noopener", referrerPolicy: "strict-origin-when-cross-origin" } as const;
+
 export const affiliateDisclosure = "Wir sind Affiliate Partner dieser Anbieter. Wenn Sie über einen mit „Werbung“ gekennzeichneten Link oder Banner ein Angebot nutzen oder einen Vertrag abschließen, können wir eine Provision erhalten. Es gelten die Preise und Bedingungen des jeweiligen Anbieters. Eine mögliche Vergütung beeinflusst weder unsere redaktionellen Angaben noch die fachliche Reihenfolge der Empfehlungen.";
 export const affiliateLinkNote = "Affiliate Link (Werbung): Wenn Sie über diesen Link ein Angebot nutzen oder einen Vertrag abschließen, können wir eine Provision erhalten. Es gelten die Preise und Bedingungen des Anbieters.";
 
