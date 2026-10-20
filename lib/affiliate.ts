@@ -10,6 +10,9 @@ export type AffiliatePartner = VendorDestination & {
   featuredSlugs?: readonly string[];
   /** Zielseite je Produkt, wenn der Partner Deep Links über ein Netzwerk erlaubt. vendorUrl ist dann der Netzwerklink. */
   destinations?: Readonly<Record<string, string>>;
+  /** Eigener Netzwerklink je Produkt aus dem Linkgenerator des Netzwerks, mit der Zielseite als Landing Page erzeugt.
+      Hat Vorrang vor destinations: Impact beschreibt Deep Links über u nur für den vollständigen Link, nicht für Kurzlinks. */
+  productLinks?: Readonly<Record<string, string>>;
 };
 
 /** Netzwerklink von Sage (Impact). Die Zusage stammt vom Betreiber, der Link wurde am 14. Oktober 2026 ersetzt.
@@ -27,6 +30,11 @@ export const sageDestinations: Readonly<Record<string, string>> = {
   "sage-intacct": "https://www.sage.com/de-de/sage-business-cloud/intacct/pricing/",
   "sage-sales-management": "https://www.sage.com/de-de/produkte/sage-sales-management/",
 };
+
+/** Kurzlinks je Sage Profil aus dem Impact Fenster "Create a link": Programm Sage Germany, Landing Page = Zielseite aus
+    sageDestinations, Media Property www.softwarebrief.de, unter "Advanced" keine Sub IDs (subId1 hängt withPlacement an).
+    Profile ohne Eintrag führen über SAGE_TRACKING_LINK mit der Zielseite im Parameter u. */
+export const sageProductLinks: Readonly<Record<string, string>> = {};
 
 /** Confirmed partnerships and exact destinations supplied by the site operator. */
 export const affiliatePartners: AffiliatePartner[] = [
@@ -55,6 +63,7 @@ export const affiliatePartners: AffiliatePartner[] = [
     productSlugs: Object.keys(sageDestinations),
     featuredSlugs: ["sage-active", "sage-hr", "sage-100", "sage-payroll"],
     destinations: sageDestinations,
+    productLinks: sageProductLinks,
   },
 ];
 
@@ -83,7 +92,8 @@ export function withAffiliateLink<T extends VendorDestination>(product: T): T {
   const partner = affiliatePartners.find((item) => item.productSlugs.includes(product.slug));
   if (!partner) return product;
   const destination = partner.destinations?.[product.slug];
-  return { ...product, vendorUrl: destination ? networkDeepLink(partner.vendorUrl, destination) : partner.vendorUrl, linkType: "affiliate" };
+  const vendorUrl = partner.productLinks?.[product.slug] ?? (destination ? networkDeepLink(partner.vendorUrl, destination) : partner.vendorUrl);
+  return { ...product, vendorUrl, linkType: "affiliate" };
 }
 
 /** Hängt die Platzierung als subId1 an Netzwerklinks (sjv.io), damit Impact Klicks und Abschlüsse je Platzierung
